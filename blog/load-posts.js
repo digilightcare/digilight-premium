@@ -61,7 +61,7 @@
       <div class="result-card">
         <h3>${title}</h3>
         <p>${description}</p>
-        <a href="post.html?slug=${post.slug}">Read More →</a>
+        <a href="/blog/post.html?slug=${post.slug}">Read More →</a>
       </div>
     `;
   }

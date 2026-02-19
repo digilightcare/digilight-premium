@@ -285,7 +285,7 @@
 
             try {
                 // Fetch the markdown file
-                const response = await fetch(`../blog/posts/${slug}.md`);
+                const response = await fetch(`posts/${slug}.md`);
                 
                 if (!response.ok) {
                     throw new Error('Post not found');
