@@ -1,5 +1,4 @@
-// Digilight Blog - Dynamic Post Loader
-// Correct paths for Netlify deployment
+// Digilight Blog - Dynamic Post Loader (FINAL FIXED VERSION)
 
 (async function () {
   const postsContainer = document.getElementById("blog-posts");
@@ -9,25 +8,33 @@
     return;
   }
 
-  // ✅ Step 1: Load posts.json from SAME folder (/blog/)
+  // ✅ Correct index file location
   let postFiles = [];
 
   try {
     const indexResponse = await fetch("posts.json");
 
-    if (indexResponse.ok) {
-      const indexData = await indexResponse.json();
-      postFiles = indexData.posts.map((p) => p.filename);
-    } else {
-      console.error("posts.json not found");
+    if (!indexResponse.ok) {
+      throw new Error("posts.json not found");
     }
+
+    const indexData = await indexResponse.json();
+
+    // posts.json structure: { "posts": [ { "filename": "xxx.md" } ] }
+    postFiles = indexData.posts.map((p) => p.filename);
   } catch (err) {
-    console.error("Error loading posts.json:", err);
+    console.error("Could not load posts.json index file:", err);
+
+    postsContainer.innerHTML =
+      "<p style='text-align:center;color:red;padding:40px;'>Error: posts.json missing or incorrect.</p>";
+    return;
   }
 
   // ✅ Frontmatter Parser
   function parseFrontmatter(content) {
-    const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
+    const frontmatterRegex =
+      /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
+
     const match = content.match(frontmatterRegex);
 
     if (!match) {
@@ -51,29 +58,19 @@
     return { metadata, content: body };
   }
 
-  // ✅ Date formatter
-  function formatDate(dateString) {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-  }
-
-  // ✅ Excerpt generator
+  // ✅ Excerpt
   function getExcerpt(content, maxLength = 150) {
     const text = content.replace(/[#*`\[\]]/g, "").trim();
     if (text.length <= maxLength) return text;
     return text.substring(0, maxLength).trim() + "...";
   }
 
-  // ✅ Blog Card HTML
+  // ✅ Blog Card UI
   function createBlogCard(post) {
     const { metadata, content } = post;
+    const slug = post.slug;
 
     const title = metadata.title || "Untitled Post";
-    const date = metadata.date ? formatDate(metadata.date) : "";
     const description = metadata.description || getExcerpt(content);
     const thumbnail = metadata.thumbnail || "../images/blog.jpg";
     const category = metadata.category || "BLOG";
@@ -81,37 +78,38 @@
     return `
       <div class="result-card">
         <img src="${thumbnail}" alt="${title}" 
-          style="width:100%;border-radius:12px;margin-bottom:15px;height:220px;object-fit:cover;">
+          style="width:100%;border-radius:12px;margin-bottom:20px;height:220px;object-fit:cover;">
 
-        <span style="display:inline-block;padding:6px 14px;
-          background:rgba(255,106,0,0.15);
-          color:#ff6a00;border-radius:14px;
-          font-size:12px;font-weight:700;">
+        <span style="display:inline-block;padding:6px 16px;
+          background:rgba(255,106,0,0.15);color:#ff6a00;
+          border-radius:16px;font-size:12px;font-weight:700;
+          text-transform:uppercase;margin-bottom:12px;">
           ${category}
         </span>
 
-        <h3 style="margin:12px 0;font-size:20px;">
+        <h3 style="font-size:22px;margin-bottom:12px;">
           ${title}
         </h3>
 
-        <p style="color:#64748b;font-size:14px;line-height:1.6;">
+        <p style="color:#64748b;line-height:1.7;">
           ${description}
         </p>
 
-        <a href="post.html?slug=${post.slug}"
-          style="color:#0056d2;font-weight:600;">
+        <a href="post.html?slug=${slug}"
+          style="color:#0056d2;font-weight:600;text-decoration:none;">
           Read More →
         </a>
       </div>
     `;
   }
 
-  // ✅ Step 2: Fetch all posts correctly from /blog/posts/
+  // ✅ Load Posts
   try {
     const posts = [];
 
     for (const filename of postFiles) {
       try {
+        // ✅ Correct posts folder path
         const response = await fetch(`posts/${filename}`);
 
         if (!response.ok) continue;
@@ -126,19 +124,14 @@
           ...parsed,
         });
       } catch (err) {
-        console.warn("Failed loading post:", filename, err);
+        console.warn("Failed loading post:", filename);
       }
     }
 
-    // Sort newest first
-    posts.sort((a, b) => {
-      return new Date(b.metadata.date || 0) - new Date(a.metadata.date || 0);
-    });
-
-    // Display
+    // Show Output
     if (posts.length === 0) {
       postsContainer.innerHTML =
-        "<p style='text-align:center;'>No blog posts found.</p>";
+        "<p style='text-align:center;color:#64748b;padding:40px;'>No blog posts found.</p>";
     } else {
       postsContainer.innerHTML = `
         <div class="results-grid">
@@ -147,8 +140,9 @@
       `;
     }
   } catch (error) {
-    console.error("Blog load error:", error);
+    console.error("Blog loading error:", error);
+
     postsContainer.innerHTML =
-      "<p style='text-align:center;color:red;'>Error loading posts.</p>";
+      "<p style='text-align:center;color:red;padding:40px;'>Blog failed to load.</p>";
   }
 })();
