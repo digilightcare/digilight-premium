@@ -1,8 +1,28 @@
 {
   "posts": [
     {
-      "slug": "sample-post",
-      "filename": "sample-post.md"
+      "slug": "ai-digital-marketing-2026",
+      "filename": "ai-digital-marketing-2026.md"
+    },
+    {
+      "slug": "seo-services-meerut",
+      "filename": "seo-services-meerut.md"
+    },
+    {
+      "slug": "social-media-marketing-strategy",
+      "filename": "social-media-marketing-strategy.md"
+    },
+    {
+      "slug": "google-ads-lead-generation",
+      "filename": "google-ads-lead-generation.md"
+    },
+    {
+      "slug": "content-marketing-that-converts",
+      "filename": "content-marketing-that-converts.md"
+    },
+    {
+      "slug": "email-marketing-automation",
+      "filename": "email-marketing-automation.md"
     }
   ]
 }
