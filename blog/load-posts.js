@@ -13,7 +13,7 @@
   let postFiles = [];
 
   try {
-    const indexResponse = await fetch("posts.json");
+    const indexResponse = await fetch("blog/posts.json");
 
     if (!indexResponse.ok) {
       throw new Error("posts.json not found");
@@ -72,7 +72,7 @@
   for (const filename of postFiles) {
     try {
       // ✅ Correct path: posts are inside blog/posts/
-      const response = await fetch(`posts/${filename}`);
+      const response = await fetch(`blog/posts/${filename}`);
 
       if (!response.ok) continue;
 
