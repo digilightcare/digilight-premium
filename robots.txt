@@ -4,6 +4,21 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /seo-meta-tags.html
 Disallow: /services-old.html
+Disallow: /blog-old-backup.html
+
+# Block old static blog HTML files (replaced by dynamic system)
+Disallow: /blog/ai-digital-marketing-2026.html
+Disallow: /blog/seo-services-meerut.html
+Disallow: /blog/social-media-marketing-strategy.html
+Disallow: /blog/google-ads-lead-generation.html
+Disallow: /blog/content-marketing-that-converts.html
+Disallow: /blog/email-marketing-automation.html
+Disallow: /blog/sample-post.html
+Disallow: /blog/blog-template.html
+
+# Block markdown source files
+Disallow: /blog/posts/*.md
+Disallow: /blog/posts.json
 
 # Sitemap
 Sitemap: https://digilightindia.netlify.app/sitemap.xml
