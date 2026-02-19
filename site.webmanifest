@@ -1,0 +1,39 @@
+{
+  "name": "Digilight India - AI Digital Marketing Company",
+  "short_name": "Digilight",
+  "description": "AI-powered digital marketing company in India offering SEO, social media marketing, PPC advertising, and content marketing services with guaranteed results.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0056d2",
+  "theme_color": "#0056d2",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-IN",
+  "categories": ["business", "marketing", "advertising"],
+  "icons": [
+    {
+      "src": "/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/og-image.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg"
+    }
+  ]
+}

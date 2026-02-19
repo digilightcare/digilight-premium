@@ -1,0 +1,13 @@
+{
+  "name": "digilight-premium",
+  "version": "1.0.0",
+  "description": "Digilight India - AI-Powered Digital Marketing Agency",
+  "scripts": {
+    "build": "node build-blog.js"
+  },
+  "dependencies": {
+    "marked": "^12.0.2"
+  },
+  "author": "Digilight India",
+  "license": "ISC"
+}

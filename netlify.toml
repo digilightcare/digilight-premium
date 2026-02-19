@@ -1,0 +1,8 @@
+[build]
+  command = "npm install && node build-blog.js"
+  publish = "/"
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200

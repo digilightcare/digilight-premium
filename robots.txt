@@ -1,0 +1,49 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /seo-meta-tags.html
+Disallow: /services-old.html
+
+# Sitemap
+Sitemap: https://digilightindia.netlify.app/sitemap.xml
+
+# Crawl-delay for general bots
+Crawl-delay: 1
+
+# Google Bot - Full Access
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing Bot - Full Access
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Allow good SEO bots
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 2
+
+# Block spam/scraper bots
+User-agent: MauiBot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: SiteBot
+Disallow: /
