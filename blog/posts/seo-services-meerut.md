@@ -1,7 +1,7 @@
 ---
 title: "Best SEO Services in Meerut: Rank #1 on Google"
 date: 2026-02-17
-thumbnail: "/images/blog.jpg"
+thumbnail: "../images/results.jpg"
 description: "Looking for professional SEO services in Meerut? Get top rankings on Google with our proven SEO strategies. Affordable packages available."
 category: "SEO"
 ---

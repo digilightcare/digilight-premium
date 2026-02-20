@@ -1,7 +1,7 @@
 ---
 title: "Content Marketing That Converts: Proven Strategies"
 date: 2026-02-14
-thumbnail: "/images/blog.jpg"
+thumbnail: "../images/blogs-medium.png"
 description: "Learn how to create content marketing that actually converts. Proven strategies, tips, and best practices for 2026."
 category: "Content Marketing"
 ---

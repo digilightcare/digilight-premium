@@ -56,12 +56,20 @@
     const title = post.metadata.title || "Untitled Post";
     const description =
       post.metadata.description || post.content.substring(0, 120) + "...";
+    const thumbnail = post.metadata.thumbnail || "../images/blog.jpg";
+    const category = post.metadata.category || "BLOG";
 
     return `
       <div class="result-card">
-        <h3>${title}</h3>
-        <p>${description}</p>
-        <a href="/blog/post.html?slug=${post.slug}">Read More →</a>
+        <img src="${thumbnail}" alt="${title}" loading="lazy">
+        <div class="result-card-content">
+          <span class="category-badge">${category}</span>
+          <h3>${title}</h3>
+          <p>${description}</p>
+          <a href="blog/${post.slug}.html" class="read-more-btn">
+            Read More
+          </a>
+        </div>
       </div>
     `;
   }

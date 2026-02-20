@@ -1,7 +1,7 @@
 ---
 title: "Social Media Marketing Strategy 2026: Complete Guide"
 date: 2026-02-16
-thumbnail: "/images/blog.jpg"
+thumbnail: "../images/smm.jpg"
 description: "Master social media marketing with our comprehensive 2026 guide. Learn proven strategies for Facebook, Instagram, LinkedIn, and more."
 category: "Social Media"
 ---

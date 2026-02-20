@@ -659,9 +659,9 @@
             const urlParams = new URLSearchParams(window.location.search);
             const slug = urlParams.get('slug');
 
+            // Redirect to blog if slug is missing
             if (!slug) {
-                document.getElementById('loading-state').style.display = 'none';
-                document.getElementById('error-state').style.display = 'block';
+                window.location.href = '../blog.html';
                 return;
             }
 
@@ -699,8 +699,8 @@
             }
 
             try {
-                // Fetch the markdown file
-                const response = await fetch(`posts/${slug}.md`);
+                // Fetch the markdown file - corrected path
+                const response = await fetch(`./posts/${slug}.md`);
                 
                 if (!response.ok) {
                     throw new Error('Post not found');
@@ -750,7 +750,7 @@
             // Function to load related posts
             async function loadRelatedPosts(currentSlug) {
                 try {
-                    const response = await fetch('../blog/posts.json');
+                    const response = await fetch('./posts.json');
                     if (!response.ok) return;
 
                     const data = await response.json();
@@ -764,7 +764,7 @@
                     const relatedPostsData = [];
                     for (const post of relatedPosts) {
                         try {
-                            const postResponse = await fetch(`posts/${post.filename}`);
+                            const postResponse = await fetch(`./posts/${post.filename}`);
                             if (!postResponse.ok) continue;
                             
                             const postContent = await postResponse.text();
@@ -782,7 +782,7 @@
                     // Display related posts
                     const relatedPostsGrid = document.getElementById('related-posts-grid');
                     relatedPostsGrid.innerHTML = relatedPostsData.map(post => `
-                        <a href="/blog/post.html?slug=${post.slug}" class="related-post-card">
+                        <a href="post.html?slug=${post.slug}" class="related-post-card">
                             <h3>${post.title}</h3>
                             <p>${post.description}</p>
                             <span class="read-more">

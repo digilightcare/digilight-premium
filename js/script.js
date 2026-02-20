@@ -65,36 +65,131 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Mobile menu toggle
+    // Mobile menu toggle - Enhanced for iOS & Android
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const header = document.querySelector('header');
+    const body = document.body;
     
     if (mobileMenuToggle && navLinks) {
-        mobileMenuToggle.addEventListener('click', function(e) {
+        // Enhanced click handler with touch optimization
+        const toggleMenu = (e) => {
             e.preventDefault();
             e.stopPropagation();
+            
+            const isOpen = navLinks.classList.contains('active');
+            
+            // Toggle menu classes
             navLinks.classList.toggle('active');
-            this.classList.toggle('active');
-        });
+            mobileMenuToggle.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (!isOpen) {
+                body.classList.add('menu-open');
+                // Add touch prevention for iOS
+                document.addEventListener('touchmove', preventTouchMove, { passive: false });
+            } else {
+                body.classList.remove('menu-open');
+                // Remove touch prevention
+                document.removeEventListener('touchmove', preventTouchMove, { passive: false });
+            }
+            
+            // Force reflow for smooth animation
+            void navLinks.offsetWidth;
+        };
         
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
+        // Prevent touch move when menu is open
+        const preventTouchMove = (e) => {
+            if (navLinks.classList.contains('active')) {
+                e.preventDefault();
+            }
+        };
+        
+        // Add click event with touch optimization
+        mobileMenuToggle.addEventListener('click', toggleMenu);
+        
+        // Add touch start for better mobile responsiveness
+        mobileMenuToggle.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            toggleMenu(e);
+        }, { passive: false });
+        
+        // Enhanced close menu when clicking outside
+        const closeMenuOutside = (event) => {
             const isClickInsideMenu = navLinks.contains(event.target);
             const isClickOnToggle = mobileMenuToggle.contains(event.target);
             
             if (!isClickInsideMenu && !isClickOnToggle && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
+                body.classList.remove('menu-open');
+                document.removeEventListener('touchmove', preventTouchMove, { passive: false });
+            }
+        };
+        
+        // Use passive listeners where possible for better performance
+        document.addEventListener('click', closeMenuOutside, { passive: true });
+        document.addEventListener('touchstart', closeMenuOutside, { passive: true });
+        
+        // Enhanced close menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Add smooth closing animation
+                navLinks.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                body.classList.remove('menu-open');
+                document.removeEventListener('touchmove', preventTouchMove, { passive: false });
+                
+                // Small delay for smooth transition
+                setTimeout(() => {
+                    // Link navigation continues normally
+                }, 100);
+            });
+            
+            // Add touch feedback for better mobile experience
+            link.addEventListener('touchstart', (e) => {
+                link.style.backgroundColor = 'rgba(0,86,210,0.1)';
+            }, { passive: true });
+            
+            link.addEventListener('touchend', (e) => {
+                setTimeout(() => {
+                    link.style.backgroundColor = '';
+                }, 150);
+            }, { passive: true });
+        });
+        
+        // Handle escape key for accessibility
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                body.classList.remove('menu-open');
+                document.removeEventListener('touchmove', preventTouchMove, { passive: false });
             }
         });
         
-        // Close menu when clicking on a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function() {
+        // Handle resize events
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                if (window.innerWidth > 968 && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                    body.classList.remove('menu-open');
+                    document.removeEventListener('touchmove', preventTouchMove, { passive: false });
+                }
+            }, 250);
+        });
+        
+        // Handle orientation change for mobile
+        window.addEventListener('orientationchange', () => {
+            if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
-            });
+                body.classList.remove('menu-open');
+                document.removeEventListener('touchmove', preventTouchMove, { passive: false });
+            }
         });
     }
     

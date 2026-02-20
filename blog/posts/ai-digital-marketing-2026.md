@@ -1,7 +1,7 @@
 ---
 title: "AI-Powered Digital Marketing 2026: Future of Marketing"
 date: 2026-02-18
-thumbnail: "/images/blog.jpg"
+thumbnail: "../images/free-ai-guide.png"
 description: "Discover how AI is revolutionizing digital marketing. Learn about AI tools, automation, personalization, and strategies for 2026."
 category: "AI Marketing"
 ---

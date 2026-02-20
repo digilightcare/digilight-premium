@@ -1,7 +1,7 @@
 ---
 title: "Google Ads for Lead Generation: Complete 2026 Guide"
 date: 2026-02-15
-thumbnail: "/images/blog.jpg"
+thumbnail: "../images/ppc-success.jpg"
 description: "Master Google Ads lead generation with our expert guide. Learn proven strategies to generate high-quality leads and maximize ROI."
 category: "PPC"
 ---

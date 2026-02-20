@@ -1,7 +1,7 @@
 ---
 title: "Email Marketing Automation: Complete Guide 2026"
 date: 2026-02-13
-thumbnail: "/images/blog.jpg"
+thumbnail: "../images/article-quora.png"
 description: "Master email marketing automation with our comprehensive guide. Learn strategies, tools, and best practices to boost engagement and sales."
 category: "Email Marketing"
 ---

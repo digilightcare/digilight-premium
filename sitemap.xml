@@ -109,4 +109,56 @@
         <priority>0.7</priority>
     </url>
     
+
+    <!-- Blog Posts Start -->
+    <url>
+        <loc>https://digilightindia.netlify.app/blog/ai-digital-marketing-2026.html</loc>
+        <lastmod>2026-02-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://digilightindia.netlify.app/blog/sample-post.html</loc>
+        <lastmod>2026-02-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://digilightindia.netlify.app/blog/seo-services-meerut.html</loc>
+        <lastmod>2026-02-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://digilightindia.netlify.app/blog/social-media-marketing-strategy.html</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://digilightindia.netlify.app/blog/google-ads-lead-generation.html</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://digilightindia.netlify.app/blog/content-marketing-that-converts.html</loc>
+        <lastmod>2026-02-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://digilightindia.netlify.app/blog/email-marketing-automation.html</loc>
+        <lastmod>2026-02-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <!-- Blog Posts End -->
+    
 </urlset>
