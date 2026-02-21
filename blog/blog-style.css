@@ -17,6 +17,22 @@
   --shadow-hover: 0 12px 40px rgba(15, 23, 42, 0.15);
 }
 
+/* Override hero section for blog posts */
+.blog-wrapper .hero,
+.blog-wrapper .hero-overlay,
+.blog-wrapper section.hero,
+.blog-wrapper footer,
+.blog-wrapper .footer {
+  background: none !important;
+  background-image: none !important;
+}
+
+/* Ensure footer has correct background */
+.blog-wrapper footer,
+.blog-wrapper .footer {
+  background: #0f172a !important;
+}
+
 /* Force Inter font for all blog content */
 .blog-wrapper,
 .blog-wrapper *,
