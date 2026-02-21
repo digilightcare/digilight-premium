@@ -1845,6 +1845,16 @@ footer .container {
         width: 100% !important;
     }
     
+    /* DO NOT affect homepage specific sections */
+    .about-grid,
+    .stats-section .container > div[style*="grid"],
+    .about-section,
+    .what-we-do-section,
+    .why-choose-section {
+        grid-template-columns: unset !important;
+        gap: unset !important;
+    }
+    
     /* Specific section fixes */
     .services-section,
     .results-section,
@@ -1854,6 +1864,30 @@ footer .container {
     .portfolio-section,
     .tools-section {
         padding: 40px 16px !important;
+    }
+    
+    /* Homepage sections responsive but maintain layout */
+    .stats-section .container > div[style*="grid"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    .counter-orbital {
+        height: 250px !important;
+    }
+    
+    .counter-orbital .orbit {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    
+    .counter-orbital div[style*="font-size: 72px"] {
+        font-size: 48px !important;
     }
     
     /* Hero Section Horizontal Alignment Fix */
