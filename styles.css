@@ -1944,37 +1944,11 @@ footer .container {
     transform: scale(1.2) !important;
 }
 
-/* Legacy Mobile Styles - Override with comprehensive rules above */
+/* Clean Mobile Styles - Only essential fixes */
 @media (max-width: 767px) {
     body {
         font-size: 16px;
         line-height: 1.8;
-    }
-    
-    /* Hero Section Horizontal Alignment Fix */
-    .hero {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        text-align: center !important;
-        align-items: center !important;
-        justify-content: center !important;
-        margin: 0 auto !important;
-    }
-    
-    .hero .container {
-        text-align: center !important;
-        padding: 0 16px !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-        left: 0 !important;
-        right: 0 !important;
-    }
-    
-    .hero h1,
-    .hero p {
-        text-align: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
     }
     
     /* Header */
@@ -1995,71 +1969,61 @@ footer .container {
         padding-bottom: 30px;
     }
     
-    .hero-slide {
-        height: 100vh;
-        min-height: 500px;
-        max-height: 100vh;
-    }
-    
-    .hero-bg-image {
-        object-fit: cover;
-        object-position: center;
-    }
-    
-    .hero-content {
-        padding: 60px 16px 100px;
-        text-align: center;
-    }
-    
-    .hero-nav-dots {
-        bottom: 30px;
+    .hero h1 {
+        font-size: 42px !important;
+        line-height: 1.2 !important;
+        font-weight: 900 !important;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
     }
     
     .hero p {
         font-size: 17px !important;
         line-height: 1.7 !important;
-        margin-bottom: 24px !important;
-        text-shadow: 1px 1px 4px rgba(0,0,0,0.9) !important;
-    }
-    
-    .hero h1 {
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
-    }
-    
-    .hero p {
         text-shadow: 1px 1px 4px rgba(0,0,0,0.9) !important;
     }
     
     .hero-buttons {
         flex-direction: column;
         gap: 12px;
-        width: 100%;
-        align-items: center !important;
-        justify-content: center !important;
-        text-align: center !important;
-        margin: 0 auto !important;
-        left: 0 !important;
-        right: 0 !important;
+        align-items: center;
     }
     
     .hero-buttons .btn {
         width: 100%;
+        max-width: 280px;
         text-align: center;
         padding: 14px 20px;
         font-size: 14px;
-        margin: 0 auto !important;
-        display: block !important;
-        left: 0 !important;
-        right: 0 !important;
     }
     
-    /* Fix all buttons on mobile */
-    .btn {
-        text-align: center !important;
-        margin: 0 auto !important;
-        display: inline-block !important;
-        width: auto !important;
-        min-width: 120px !important;
+    /* Typography */
+    h1 { font-size: 32px !important; line-height: 1.3 !important; }
+    h2 { font-size: 28px !important; line-height: 1.4 !important; }
+    h3 { font-size: 22px !important; line-height: 1.4 !important; }
+    h4 { font-size: 19px !important; line-height: 1.5 !important; }
+    
+    p {
+        font-size: 16px !important;
+        line-height: 1.8 !important;
+        margin-bottom: 16px !important;
+    }
+    
+    /* Service Cards */
+    .service-card {
+        padding: 20px 16px;
+        text-align: center;
+        min-height: auto;
+    }
+    
+    .service-card h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .service-card p {
+        font-size: 16px !important;
+        line-height: 1.7 !important;
+        margin-bottom: 15px !important;
     }
     
     /* Fix guarantee section on mobile */
@@ -2076,71 +2040,13 @@ footer .container {
         padding: 16px 20px !important;
     }
     
-    /* Homepage hero section fix */
-    .hero-content {
-        padding: 60px 16px 100px;
-        text-align: center;
-        margin: 0 auto !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        left: 0 !important;
-        right: 0 !important;
-    }
-    
-    .hero-content h1,
-    .hero-content p {
+    /* Fix all buttons on mobile */
+    .btn {
         text-align: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    /* Typography */
-    h1 { font-size: 32px !important; line-height: 1.3 !important; }
-    
-    /* Hero heading - Make it bolder and larger than buttons */
-    .hero h1, .hero h2 {
-        font-size: 42px !important;
-        line-height: 1.2 !important;
-        margin-bottom: 20px !important;
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
-        font-weight: 900 !important;
-    }
-    
-    .hero h1 {
-        font-size: 42px !important;
-        line-height: 1.2 !important;
-        font-weight: 900 !important;
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
-    }
-    
-    h2 { font-size: 28px !important; line-height: 1.4 !important; }
-    h3 { font-size: 22px !important; line-height: 1.4 !important; }
-    h4 { font-size: 19px !important; line-height: 1.5 !important; }
-    
-    p {
-        font-size: 16px !important;
-        line-height: 1.8 !important;
-        margin-bottom: 16px !important;
-    }
-    
-    /* Service Cards */
-    .service-card {
-        padding: 20px 16px;
-        text-align: center;
-        min-height: 350px;
-    }
-    
-    .service-card h3 {
-        font-size: 18px;
-        margin-bottom: 12px;
-    }
-    
-    .service-card p {
-        font-size: 16px !important;
-        line-height: 1.7 !important;
-        margin-bottom: 15px !important;
+        margin: 0 auto !important;
+        display: inline-block !important;
+        width: auto !important;
+        min-width: 120px !important;
     }
     
     .service-card .service-icon {
