@@ -1,7 +1,191 @@
 /* ===================================
-   DIGILIGHT INDIA - PREMIUM THEME
-   AI-Powered Digital Marketing Agency
+   COMPREHENSIVE MOBILE OPTIMIZATION
    =================================== */
+
+/* Header Logo Optimization */
+@media (max-width: 768px) {
+    .logo {
+        gap: 6px !important;
+    }
+    
+    .logo img {
+        max-height: 32px !important;
+        width: auto !important;
+    }
+}
+
+/* Footer Logo Optimization */
+@media (max-width: 768px) {
+    footer .logo {
+        gap: 6px !important;
+        margin-bottom: 12px !important;
+    }
+    
+    footer .logo img {
+        max-height: 32px !important;
+        width: auto !important;
+    }
+}
+
+/* Enhanced Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        padding: 100px 20px 20px !important;
+        padding-top: 80px !important;
+    }
+    
+    .nav-links li {
+        margin-bottom: 5px !important;
+    }
+    
+    .nav-links a {
+        padding: 15px 20px !important;
+        font-size: 16px !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    }
+    
+    .nav-links a:hover {
+        background: rgba(0,86,210,0.1) !important;
+    }
+    
+    /* Hero Section Tablet Optimization */
+    .hero {
+        height: 55vh !important;
+        min-height: 380px !important;
+        max-height: 550px !important;
+        padding-top: 110px !important;
+        padding-bottom: 35px !important;
+    }
+    
+    .hero h1 {
+        font-size: 38px !important;
+        margin: 18px 0 22px !important;
+        line-height: 1.3 !important;
+    }
+    
+    .hero p {
+        font-size: 17px !important;
+        line-height: 1.6 !important;
+        max-width: 95% !important;
+        padding: 0 25px !important;
+    }
+    
+    /* Fix hero background image for tablet */
+    .hero[style*="inner-bg.jpg"] {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-attachment: scroll !important;
+    }
+    
+    /* Hero buttons tablet optimization */
+    .hero-buttons {
+        gap: 18px !important;
+        margin-top: 28px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    
+    .hero-buttons .btn {
+        min-width: 200px !important;
+        font-size: 16px !important;
+        padding: 15px 25px !important;
+    }
+}
+
+/* iOS Safari Specific Fixes */
+@supports (-webkit-touch-callout: none) {
+    .nav-links {
+        padding-top: 100px !important;
+    }
+    
+    .mobile-menu-toggle {
+        top: 20px !important;
+        right: 20px !important;
+    }
+}
+
+/* Android Chrome Specific Fixes */
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 96dpi) {
+    .nav-links {
+        padding-top: 80px !important;
+    }
+}
+
+/* Touch Optimization */
+@media (hover: none) and (pointer: coarse) {
+    .nav-links a {
+        padding: 20px !important;
+        font-size: 18px !important;
+    }
+    
+    .btn {
+        min-height: 44px !important;
+        min-width: 44px !important;
+    }
+}
+
+/* Small Screen Optimization */
+@media (max-width: 480px) {
+    .logo img {
+        max-height: 28px !important;
+    }
+    
+    footer .logo img {
+        max-height: 28px !important;
+    }
+    
+    .nav-links {
+        padding: 80px 15px 15px !important;
+    }
+    
+    .nav-links a {
+        padding: 12px 15px !important;
+        font-size: 15px !important;
+    }
+    
+    /* Hero Section Mobile Optimization */
+    .hero {
+        height: 50vh !important;
+        min-height: 350px !important;
+        max-height: 500px !important;
+        padding-top: 100px !important;
+        padding-bottom: 30px !important;
+    }
+    
+    .hero h1 {
+        font-size: 32px !important;
+        margin: 15px 0 20px !important;
+        line-height: 1.2 !important;
+    }
+    
+    .hero p {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        max-width: 100% !important;
+        padding: 0 20px !important;
+    }
+    
+    /* Fix hero background image for mobile */
+    .hero[style*="inner-bg.jpg"] {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-attachment: scroll !important;
+    }
+    
+    /* Hero buttons mobile optimization */
+    .hero-buttons {
+        flex-direction: column !important;
+        gap: 15px !important;
+        margin-top: 25px !important;
+    }
+    
+    .hero-buttons .btn {
+        width: 100% !important;
+        max-width: 280px !important;
+        font-size: 15px !important;
+        padding: 14px 20px !important;
+    }
+}
 
 /* CSS VARIABLES */
 :root {
@@ -83,13 +267,13 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-    position: sticky;
-    top: 0;
+    -webkit-backdrop-filter: blur(20px);
     z-index: 1000;
+    padding: 16px 0;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
@@ -117,7 +301,7 @@ header nav .container {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     font-family: 'Raleway', sans-serif;
     cursor: pointer;
     transition: opacity 0.3s ease;
@@ -307,6 +491,14 @@ header nav .container {
         opacity: 1;
         visibility: visible;
         display: flex;
+    }
+    
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
     }
     
     .nav-links li {
@@ -939,19 +1131,21 @@ section.hero:not(.hero-slider .hero) p {
         grid-template-columns: 1fr !important;
         gap: 20px;
     }
-}
-
-.service-card {
-    background: var(--white);
-    padding: 24px;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    text-align: center;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-top: 4px solid #ff6a00;
-    overflow: hidden;
-    position: relative;
+    .service-card {
+        background: var(--white);
+        padding: 24px 16px;
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 400px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        text-align: center;
+        border: 1px solid rgba(0,0,0,0.1);
+        border-top: 4px solid #ff6a00;
+    }
 }
 
 .service-card::before {
@@ -2448,6 +2642,20 @@ footer .container {
         min-width: 120px !important;
     }
     
+    /* Fix guarantee section on mobile */
+    .pricing-guarantee {
+        padding: 0 16px !important;
+        text-align: center !important;
+    }
+    
+    .pricing-guarantee p {
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+        hyphens: auto !important;
+        font-size: 14px !important;
+        padding: 16px 20px !important;
+    }
+    
     /* Homepage hero section fix */
     .hero-content {
         padding: 60px 16px 100px;
@@ -2499,8 +2707,9 @@ footer .container {
     
     /* Service Cards */
     .service-card {
-        padding: 24px 16px;
+        padding: 20px 16px;
         text-align: center;
+        min-height: 350px;
     }
     
     .service-card h3 {
@@ -2511,6 +2720,59 @@ footer .container {
     .service-card p {
         font-size: 16px !important;
         line-height: 1.7 !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .service-card .service-icon {
+        font-size: 40px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .service-card .btn {
+        font-size: 14px !important;
+        padding: 10px 20px !important;
+        margin-top: auto !important;
+    }
+    
+    /* Result Cards */
+    .result-card {
+        padding: 20px !important;
+        min-height: 350px !important;
+    }
+    
+    .result-card h3 {
+        font-size: 18px !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .result-card p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .result-card .btn {
+        font-size: 13px !important;
+        padding: 8px 16px !important;
+    }
+    
+    /* Testimonial Cards */
+    .testimonial-card {
+        padding: 20px !important;
+        min-height: 300px !important;
+    }
+    
+    .testimonial-card p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+    
+    .testimonial-card .author-info h4 {
+        font-size: 16px !important;
+    }
+    
+    .testimonial-card .author-info p {
+        font-size: 13px !important;
     }
     
     /* Guarantee Statement */
