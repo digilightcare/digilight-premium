@@ -6,7 +6,6 @@
 /* Force Single Column for SPECIFIC Grid Layouts Only */
 @media (max-width: 767px) {
     /* ONLY Specific Grid Layouts - Force Single Column */
-    .services-grid,
     .results-grid,
     .testimonials-grid,
     .pricing-grid,
@@ -20,6 +19,8 @@
         gap: 16px !important;
         display: grid !important;
     }
+    
+    /* REMOVED services-grid - let styles.css handle responsive breakpoints */
     
     /* DO NOT affect inline style grids or homepage specific grids */
     /* Removed: [class*="-grid"], [class*="grid"] - These were breaking homepage */
@@ -619,9 +620,10 @@
 
 /* Section Spacing Mobile */
 @media (max-width: 767px) {
-    section {
+    /* REMOVED universal section rule - was breaking homepage */
+    /* section {
         padding: 50px 0 !important;
-    }
+    } */
     
     .section-header {
         margin-bottom: 32px !important;
