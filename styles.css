@@ -73,10 +73,10 @@
         padding: 15px 25px !important;
     }
     
-    /* Don't affect other sections */
-    section:not(.hero) {
+    /* Don't affect other sections - REMOVED universal section rule */
+    /* section:not(.hero) {
         padding: 40px 0 !important;
-    }
+    } */
 }
 
 @media (max-width: 480px) {
@@ -132,10 +132,10 @@
         padding: 14px 20px !important;
     }
     
-    /* Don't affect other sections */
-    section:not(.hero) {
+    /* Don't affect other sections - REMOVED universal section rule */
+    /* section:not(.hero) {
         padding: 30px 0 !important;
-    }
+    } */
 }
 
 /* CSS VARIABLES */
@@ -2506,9 +2506,10 @@ footer .container {
         max-width: 100%;
     }
     
-    section {
+    /* REMOVED universal section rule - was breaking homepage */
+    /* section {
         padding: 20px 0;
-    }
+    } */
     
     .section-header {
         margin-bottom: 30px;
