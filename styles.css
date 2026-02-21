@@ -8,7 +8,7 @@
     --primary-blue: #0056d2;
     --accent-orange: #ff6a00;
     --dark: #1a1a1a;
-    --text-dark: #1e293b;
+    --text-dark: #000000;
     --text-gray: #2c3e50;
     --bg-light: #F8FAFC;
     --white: #ffffff;
@@ -66,7 +66,7 @@ p {
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 16px;
-    color: #1e293b;
+    color: #000000;
     font-weight: 400;
     font-family: 'Raleway', Arial, sans-serif;
 }
@@ -421,7 +421,7 @@ header nav .container {
 
 /* SECTIONS */
 section {
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 section.hero {
@@ -456,7 +456,7 @@ section.hero {
 
 .section-description {
     font-size: 15px;
-    color: #1e293b;
+    color: #000000;
     line-height: 1.7;
     max-width: 700px;
     margin: 0 auto;
@@ -508,6 +508,59 @@ section.hero {
 
 .btn-white:hover {
     background: var(--bg-light);
+}
+
+/* Hero Section Text Enhancement */
+section.hero:not(.hero-slider .hero) h1 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
+}
+
+section.hero:not(.hero-slider .hero) p {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8) !important;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+/* Contact Hero Specific */
+.contact-hero h1 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8) !important;
+}
+
+.contact-hero p {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8) !important;
+}
+
+/* Global Hero Section Horizontal Alignment */
+section.hero:not(.hero-slider .hero) {
+    text-align: center !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    position: relative !important;
+}
+
+section.hero:not(.hero-slider .hero) .container {
+    text-align: center !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    position: relative !important;
+}
+
+section.hero:not(.hero-slider .hero) h1,
+section.hero:not(.hero-slider .hero) p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 /* HERO SECTION - TEMPLATE STYLE */
@@ -842,7 +895,7 @@ section.hero {
 .services-section {
     background: #e6f4ff !important;
     background: linear-gradient(135deg, #e6f4ff 0%, #d9efff 25%, #f0f8ff 50%, #fff5e6 75%, #fff0e6 100%) !important;
-    padding: 80px 0 !important;
+    padding: 40px 0 !important;
     position: relative;
     overflow: hidden;
 }
@@ -963,7 +1016,7 @@ section.hero {
 
 .service-card p {
     font-size: 15px;
-    color: #1e293b;
+    color: #000000;
     line-height: 1.7;
     margin-bottom: 20px;
     font-weight: 400;
@@ -974,7 +1027,7 @@ section.hero {
 .results-section {
     background: #fff5e6 !important;
     background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 25%, #fff0e6 50%, #e6f4ff 75%, #f0f8ff 100%) !important;
-    padding: 80px 0 !important;
+    padding: 40px 0 !important;
     position: relative;
     overflow: hidden;
 }
@@ -1099,7 +1152,7 @@ section.hero {
 
 .result-card p {
     font-size: 15px;
-    color: #1e293b;
+    color: #000000;
     line-height: 1.7;
     margin-bottom: 20px;
     font-weight: 400;
@@ -1144,7 +1197,7 @@ section.hero {
 .testimonials-section {
     background: #fff0e6 !important;
     background: linear-gradient(135deg, #fff0e6 0%, #fff5e6 25%, #e6f4ff 50%, #d9efff 75%, #f0f8ff 100%) !important;
-    padding: 80px 0 !important;
+    padding: 40px 0 !important;
     position: relative;
     overflow: hidden;
 }
@@ -1238,7 +1291,7 @@ section.hero {
 .testimonial-text {
     font-size: 15px;
     line-height: 1.7;
-    color: #1e293b;
+    color: #000000;
     margin-bottom: 24px;
     font-style: normal;
     font-weight: 400;
@@ -1273,7 +1326,7 @@ section.hero {
 
 .author-info p {
     font-size: 13px;
-    color: #64748b;
+    color: #000000;
     margin: 0;
 }
 
@@ -1834,6 +1887,50 @@ footer .container {
         font-size: 42px !important;
     }
     
+    /* Hero Section Tablet Optimization */
+    section.hero:not(.hero-slider .hero) {
+        height: 55vh;
+        min-height: 380px;
+        max-height: 550px;
+        padding-top: 110px;
+        padding-bottom: 35px;
+        text-align: center !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+    
+    /* Tablet hero heading - Make it prominent */
+    section.hero:not(.hero-slider .hero) h1 {
+        font-size: 48px !important;
+        line-height: 1.2 !important;
+        font-weight: 900 !important;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.8) !important;
+    }
+    
+    .hero h1, .hero h2 {
+        font-size: 48px !important;
+        line-height: 1.2 !important;
+        font-weight: 900 !important;
+    }
+    
+    section.hero:not(.hero-slider .hero) .container {
+        text-align: center !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 720px !important;
+        padding: 0 20px !important;
+    }
+    
+    section.hero:not(.hero-slider .hero) h1,
+    section.hero:not(.hero-slider .hero) p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+    }
+    
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
@@ -1849,15 +1946,414 @@ footer .container {
     }
 }
 
-/* Mobile (320px - 767px) */
+/* MOBILE COMPREHENSIVE OPTIMIZATION - FORCE SINGLE COLUMN */
+@media (max-width: 767px) {
+    
+    /* FORCE ALL GRIDS TO SINGLE COLUMN */
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    
+    /* All grids become single column */
+    [class*="grid"], 
+    .services-grid,
+    .results-grid,
+    .testimonials-grid,
+    .pricing-grid,
+    .footer-grid,
+    .about-grid,
+    .contact-grid,
+    .stats-grid,
+    .blog-grid,
+    .portfolio-grid,
+    .tools-grid,
+    .features-grid,
+    .team-grid,
+    .partners-grid,
+    .categories-grid,
+    .related-posts-grid,
+    .blog-posts-grid,
+    .card-grid,
+    .item-grid,
+    .product-grid,
+    .solution-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        width: 100% !important;
+    }
+    
+    /* All flex containers become single column */
+    [class*="flex"],
+    .flex,
+    .flex-row,
+    .flex-wrap,
+    .d-flex,
+    .row,
+    .container-fluid,
+    .wrapper,
+    .section-wrapper,
+    .content-wrapper {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    
+    /* All containers become full width */
+    .container,
+    .container-fluid,
+    .section-container,
+    .content-container,
+    .wrapper,
+    .main-wrapper,
+    .page-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 16px !important;
+        margin: 0 auto !important;
+    }
+    
+    /* All cards become full width */
+    .card,
+    .service-card,
+    .result-card,
+    .testimonial-card,
+    .pricing-card,
+    .blog-card,
+    .portfolio-card,
+    .tool-card,
+    .feature-card,
+    .team-card,
+    .partner-card,
+    .category-card,
+    .related-post-card,
+    .blog-post-card,
+    .item-card,
+    .product-card,
+    .solution-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 20px 0 !important;
+        padding: 20px 16px !important;
+    }
+    
+    /* All sections become single column */
+    section,
+    .section,
+    .content-section,
+    .main-section {
+        width: 100% !important;
+        padding: 40px 0 !important;
+    }
+    
+    /* All columns become full width */
+    [class*="col"],
+    .col,
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+    .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+    .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
+    .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
+    .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6,
+    .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin: 0 0 20px 0 !important;
+    }
+    
+    /* All images become responsive */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 0 auto 16px auto !important;
+        display: block !important;
+    }
+    
+    /* All tables become scrollable */
+    table {
+        width: 100% !important;
+        overflow-x: auto !important;
+        display: block !important;
+    }
+    
+    /* All forms become single column */
+    form,
+    .form,
+    .form-group,
+    .input-group,
+    .form-row {
+        width: 100% !important;
+        flex-direction: column !important;
+    }
+    
+    input, textarea, select, button {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 16px 0 !important;
+    }
+    
+    /* All navigation becomes mobile-friendly */
+    nav,
+    .navbar,
+    .nav,
+    .menu {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    
+    /* All lists become single column */
+    ul, ol {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    
+    li {
+        width: 100% !important;
+        margin: 0 0 8px 0 !important;
+    }
+    
+    /* Force text alignment */
+    .text-left, .text-start {
+        text-align: center !important;
+    }
+    
+    .text-right, .text-end {
+        text-align: center !important;
+    }
+    
+    /* Hide unnecessary elements on mobile */
+    .d-none-mobile,
+    .hide-mobile,
+    .desktop-only {
+        display: none !important;
+    }
+    
+    /* Show mobile-specific elements */
+    .d-block-mobile,
+    .show-mobile,
+    .mobile-only {
+        display: block !important;
+    }
+    
+    /* Specific section fixes */
+    .services-section,
+    .results-section,
+    .testimonials-section,
+    .pricing-section,
+    .about-section,
+    .contact-section,
+    .blog-section,
+    .portfolio-section,
+    .tools-section {
+        padding: 40px 16px !important;
+    }
+    
+    /* Ensure no horizontal scrolling */
+    body, html {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* TABLET COMPREHENSIVE OPTIMIZATION - FORCE SINGLE COLUMN */
+@media (max-width: 1023px) and (min-width: 768px) {
+    
+    /* FORCE ALL GRIDS TO SINGLE COLUMN ON TABLET */
+    [class*="grid"], 
+    .services-grid,
+    .results-grid,
+    .testimonials-grid,
+    .pricing-grid,
+    .footer-grid,
+    .about-grid,
+    .contact-grid,
+    .stats-grid,
+    .blog-grid,
+    .portfolio-grid,
+    .tools-grid,
+    .features-grid,
+    .team-grid,
+    .partners-grid,
+    .categories-grid,
+    .related-posts-grid,
+    .blog-posts-grid,
+    .card-grid,
+    .item-grid,
+    .product-grid,
+    .solution-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        width: 100% !important;
+    }
+    
+    /* All flex containers become single column */
+    [class*="flex"],
+    .flex,
+    .flex-row,
+    .flex-wrap,
+    .d-flex,
+    .row,
+    .container-fluid,
+    .wrapper,
+    .section-wrapper,
+    .content-wrapper {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    
+    /* All containers become full width */
+    .container,
+    .container-fluid,
+    .section-container,
+    .content-container,
+    .wrapper,
+    .main-wrapper,
+    .page-wrapper {
+        width: 100% !important;
+        max-width: 720px !important;
+        padding: 0 20px !important;
+        margin: 0 auto !important;
+    }
+    
+    /* All cards become full width */
+    .card,
+    .service-card,
+    .result-card,
+    .testimonial-card,
+    .pricing-card,
+    .blog-card,
+    .portfolio-card,
+    .tool-card,
+    .feature-card,
+    .team-card,
+    .partner-card,
+    .category-card,
+    .related-post-card,
+    .blog-post-card,
+    .item-card,
+    .product-card,
+    .solution-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 24px 0 !important;
+        padding: 24px 20px !important;
+    }
+    
+    /* All columns become full width */
+    [class*="col"],
+    .col,
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+    .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+    .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
+    .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
+    .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6,
+    .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin: 0 0 24px 0 !important;
+    }
+    
+    /* Ensure no horizontal scrolling */
+    body, html {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* END TABLET COMPREHENSIVE OPTIMIZATION */
+
+/* Service Card Animations */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* PULSE ANIMATION */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(0, 212, 255, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+    }
+}
+
+/* Service Card Hover Effects */
+.service-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.2) !important;
+}
+
+/* Legacy Mobile Styles - Override with comprehensive rules above */
 @media (max-width: 767px) {
     body {
         font-size: 16px;
         line-height: 1.8;
     }
     
-    .container {
-        padding: 0 16px;
+    /* Hero Section Horizontal Alignment Fix */
+    section.hero:not(.hero-slider .hero) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        text-align: center !important;
+        width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto !important;
+    }
+    
+    section.hero:not(.hero-slider .hero) .container {
+        text-align: center !important;
+        padding: 0 16px !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+    
+    section.hero:not(.hero-slider .hero) h1,
+    section.hero:not(.hero-slider .hero) p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
     /* Header */
@@ -1875,6 +2371,14 @@ footer .container {
         min-height: 500px;
         max-height: 100vh;
         margin-top: 0;
+    }
+    
+    section.hero:not(.hero-slider .hero) {
+        height: 50vh;
+        min-height: 350px;
+        max-height: 500px;
+        padding-top: 100px;
+        padding-bottom: 30px;
     }
     
     .hero-slide {
@@ -1897,22 +2401,31 @@ footer .container {
         bottom: 30px;
     }
     
-    .hero h1, .hero h2 {
-        font-size: 32px !important;
-        line-height: 1.4 !important;
-        margin-bottom: 20px !important;
-    }
-    
     .hero p {
         font-size: 17px !important;
         line-height: 1.7 !important;
         margin-bottom: 24px !important;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.9) !important;
+    }
+    
+    section.hero:not(.hero-slider .hero) h1 {
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
+    }
+    
+    section.hero:not(.hero-slider .hero) p {
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.9) !important;
     }
     
     .hero-buttons {
         flex-direction: column;
         gap: 12px;
         width: 100%;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        left: 0 !important;
+        right: 0 !important;
     }
     
     .hero-buttons .btn {
@@ -1920,10 +2433,60 @@ footer .container {
         text-align: center;
         padding: 14px 20px;
         font-size: 14px;
+        margin: 0 auto !important;
+        display: block !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+    
+    /* Fix all buttons on mobile */
+    .btn {
+        text-align: center !important;
+        margin: 0 auto !important;
+        display: inline-block !important;
+        width: auto !important;
+        min-width: 120px !important;
+    }
+    
+    /* Homepage hero section fix */
+    .hero-content {
+        padding: 60px 16px 100px;
+        text-align: center;
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+    
+    .hero-content h1,
+    .hero-content p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     
     /* Typography */
     h1 { font-size: 32px !important; line-height: 1.3 !important; }
+    
+    /* Hero heading - Make it bolder and larger than buttons */
+    .hero h1, .hero h2 {
+        font-size: 42px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 20px !important;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
+        font-weight: 900 !important;
+    }
+    
+    section.hero:not(.hero-slider .hero) h1 {
+        font-size: 42px !important;
+        line-height: 1.2 !important;
+        font-weight: 900 !important;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
+    }
+    
     h2 { font-size: 28px !important; line-height: 1.4 !important; }
     h3 { font-size: 22px !important; line-height: 1.4 !important; }
     h4 { font-size: 19px !important; line-height: 1.5 !important; }
@@ -1961,7 +2524,7 @@ footer .container {
     
     /* CTA Section */
     .cta-section {
-        padding: 40px 0;
+        padding: 20px 0;
     }
     
     .cta-section h2 {
@@ -2226,7 +2789,7 @@ footer .container {
     }
     
     section {
-        padding: 40px 0;
+        padding: 20px 0;
     }
     
     .section-header {
@@ -2331,7 +2894,7 @@ img:hover {
 /* STATS COUNTER SECTION */
 .stats-section {
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 25%, #dbeafe 50%, #fef7f0 75%, #fefaf2 100%) !important;
-    padding: 60px 0 !important;
+    padding: 30px 0 !important;
     position: relative;
     overflow: hidden;
 }
@@ -2444,7 +3007,7 @@ img:hover {
 
 @media (max-width: 768px) {
     .stats-section {
-        padding: 50px 0;
+        padding: 25px 0;
     }
     
     .stats-grid {
@@ -2477,7 +3040,7 @@ img:hover {
 
 @media (max-width: 480px) {
     .stats-section {
-        padding: 40px 0;
+        padding: 20px 0;
     }
     
     .stats-grid {
