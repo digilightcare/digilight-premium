@@ -1830,193 +1830,19 @@ footer .container {
     }
 }
 
-/* MOBILE COMPREHENSIVE OPTIMIZATION - FORCE SINGLE COLUMN */
+/* Mobile Optimization - Specific fixes only */
 @media (max-width: 767px) {
-    
-    /* FORCE ALL GRIDS TO SINGLE COLUMN */
-    *, *::before, *::after {
-        box-sizing: border-box;
-    }
-    
-    /* All grids become single column */
-    [class*="grid"], 
+    /* Only specific grids become single column */
     .services-grid,
     .results-grid,
     .testimonials-grid,
     .pricing-grid,
     .footer-grid,
-    .about-grid,
-    .contact-grid,
-    .stats-grid,
     .blog-grid,
-    .portfolio-grid,
-    .tools-grid,
-    .features-grid,
-    .team-grid,
-    .partners-grid,
-    .categories-grid,
-    .related-posts-grid,
-    .blog-posts-grid,
-    .card-grid,
-    .item-grid,
-    .product-grid,
-    .solution-grid {
+    .portfolio-grid {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
         width: 100% !important;
-    }
-    
-    /* All flex containers become single column */
-    [class*="flex"],
-    .flex,
-    .flex-row,
-    .flex-wrap,
-    .d-flex,
-    .row,
-    .container-fluid,
-    .wrapper,
-    .section-wrapper,
-    .content-wrapper {
-        flex-direction: column !important;
-        width: 100% !important;
-    }
-    
-    /* All containers become full width */
-    .container,
-    .container-fluid,
-    .section-container,
-    .content-container,
-    .wrapper,
-    .main-wrapper,
-    .page-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 16px !important;
-        margin: 0 auto !important;
-    }
-    
-    /* All cards become full width */
-    .card,
-    .service-card,
-    .result-card,
-    .testimonial-card,
-    .pricing-card,
-    .blog-card,
-    .portfolio-card,
-    .tool-card,
-    .feature-card,
-    .team-card,
-    .partner-card,
-    .category-card,
-    .related-post-card,
-    .blog-post-card,
-    .item-card,
-    .product-card,
-    .solution-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 0 20px 0 !important;
-        padding: 20px 16px !important;
-    }
-    
-    /* All sections become single column */
-    section,
-    .section,
-    .content-section,
-    .main-section {
-        width: 100% !important;
-        padding: 40px 0 !important;
-    }
-    
-    /* All columns become full width */
-    [class*="col"],
-    .col,
-    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
-    .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
-    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
-    .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
-    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
-    .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
-    .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6,
-    .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
-        margin: 0 0 20px 0 !important;
-    }
-    
-    /* All images become responsive */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
-        margin: 0 auto 16px auto !important;
-        display: block !important;
-    }
-    
-    /* All tables become scrollable */
-    table {
-        width: 100% !important;
-        overflow-x: auto !important;
-        display: block !important;
-    }
-    
-    /* All forms become single column */
-    form,
-    .form,
-    .form-group,
-    .input-group,
-    .form-row {
-        width: 100% !important;
-        flex-direction: column !important;
-    }
-    
-    input, textarea, select, button {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 0 16px 0 !important;
-    }
-    
-    /* All navigation becomes mobile-friendly */
-    nav,
-    .navbar,
-    .nav,
-    .menu {
-        flex-direction: column !important;
-        width: 100% !important;
-    }
-    
-    /* All lists become single column */
-    ul, ol {
-        flex-direction: column !important;
-        width: 100% !important;
-    }
-    
-    li {
-        width: 100% !important;
-        margin: 0 0 8px 0 !important;
-    }
-    
-    /* Force text alignment */
-    .text-left, .text-start {
-        text-align: center !important;
-    }
-    
-    .text-right, .text-end {
-        text-align: center !important;
-    }
-    
-    /* Hide unnecessary elements on mobile */
-    .d-none-mobile,
-    .hide-mobile,
-    .desktop-only {
-        display: none !important;
-    }
-    
-    /* Show mobile-specific elements */
-    .d-block-mobile,
-    .show-mobile,
-    .mobile-only {
-        display: block !important;
     }
     
     /* Specific section fixes */
@@ -2024,138 +1850,56 @@ footer .container {
     .results-section,
     .testimonials-section,
     .pricing-section,
-    .about-section,
-    .contact-section,
     .blog-section,
     .portfolio-section,
     .tools-section {
         padding: 40px 16px !important;
     }
     
-    /* Ensure no horizontal scrolling */
-    body, html {
-        overflow-x: hidden !important;
-        width: 100% !important;
-        max-width: 100% !important;
+    /* Hero Section Horizontal Alignment Fix */
+    .hero {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto !important;
     }
     
-    * {
+    .hero .container {
+        text-align: center !important;
+        padding: 0 16px !important;
         max-width: 100% !important;
-        box-sizing: border-box !important;
+        margin: 0 auto !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+    
+    .hero h1,
+    .hero p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
 
-/* TABLET COMPREHENSIVE OPTIMIZATION - FORCE SINGLE COLUMN */
+/* Tablet Optimization - Specific fixes only */
 @media (max-width: 1023px) and (min-width: 768px) {
-    
-    /* FORCE ALL GRIDS TO SINGLE COLUMN ON TABLET */
-    [class*="grid"], 
+    /* Only specific grids become single column on tablet */
     .services-grid,
     .results-grid,
     .testimonials-grid,
     .pricing-grid,
-    .footer-grid,
-    .about-grid,
-    .contact-grid,
-    .stats-grid,
-    .blog-grid,
-    .portfolio-grid,
-    .tools-grid,
-    .features-grid,
-    .team-grid,
-    .partners-grid,
-    .categories-grid,
-    .related-posts-grid,
-    .blog-posts-grid,
-    .card-grid,
-    .item-grid,
-    .product-grid,
-    .solution-grid {
+    .footer-grid {
         grid-template-columns: 1fr !important;
         gap: 24px !important;
         width: 100% !important;
     }
     
-    /* All flex containers become single column */
-    [class*="flex"],
-    .flex,
-    .flex-row,
-    .flex-wrap,
-    .d-flex,
-    .row,
-    .container-fluid,
-    .wrapper,
-    .section-wrapper,
-    .content-wrapper {
-        flex-direction: column !important;
-        width: 100% !important;
-    }
-    
-    /* All containers become full width */
-    .container,
-    .container-fluid,
-    .section-container,
-    .content-container,
-    .wrapper,
-    .main-wrapper,
-    .page-wrapper {
-        width: 100% !important;
+    .container {
         max-width: 720px !important;
         padding: 0 20px !important;
         margin: 0 auto !important;
-    }
-    
-    /* All cards become full width */
-    .card,
-    .service-card,
-    .result-card,
-    .testimonial-card,
-    .pricing-card,
-    .blog-card,
-    .portfolio-card,
-    .tool-card,
-    .feature-card,
-    .team-card,
-    .partner-card,
-    .category-card,
-    .related-post-card,
-    .blog-post-card,
-    .item-card,
-    .product-card,
-    .solution-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 0 24px 0 !important;
-        padding: 24px 20px !important;
-    }
-    
-    /* All columns become full width */
-    [class*="col"],
-    .col,
-    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
-    .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
-    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
-    .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
-    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
-    .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
-    .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6,
-    .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
-        margin: 0 0 24px 0 !important;
-    }
-    
-    /* Ensure no horizontal scrolling */
-    body, html {
-        overflow-x: hidden !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    * {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
     }
 }
 
