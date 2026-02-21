@@ -647,32 +647,47 @@ section.hero {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background-image: url('images/hero-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
 }
 
-.hero h1 {
-    color: #ffffff !important;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.8) !important;
-    font-weight: 800 !important;
-    letter-spacing: -0.02em;
-}
-
-.hero p {
-    color: #ffffff !important;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8) !important;
-    font-weight: 400;
-    letter-spacing: -0.01em;
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .hero .container {
-    text-align: center !important;
-    margin: 0 auto !important;
-    width: 100% !important;
-    max-width: 1200px !important;
-    position: relative !important;
+    position: relative;
     z-index: 2;
+    text-align: center;
 }
 
-.hero .hero-buttons {
+.hero h1 {
+    font-size: 48px;
+    margin: 20px 0 24px;
+    color: #ffffff;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #ffffff;
+    line-height: 1.7;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+.hero-buttons {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -1757,48 +1772,35 @@ footer .container {
         font-size: 42px !important;
     }
     
-    /* Hero Section Tablet Optimization */
-    section.hero:not(.hero-slider .hero) {
+    .hero {
         height: 55vh;
         min-height: 380px;
         max-height: 550px;
         padding-top: 110px;
         padding-bottom: 35px;
+    }
+    
+    .hero h1 {
+        font-size: 38px !important;
+        line-height: 1.2 !important;
+        font-weight: 900 !important;
+        margin: 18px 0 22px !important;
+    }
+    
+    .hero p {
+        font-size: 17px !important;
+        line-height: 1.6 !important;
+        max-width: 95% !important;
+        padding: 0 25px !important;
+        font-weight: 500 !important;
+    }
+    
+    .hero .container {
         text-align: center !important;
         margin: 0 auto !important;
         width: 100% !important;
-        left: 0 !important;
-        right: 0 !important;
-    }
-    
-    /* Tablet hero heading - Make it prominent */
-    section.hero:not(.hero-slider .hero) h1 {
-        font-size: 48px !important;
-        line-height: 1.2 !important;
-        font-weight: 900 !important;
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.8) !important;
-    }
-    
-    .hero h1, .hero h2 {
-        font-size: 48px !important;
-        line-height: 1.2 !important;
-        font-weight: 900 !important;
-    }
-    
-    section.hero:not(.hero-slider .hero) .container {
-        text-align: center !important;
-        margin: 0 auto !important;
-        width: 100% !important;
-        max-width: 720px !important;
+        max-width: 1200px !important;
         padding: 0 20px !important;
-    }
-    
-    section.hero:not(.hero-slider .hero) h1,
-    section.hero:not(.hero-slider .hero) p {
-        text-align: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        width: 100% !important;
     }
     
     .services-grid {
@@ -2194,36 +2196,29 @@ footer .container {
     }
     
     /* Hero Section Horizontal Alignment Fix */
-    section.hero:not(.hero-slider .hero) {
+    .hero {
         padding-left: 0 !important;
         padding-right: 0 !important;
         text-align: center !important;
-        width: 100% !important;
-        left: 0 !important;
-        right: 0 !important;
+        align-items: center !important;
+        justify-content: center !important;
         margin: 0 auto !important;
     }
     
-    section.hero:not(.hero-slider .hero) .container {
+    .hero .container {
         text-align: center !important;
         padding: 0 16px !important;
         max-width: 100% !important;
         margin: 0 auto !important;
-        width: 100% !important;
-        position: relative !important;
         left: 0 !important;
         right: 0 !important;
     }
     
-    section.hero:not(.hero-slider .hero) h1,
-    section.hero:not(.hero-slider .hero) p {
+    .hero h1,
+    .hero p {
         text-align: center !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        max-width: 100% !important;
     }
     
     /* Header */
@@ -2237,13 +2232,6 @@ footer .container {
     
     /* Hero Section */
     .hero {
-        height: 100vh;
-        min-height: 500px;
-        max-height: 100vh;
-        margin-top: 0;
-    }
-    
-    section.hero:not(.hero-slider .hero) {
         height: 50vh;
         min-height: 350px;
         max-height: 500px;
@@ -2278,11 +2266,11 @@ footer .container {
         text-shadow: 1px 1px 4px rgba(0,0,0,0.9) !important;
     }
     
-    section.hero:not(.hero-slider .hero) h1 {
+    .hero h1 {
         text-shadow: 2px 2px 8px rgba(0,0,0,0.9) !important;
     }
     
-    section.hero:not(.hero-slider .hero) p {
+    .hero p {
         text-shadow: 1px 1px 4px rgba(0,0,0,0.9) !important;
     }
     
@@ -2364,7 +2352,7 @@ footer .container {
         font-weight: 900 !important;
     }
     
-    section.hero:not(.hero-slider .hero) h1 {
+    .hero h1 {
         font-size: 42px !important;
         line-height: 1.2 !important;
         font-weight: 900 !important;
