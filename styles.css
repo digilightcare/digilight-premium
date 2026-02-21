@@ -1,8 +1,9 @@
 /* ===================================
-   COMPREHENSIVE MOBILE OPTIMIZATION
+   DIGILIGHT INDIA - PREMIUM THEME
+   AI-Powered Digital Marketing Agency
    =================================== */
 
-/* Header Logo Optimization */
+/* Mobile Optimization */
 @media (max-width: 768px) {
     .logo {
         gap: 6px !important;
@@ -12,10 +13,7 @@
         max-height: 32px !important;
         width: auto !important;
     }
-}
-
-/* Footer Logo Optimization */
-@media (max-width: 768px) {
+    
     footer .logo {
         gap: 6px !important;
         margin-bottom: 12px !important;
@@ -25,13 +23,9 @@
         max-height: 32px !important;
         width: auto !important;
     }
-}
-
-/* Enhanced Mobile Navigation */
-@media (max-width: 768px) {
+    
     .nav-links {
-        padding: 100px 20px 20px !important;
-        padding-top: 80px !important;
+        padding: 80px 20px 20px !important;
     }
     
     .nav-links li {
@@ -44,11 +38,6 @@
         border-bottom: 1px solid rgba(255,255,255,0.1) !important;
     }
     
-    .nav-links a:hover {
-        background: rgba(0,86,210,0.1) !important;
-    }
-    
-    /* Hero Section Tablet Optimization */
     .hero {
         height: 55vh !important;
         min-height: 380px !important;
@@ -70,14 +59,6 @@
         padding: 0 25px !important;
     }
     
-    /* Fix hero background image for tablet */
-    .hero[style*="inner-bg.jpg"] {
-        background-size: cover !important;
-        background-position: center center !important;
-        background-attachment: scroll !important;
-    }
-    
-    /* Hero buttons tablet optimization */
     .hero-buttons {
         gap: 18px !important;
         margin-top: 28px !important;
@@ -92,39 +73,6 @@
     }
 }
 
-/* iOS Safari Specific Fixes */
-@supports (-webkit-touch-callout: none) {
-    .nav-links {
-        padding-top: 100px !important;
-    }
-    
-    .mobile-menu-toggle {
-        top: 20px !important;
-        right: 20px !important;
-    }
-}
-
-/* Android Chrome Specific Fixes */
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 96dpi) {
-    .nav-links {
-        padding-top: 80px !important;
-    }
-}
-
-/* Touch Optimization */
-@media (hover: none) and (pointer: coarse) {
-    .nav-links a {
-        padding: 20px !important;
-        font-size: 18px !important;
-    }
-    
-    .btn {
-        min-height: 44px !important;
-        min-width: 44px !important;
-    }
-}
-
-/* Small Screen Optimization */
 @media (max-width: 480px) {
     .logo img {
         max-height: 28px !important;
@@ -143,7 +91,6 @@
         font-size: 15px !important;
     }
     
-    /* Hero Section Mobile Optimization */
     .hero {
         height: 50vh !important;
         min-height: 350px !important;
@@ -165,14 +112,6 @@
         padding: 0 20px !important;
     }
     
-    /* Fix hero background image for mobile */
-    .hero[style*="inner-bg.jpg"] {
-        background-size: cover !important;
-        background-position: center center !important;
-        background-attachment: scroll !important;
-    }
-    
-    /* Hero buttons mobile optimization */
     .hero-buttons {
         flex-direction: column !important;
         gap: 15px !important;
@@ -698,310 +637,47 @@ section.hero {
     box-shadow: var(--shadow);
 }
 
-.btn-white:hover {
-    background: var(--bg-light);
+/* Hero Section */
+.hero {
+    height: 60vh;
+    min-height: 400px;
+    max-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-/* Hero Section Text Enhancement */
-section.hero:not(.hero-slider .hero) h1 {
+.hero h1 {
     color: #ffffff !important;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.8) !important;
     font-weight: 800 !important;
     letter-spacing: -0.02em;
 }
 
-section.hero:not(.hero-slider .hero) p {
+.hero p {
     color: #ffffff !important;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.8) !important;
     font-weight: 400;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.01em;
 }
 
-/* Contact Hero Specific */
-.contact-hero h1 {
-    color: #ffffff !important;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.8) !important;
-}
-
-.contact-hero p {
-    color: #ffffff !important;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8) !important;
-}
-
-/* Global Hero Section Horizontal Alignment */
-section.hero:not(.hero-slider .hero) {
-    text-align: center !important;
-    margin: 0 auto !important;
-    width: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    position: relative !important;
-}
-
-section.hero:not(.hero-slider .hero) .container {
+.hero .container {
     text-align: center !important;
     margin: 0 auto !important;
     width: 100% !important;
     max-width: 1200px !important;
     position: relative !important;
-}
-
-section.hero:not(.hero-slider .hero) h1,
-section.hero:not(.hero-slider .hero) p {
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 100% !important;
-    max-width: 100% !important;
-}
-
-/* HERO SECTION - TEMPLATE STYLE */
-.hero {
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-    min-height: 600px;
-    max-height: 100vh;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-.hero-slider {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.hero-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
-    margin: 0;
-    padding: 0;
-}
-
-.hero-slide.active {
-    opacity: 1;
-    visibility: visible;
-    position: relative;
-}
-
-.hero-bg-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    margin: 0;
-    padding: 0;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-}
-
-.hero-slide .container {
-    position: relative;
     z-index: 2;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
 }
 
-.hero-content {
-    max-width: 1000px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 120px 20px;
-}
-
-.hero-slide.active .hero-content h1,
-.hero-slide.active .hero-content .hero-title {
-    animation: fadeInDown 1s ease-out both;
-    animation-delay: 0.4s;
-    opacity: 0;
-}
-
-.hero-slide.active .hero-content p,
-.hero-slide.active .hero-content .hero-description {
-    animation: fadeInUp 1s ease-out both;
-    animation-delay: 0.7s;
-    opacity: 0;
-}
-
-.hero-slide.active .hero-content .hero-buttons {
-    animation: fadeInUp 1s ease-out both;
-    animation-delay: 1s;
-    opacity: 0;
-}
-
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero h1 {
-    font-size: 70px;
-    font-weight: 900;
-    line-height: 1.2;
-    margin-bottom: 25px;
-    font-family: 'Raleway', sans-serif;
-    color: #ffffff;
-    letter-spacing: 0;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-    text-transform: capitalize;
-}
-
-.hero p {
-    font-size: 22px;
-    line-height: 1.6;
-    color: rgba(255,255,255,0.95);
-    margin-bottom: 40px;
-    font-weight: 400;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-    font-family: 'Raleway', sans-serif;
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero-buttons {
+.hero .hero-buttons {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 40px;
-}
-
-.hero .btn {
-    font-weight: 700;
-    padding: 16px 38px;
-    font-size: 16px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
-    border: 2px solid transparent;
-    border-radius: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-family: 'Raleway', sans-serif;
-}
-
-.hero .btn-primary {
-    background: #ff6a00;
-    color: #ffffff;
-    border-color: #ff6a00;
-}
-
-.hero .btn-primary:hover {
-    background: #e55f00;
-    border-color: #e55f00;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(255,106,0,0.4);
-}
-
-.hero .btn-secondary {
-    background: transparent;
-    color: #ffffff;
-    border-color: rgba(255,255,255,0.8);
-}
-
-.hero .btn-secondary:hover {
-    background: #ffffff;
-    color: #333333;
-    border-color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(255,255,255,0.4);
-}
-
-/* Hero Slider Navigation Dots */
-.hero-nav-dots {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 12px;
-    z-index: 10;
-}
-
-.hero-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.4);
-    border: 2px solid rgba(255,255,255,0.6);
-    cursor: pointer;
-    transition: all 0.4s ease;
-    padding: 0;
-    position: relative;
-}
-
-.hero-dot::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0;
-    height: 0;
-    background: #ff6a00;
-    border-radius: 50%;
-    transition: all 0.4s ease;
-}
-
-.hero-dot:hover {
-    background: rgba(255,255,255,0.6);
-    border-color: rgba(255,255,255,0.9);
-    transform: scale(1.2);
-}
-
-.hero-dot.active {
-    background: #ff6a00;
-    border-color: #ff6a00;
-    width: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(255,106,0,0.6);
-}
-
-.hero-dot.active::before {
-    width: 100%;
-    height: 100%;
+    margin-top: 30px;
+    flex-wrap: wrap;
 }
 
 .trust-badges {
