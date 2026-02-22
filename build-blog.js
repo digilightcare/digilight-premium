@@ -171,7 +171,7 @@ function getPostTemplate(data) {
 <body>
     <header>
         <nav>
-            <div class="logo">
+            <div class="logo" style="display: flex; align-items: center; gap: 8px; cursor: pointer;" onclick="window.location.href='../index.html'">
                 <img src="../images/digilight-logo.png" alt="Digilight India" style="height: 40px;">
                 <img src="../images/digilight-text-logo.png" alt="Digilight" style="height: 32px;">
             </div>
@@ -187,14 +187,14 @@ function getPostTemplate(data) {
                 <li><a href="../pricing.html">Pricing</a></li>
                 <li><a href="../testimonials.html">Testimonials</a></li>
                 <li><a href="../guide.html">Free Tools</a></li>
-                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
                 <li><a href="../contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero" style="height: 60vh; min-height: 400px; max-height: 600px; padding-top: 120px; padding-bottom: 40px; background-image: url('../images/inner-bg.jpg'); background-size: cover; background-position: center; position: relative;">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5);"></div>
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2);"></div>
         <div class="container" style="text-align: center; position: relative; z-index: 1;">
             <h1 style="font-size: 48px; margin: 20px 0 24px; color: #ffffff; font-weight: 800; text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">${title}</h1>
             <p style="font-size: 18px; max-width: 800px; margin: 0 auto; color: #ffffff; line-height: 1.6; text-shadow: 1px 1px 4px rgba(0,0,0,0.8);">${description}</p>
@@ -307,11 +307,12 @@ function getPostTemplate(data) {
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <section class="hero" style="height: 60vh; min-height: 400px; max-height: 600px; padding-top: 120px; padding-bottom: 40px; background-image: url('../images/inner-bg.jpg'); background-size: cover; background-position: center; position: relative;">
+                    <div class="logo" style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px; cursor: pointer;" onclick="window.location.href='../index.html'">
                         <img src="../images/digilight-logo.png" alt="Digilight India" style="height: 40px;">
                         <img src="../images/digilight-text-logo.png" alt="Digilight" style="height: 28px;">
-                    </section>
-                    <p style="margin-bottom: 16px; line-height: 1.7; max-width: 350px;">Digilight India is a leading <strong>AI-powered digital marketing agency</strong> specializing in <strong>SEO services</strong>, <strong>social media marketing</strong>, <strong>PPC advertising</strong>, and <strong>content marketing</strong>.</p>
+                    </div>
+                    <p style="margin-bottom: 16px; line-height: 1.7; text-align: justify; max-width: 350px;">Digilight India is a leading <strong>AI-powered digital marketing agency</strong> specializing in <strong>SEO services</strong>, <strong>social media marketing</strong>, <strong>PPC advertising</strong>, and <strong>content marketing</strong>. We help businesses achieve <strong>higher search rankings</strong>, drive <strong>organic traffic</strong>, and maximize <strong>ROI</strong>.</p>
+                    <p style="margin-bottom: 20px; line-height: 1.7; text-align: justify; max-width: 350px;">From <strong>local SEO</strong> to enterprise solutions, we deliver results that boost <strong>brand visibility</strong> and generate qualified <strong>leads</strong>. Partner with India's trusted <strong>digital marketing experts</strong>!</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/digilightindia/" target="_blank" class="social-link">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -351,8 +352,16 @@ function getPostTemplate(data) {
                 <div class="footer-col">
                     <h3>Contact Info</h3>
                     <p><strong>Address:</strong> Meerut, U.P., India 250001</p>
-                    <p><strong>Phone:</strong> <a href="tel:+919548838588" style="color: #ff6a00; font-weight: 600; text-decoration: none;">+91-9548838588</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:digilightcare@gmail.com" style="color: #ff6a00; font-weight: 600; text-decoration: none;">digilightcare@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+919548838588" style="color: #ff6a00; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">+91-9548838588</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:digilightcare@gmail.com" style="color: #ff6a00; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">digilightcare@gmail.com</a></p>
+                    <p>Location: India</p>
+                    <div style="margin-top: 24px;">
+                        <h4 style="font-size: 18px; margin-bottom: 12px; color: var(--white); font-weight: 600;">Subscribe to Newsletter</h4>
+                        <form action="https://dashboard.mailerlite.com/forms/1349402/147383048198948452/share" method="get" target="_blank" style="display: flex; gap: 8px; flex-direction: column;" onsubmit="gtag('event', 'subscribe', { event_category: 'Engagement', event_label: 'Newsletter Signup' }); console.log('GA4: Newsletter subscription tracked');">
+                            <input type="email" name="email" placeholder="Enter your email" required style="padding: 12px 16px; border-radius: 6px; border: none; font-size: 14px; font-family: 'Raleway', Arial, sans-serif;">
+                            <button type="submit" style="padding: 12px 24px; background: #ff6a00; color: white; border: none; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Raleway', Arial, sans-serif; transition: all 0.3s ease;">Subscribe</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -361,7 +370,7 @@ function getPostTemplate(data) {
         </div>
     </footer>
 
-    <a href="https://wa.me/919548838588?text=Hi%20Digilight%20India,%20I%20want%20digital%20marketing%20services" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/919548838588?text=Hi%20Digilight%20India,%20I%20want%20digital%20marketing%20services" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp" onclick="gtag('event', 'whatsapp_click', { event_category: 'Engagement', event_label: 'WhatsApp Click' }); console.log('GA4: WhatsApp click tracked');">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
             <path d="M16 0C7.164 0 0 7.164 0 16c0 2.825.738 5.48 2.032 7.776L0 32l8.448-2.016C10.656 31.232 13.248 32 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.344c-2.528 0-4.896-.704-6.912-1.92l-.496-.288-5.12 1.216 1.248-4.992-.32-.512C2.72 20.768 2.016 18.448 2.016 16c0-7.728 6.272-14 14-14s14 6.272 14 14-6.272 13.344-14 13.344zm7.68-10.496c-.416-.208-2.464-1.216-2.848-1.36-.384-.128-.656-.192-.944.208-.272.416-1.088 1.36-1.328 1.632-.24.288-.496.32-.912.112-.416-.208-1.76-.64-3.344-2.048-1.232-1.088-2.064-2.432-2.304-2.848-.24-.416-.016-.64.176-.848.192-.192.416-.496.624-.752.208-.24.272-.416.416-.688.128-.288.064-.528-.032-.752-.096-.208-.944-2.272-1.296-3.104-.336-.8-.688-.688-.944-.688-.24-.016-.528-.016-.816-.016s-.752.112-1.136.528c-.4.416-1.504 1.472-1.504 3.584s1.536 4.16 1.76 4.448c.208.272 3.104 4.736 7.52 6.64 1.056.448 1.872.72 2.512.928.1056.32 2.016.192 2.8.112.848-.128 2.464-.992 2.816-1.968.352-.96.352-1.792.24-1.968-.096-.192-.384-.304-.8-.512z"/>
         </svg>
