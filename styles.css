@@ -223,11 +223,11 @@
     margin-bottom: 12px !important;
     animation: titleReveal 1.5s ease-out 0.3s both !important;
     text-shadow: 
-        0 0 40px rgba(255, 106, 0, 0.5),
+        0 0 40px rgba(59, 130, 246, 0.5),
         0 0 80px rgba(59, 130, 246, 0.3),
         0 10px 40px rgba(0, 0, 0, 0.8) !important;
     letter-spacing: -0.2px !important;
-    color: #ffffff !important;
+    color: #3b82f6 !important;
     position: relative !important;
     height: 165px !important;
     display: flex !important;
@@ -261,7 +261,7 @@
     height: 55px !important;
     line-height: 1.1 !important;
     overflow: hidden !important;
-    background: linear-gradient(135deg, #ff6a00 0%, #fb923c 25%, #fbbf24 50%, #3b82f6 75%, #60a5fa 100%) !important;
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 25%, #2563eb 50%, #1d4ed8 75%, #1e40af 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
@@ -303,13 +303,13 @@
 .hero-description {
     font-size: 18px !important;
     line-height: 1.4 !important;
-    color: rgba(255, 255, 255, 0.95) !important;
+    color: #000000 !important;
     margin-bottom: 18px !important;
     max-width: 500px !important;
     animation: descriptionFade 1.5s ease-out 0.5s both !important;
     font-weight: 400 !important;
     letter-spacing: 0.2px !important;
-    text-shadow: 0 2px 25px rgba(0, 0, 0, 0.9) !important;
+    text-shadow: 0 2px 25px rgba(255, 255, 255, 0.8) !important;
     height: 75px !important;
     display: flex !important;
     flex-direction: column !important;
@@ -1136,9 +1136,10 @@
         flex-direction: column !important;
         justify-content: center !important;
         text-shadow: 
-            0 0 30px rgba(255, 106, 0, 0.5),
+            0 0 30px rgba(59, 130, 246, 0.5),
             0 0 60px rgba(59, 130, 246, 0.3),
             0 5px 30px rgba(0, 0, 0, 0.8) !important;
+        color: #3b82f6 !important;
         -webkit-font-smoothing: antialiased !important;
         -moz-osx-font-smoothing: grayscale !important;
         text-rendering: optimizeLegibility !important;
@@ -1164,7 +1165,7 @@
         height: 35px !important;
         line-height: 1.1 !important;
         overflow: hidden !important;
-        background: linear-gradient(135deg, #ff6a00 0%, #fb923c 25%, #fbbf24 50%, #3b82f6 75%, #60a5fa 100%) !important;
+        background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 25%, #2563eb 50%, #1d4ed8 75%, #1e40af 100%) !important;
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
         background-clip: text !important;
@@ -1189,8 +1190,8 @@
         flex-direction: column !important;
         justify-content: center !important;
         font-weight: 400 !important;
-        color: rgba(255, 255, 255, 0.95) !important;
-        text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8) !important;
+        color: #000000 !important;
+        text-shadow: 0 2px 20px rgba(255, 255, 255, 0.8) !important;
     }
     
     #rotating-description {
@@ -1895,21 +1896,29 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', Arial, sans-serif;
     font-weight: 700;
     line-height: 1.3;
-    color: var(--text-dark);
+    color: #3b82f6 !important;
 }
 
-h1 { font-size: 56px; font-weight: 700; font-family: Arial, sans-serif; }
-h2 { font-size: 42px; }
-h3 { font-size: 28px; }
-h4 { font-size: 22px; }
-h5 { font-size: 18px; }
-h6 { font-size: 16px; }
+h1 { 
+    font-size: 56px; 
+    font-weight: 700; 
+    font-family: Arial, sans-serif; 
+    color: #3b82f6 !important;
+}
+h2 { 
+    font-size: 42px; 
+    color: #3b82f6 !important;
+}
+h3 { font-size: 28px; color: #3b82f6 !important; }
+h4 { font-size: 22px; color: #3b82f6 !important; }
+h5 { font-size: 18px; color: #3b82f6 !important; }
+h6 { font-size: 16px; color: #3b82f6 !important; }
 
 p {
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 16px;
-    color: #000000;
+    color: #000000 !important;
     font-weight: 400;
     font-family: 'Raleway', Arial, sans-serif;
 }
