@@ -255,16 +255,181 @@
     </header>
 
     <section class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles"></div>
+        </div>
+        
         <div class="container">
-            <h1>Transform Your Business with <span style="color: #ff6a00;">AI-Powered Digital Marketing</span></h1>
-            <p>Unlock higher traffic, qualified leads, and sales with our data-driven marketing solutions designed to elevate your brand.</p>
-            <div class="hero-buttons">
-                <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0MAN-Qo-o_ih8OWrqqnvNSoVvgDpAx4GKzoHyP7tnAcw6u6UmD5sMdFbXT_BEerbnDi0QOFqAW" target="_blank" class="btn btn-primary">Book Free Strategy Call</a>
-                <a href="https://dashboard.mailerlite.com/forms/1349402/147383048198948452/share" target="_blank" class="btn btn-secondary" style="background: transparent; color: white; border: 2px solid white; padding: 15px 30px; font-size: 16px; font-weight: 600; text-decoration: none; display: inline-block; border-radius: 50px; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.background='white'; this.style.color='#0056d2'; this.style.borderColor='#0056d2';" onmouseout="this.style.background='transparent'; this.style.color='white'; this.style.borderColor='white';" onclick="this.style.background='white'; this.style.color='#0056d2'; this.style.borderColor='#0056d2';">Download AI Growth Guide</a>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span class="badge-text" id="rotating-text">AI-Powered Marketing</span>
+                </div>
+                
+                <div class="hero-middle-content">
+                    <h1 class="hero-title">
+                        <span id="rotating-title">Transform Your Business with</span>
+                        <span class="gradient-text">Data-Driven Marketing</span>
+                    </h1>
+                    
+                    <p class="hero-description" id="rotating-description">
+                        Unlock explosive growth with cutting-edge AI technology and proven digital strategies. 
+                        We help businesses increase traffic, generate leads, and boost revenue by 300%+.
+                    </p>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0MAN-Qo-o_ih8OWrqqnvNSoVvgDpAx4GKzoHyP7tnAcw6u6UmD5sMdFbXT_BEerbnDi0QOFqAW" target="_blank" class="btn btn-primary">
+                        <span>Start Free Trial</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="https://dashboard.mailerlite.com/forms/1349402/147383048198948452/share" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        <span>Watch Demo</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-right-container">
+                <div class="hero-stats-right">
+                    <div class="orbit-path"></div>
+                    <div class="orbit-path"></div>
+                    <div class="orbit-path"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">300%</div>
+                        <div class="stat-label">Average ROI</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                </div>
+                
+                <div class="graphs-container">
+                    <div class="graph-item">
+                        <div class="mini-chart">
+                            <div class="chart-bar" style="height: 40%"></div>
+                            <div class="chart-bar" style="height: 60%"></div>
+                            <div class="chart-bar" style="height: 80%"></div>
+                            <div class="chart-bar" style="height: 100%"></div>
+                            <div class="chart-bar" style="height: 90%"></div>
+                        </div>
+                        <span class="graph-label">Growth</span>
+                    </div>
+                    <div class="graph-item">
+                        <div class="mini-pie-chart">
+                            <div class="pie-segment" style="--segment: 1"></div>
+                            <div class="pie-segment" style="--segment: 2"></div>
+                            <div class="pie-segment" style="--segment: 3"></div>
+                        </div>
+                        <span class="graph-label">ROI</span>
+                    </div>
+                    <div class="graph-item">
+                        <div class="mini-line-chart">
+                            <svg width="80" height="50" viewBox="0 0 80 50">
+                                <polyline points="8,40 18,28 28,35 38,18 48,25 58,12 68,20" 
+                                          fill="none" 
+                                          stroke="url(#gradient)" 
+                                          stroke-width="3"/>
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#ff6a00;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span class="graph-label">Traffic</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Revolutionary Hero JavaScript -->
+    <script>
+        // Interactive Cursor Effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const hero = document.querySelector('.hero');
+            let mouseX = 50;
+            let mouseY = 50;
+            
+            hero.addEventListener('mousemove', function(e) {
+                const rect = hero.getBoundingClientRect();
+                mouseX = ((e.clientX - rect.left) / rect.width) * 100;
+                mouseY = ((e.clientY - rect.top) / rect.height) * 100;
+                
+                hero.style.setProperty('--mouse-x', mouseX + '%');
+                hero.style.setProperty('--mouse-y', mouseY + '%');
+            });
+            
+            hero.addEventListener('mouseleave', function() {
+                mouseX = 50;
+                mouseY = 50;
+                hero.style.setProperty('--mouse-x', '50%');
+                hero.style.setProperty('--mouse-y', '50%');
+            });
+        });
+
+        // Auto-Rotating Content System
+        const contentSets = [
+            {
+                badge: 'AI-Powered Marketing',
+                title: 'Transform Your Business with',
+                description: 'Unlock explosive growth with cutting-edge AI technology and proven digital strategies. We help businesses increase traffic, generate leads, and boost revenue by 300%+.'
+            },
+            {
+                badge: 'Growth Acceleration',
+                title: 'Scale Your Revenue with',
+                description: 'Experience rapid business growth with our data-driven approach. We deliver measurable results that transform your marketing ROI and drive sustainable success.'
+            },
+            {
+                badge: 'Digital Excellence',
+                title: 'Dominate Your Market with',
+                description: 'Lead your industry with innovative digital strategies and advanced analytics. Our solutions give you the competitive edge needed to win in today\'s market.'
+            },
+            {
+                badge: 'Revenue Optimization',
+                title: 'Maximize Your Profits with',
+                description: 'Optimize every marketing dollar with intelligent automation and precision targeting. We help you achieve maximum ROI and sustainable growth.'
+            }
+        ];
+        
+        let contentIndex = 0;
+        const badgeElement = document.getElementById('rotating-text');
+        const titleElement = document.getElementById('rotating-title');
+        const descriptionElement = document.getElementById('rotating-description');
+        
+        function rotateContent() {
+            contentIndex = (contentIndex + 1) % contentSets.length;
+            const currentContent = contentSets[contentIndex];
+            
+            // Fade out all elements
+            badgeElement.style.opacity = '0';
+            titleElement.style.opacity = '0';
+            descriptionElement.style.opacity = '0';
+            
+            setTimeout(() => {
+                // Update content
+                badgeElement.textContent = currentContent.badge;
+                titleElement.textContent = currentContent.title;
+                descriptionElement.textContent = currentContent.description;
+                
+                // Fade in all elements
+                badgeElement.style.opacity = '1';
+                titleElement.style.opacity = '1';
+                descriptionElement.style.opacity = '1';
+            }, 500);
+        }
+        
+        // Start rotation after 5 seconds, then every 5 seconds
+        setInterval(rotateContent, 5000);
+    </script>
 
     <!-- Orbital Counters Section -->
     <section class="stats-section" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 80px 0; color: white; position: relative; overflow: hidden;">
