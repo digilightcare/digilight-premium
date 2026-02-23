@@ -1387,17 +1387,33 @@
         z-index: 10 !important;
     }
     
-    /* Apply orbital animations to mobile satellites */
+    /* Apply orbital animations to mobile satellites - SIMPLIFIED */
     .stat-item:nth-child(4) {
-        animation: orbit1 12s linear infinite !important;
+        animation: orbit1 10s linear infinite !important;
     }
     
     .stat-item:nth-child(5) {
-        animation: orbit2 18s linear infinite !important;
+        animation: orbit2 15s linear infinite !important;
     }
     
     .stat-item:nth-child(6) {
-        animation: orbit3 24s linear infinite !important;
+        animation: orbit3 20s linear infinite !important;
+    }
+    
+    /* SIMPLIFIED Mobile Orbital Adjustments - Working Center Rotation */
+    @keyframes orbit1 {
+        0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+    }
+    
+    @keyframes orbit2 {
+        0% { transform: rotate(120deg) translateX(140px) rotate(-120deg); }
+        100% { transform: rotate(480deg) translateX(140px) rotate(-480deg); }
+    }
+    
+    @keyframes orbit3 {
+        0% { transform: rotate(240deg) translateX(180px) rotate(-240deg); }
+        100% { transform: rotate(600deg) translateX(180px) rotate(-600deg); }
     }
     
     .stat-number {
@@ -1417,22 +1433,6 @@
         text-shadow: 1px 1px 2px rgba(255, 255, 255, 1) !important;
         line-height: 1 !important;
         text-transform: uppercase !important;
-    }
-    
-    /* Mobile Orbital Adjustments - MUCH LARGER Radii */
-    @keyframes orbit1 {
-        0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
-    }
-    
-    @keyframes orbit2 {
-        0% { transform: rotate(120deg) translateX(160px) rotate(-120deg); }
-        100% { transform: rotate(480deg) translateX(160px) rotate(-480deg); }
-    }
-    
-    @keyframes orbit3 {
-        0% { transform: rotate(240deg) translateX(200px) rotate(-240deg); }
-        100% { transform: rotate(600deg) translateX(200px) rotate(-600deg); }
     }
     
     /* Mobile Much Larger Graphs - Bottom Aligned */
@@ -1781,17 +1781,33 @@
         z-index: 10 !important;
     }
     
-    /* Apply orbital animations to 480px satellites */
+    /* Apply orbital animations to 480px satellites - SIMPLIFIED */
     .stat-item:nth-child(4) {
-        animation: orbit1 12s linear infinite !important;
+        animation: orbit1 10s linear infinite !important;
     }
     
     .stat-item:nth-child(5) {
-        animation: orbit2 18s linear infinite !important;
+        animation: orbit2 15s linear infinite !important;
     }
     
     .stat-item:nth-child(6) {
-        animation: orbit3 24s linear infinite !important;
+        animation: orbit3 20s linear infinite !important;
+    }
+    
+    /* SIMPLIFIED orbital radius for 480px */
+    @keyframes orbit1 {
+        0% { transform: rotate(0deg) translateX(70px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(70px) rotate(-360deg); }
+    }
+    
+    @keyframes orbit2 {
+        0% { transform: rotate(120deg) translateX(100px) rotate(-120deg); }
+        100% { transform: rotate(480deg) translateX(100px) rotate(-480deg); }
+    }
+    
+    @keyframes orbit3 {
+        0% { transform: rotate(240deg) translateX(130px) rotate(-240deg); }
+        100% { transform: rotate(600deg) translateX(130px) rotate(-600deg); }
     }
     
     .stat-number {
