@@ -16,16 +16,6 @@ User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
-# Block unnecessary crawlers
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
 # Allow important resources
 Allow: /css/
 Allow: /js/
@@ -53,27 +43,7 @@ Disallow: /blog/blog-template.html
 Disallow: /blog/posts/*.md
 Disallow: /blog/posts.json
 
-# Sitemap
-Sitemap: https://digilightindia.netlify.app/sitemap.xml
-
-# Crawl-delay for general bots
-Crawl-delay: 1
-
-# Google Bot - Full Access
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-# Google Image Bot
-User-agent: Googlebot-Image
-Allow: /
-
-# Bing Bot - Full Access
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 0
-
-# Allow good SEO bots
+# Allow good SEO bots with crawl delays
 User-agent: AhrefsBot
 Allow: /
 Crawl-delay: 2
@@ -95,3 +65,7 @@ Disallow: /
 
 User-agent: SiteBot
 Disallow: /
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
