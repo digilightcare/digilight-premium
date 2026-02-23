@@ -326,6 +326,7 @@
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
+    color: #ffffff !important;
     animation: titleReveal 1.5s ease-out 0.3s both !important;
     text-shadow: 
         0 0 40px rgba(255, 106, 0, 0.5),
@@ -346,6 +347,7 @@
     overflow: hidden !important;
     margin-bottom: 0px !important;
     flex-shrink: 0 !important;
+    color: #ffffff !important;
 }
 
 #rotating-title {
@@ -354,6 +356,7 @@
     line-height: 1.1 !important;
     overflow: hidden !important;
     flex-shrink: 0 !important;
+    color: #ffffff !important;
 }
 
 .gradient-text {
