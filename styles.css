@@ -346,6 +346,10 @@
     color: #ffffff !important;
 }
 
+.hero-title span.gradient-text {
+    color: #ff6a00 !important;
+}
+
 #rotating-title {
     display: block !important;
     height: 63px !important;
@@ -1209,6 +1213,10 @@
         overflow: hidden !important;
         margin-bottom: 0px !important;
         flex-shrink: 0 !important;
+    }
+
+    .hero-title span.gradient-text {
+        color: #ff6a00 !important;
     }
     
     #rotating-title {
