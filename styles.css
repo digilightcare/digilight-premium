@@ -352,7 +352,7 @@
     line-height: 1.1 !important;
     overflow: hidden !important;
     flex-shrink: 0 !important;
-    color: #ffffff !important;
+    color: #ff6a00 !important;
 }
 
 .gradient-text {
@@ -1217,7 +1217,7 @@
         line-height: 1.1 !important;
         overflow: hidden !important;
         flex-shrink: 0 !important;
-        color: #ffffff !important;
+        color: #ff6a00 !important;
     }
     
     .gradient-text {
