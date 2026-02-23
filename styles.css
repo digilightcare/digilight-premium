@@ -1310,10 +1310,9 @@
         margin-top: 20px !important;
     }
     
-    /* Mobile Animation Performance Optimizations */
+    /* Mobile Animation Performance Optimizations - REMOVED CONFLICTS */
     .hero-stats-right,
-    .orbit-path,
-    .stat-item {
+    .orbit-path {
         will-change: transform !important;
         -webkit-transform: translateZ(0) !important;
         transform: translateZ(0) !important;
@@ -1321,6 +1320,16 @@
         backface-visibility: hidden !important;
         -webkit-perspective: 1000px !important;
         perspective: 1000px !important;
+    }
+    
+    /* DO NOT apply to stat-item - it blocks orbital animations */
+    .stat-item {
+        will-change: transform !important;
+        -webkit-backface-visibility: hidden !important;
+        backface-visibility: hidden !important;
+        -webkit-perspective: 1000px !important;
+        perspective: 1000px !important;
+        /* REMOVED transform: translateZ(0) - this blocks animations */
     }
     
     /* Smooth Animation Transitions */
@@ -1511,15 +1520,14 @@
         margin-top: 25px !important;
     }
     
-    /* Performance optimizations */
+    /* Performance optimizations - REMOVED CONFLICTS */
     .hero * {
-        -webkit-transform: translateZ(0) !important;
-        transform: translateZ(0) !important;
         -webkit-backface-visibility: hidden !important;
         backface-visibility: hidden !important;
         -webkit-perspective: 1000px !important;
         perspective: 1000px !important;
         scroll-behavior: smooth !important;
+        /* REMOVED transform: translateZ(0) - this blocks animations */
     }
     
     /* Optimize images and animations for mobile */
@@ -1694,13 +1702,12 @@
         scroll-behavior: smooth !important;
     }
     
-    /* Performance optimizations for small mobile */
+    /* Performance optimizations for small mobile - REMOVED CONFLICTS */
     .hero * {
-        -webkit-transform: translateZ(0) !important;
-        transform: translateZ(0) !important;
         -webkit-backface-visibility: hidden !important;
         backface-visibility: hidden !important;
         scroll-behavior: smooth !important;
+        /* REMOVED transform: translateZ(0) - this blocks animations */
     }
     
     /* Reduce animation complexity for better performance */
@@ -2528,17 +2535,17 @@ header nav .container {
         right: 0 !important;
     }
     
-    /* Fix home page hero performance */
+    /* Fix home page hero performance - REMOVED CONFLICTS */
     body#index .hero {
         scroll-behavior: smooth !important;
         overflow-x: hidden !important;
-        transform: translateZ(0) !important;
         will-change: auto !important;
+        /* REMOVED transform: translateZ(0) - this blocks animations */
     }
     
     body#index .hero * {
-        transform: translateZ(0) !important;
         will-change: auto !important;
+        /* REMOVED transform: translateZ(0) - this blocks animations */
     }
 }
 
