@@ -1341,61 +1341,64 @@
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important;
     }
     
-    /* Mobile Larger Orbital Formation - Much Bigger */
+    /* Mobile Larger Orbital Formation - MUCH BIGGER */
     .hero-stats-right {
-        width: 350px !important;
-        height: 350px !important;
+        width: 400px !important;
+        height: 400px !important;
         margin: 0 auto !important;
         flex: none !important;
     }
     
     .hero-stats-right::before {
-        width: 50px !important;
-        height: 50px !important;
+        width: 60px !important;
+        height: 60px !important;
     }
     
     .orbit-path:nth-child(1) {
-        width: 160px !important;
-        height: 160px !important;
+        width: 200px !important;
+        height: 200px !important;
     }
     
     .orbit-path:nth-child(2) {
-        width: 220px !important;
-        height: 220px !important;
-    }
-    
-    .orbit-path:nth-child(3) {
         width: 280px !important;
         height: 280px !important;
     }
     
-    /* Ensure all 3 satellites are visible on mobile */
+    .orbit-path:nth-child(3) {
+        width: 360px !important;
+        height: 360px !important;
+    }
+    
+    /* Ensure all 3 satellites are VISIBLE on mobile */
     .stat-item {
-        width: 95px !important;
-        height: 95px !important;
-        font-size: 13px !important;
+        width: 120px !important;
+        height: 120px !important;
+        font-size: 14px !important;
         opacity: 1 !important;
         visibility: visible !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
-        background: rgba(255, 255, 255, 0.9) !important;
-        border: 2px solid rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        border: 3px solid #ff6a00 !important;
+        border-radius: 50% !important;
+        position: relative !important;
+        z-index: 10 !important;
     }
     
     .stat-number {
-        font-size: 22px !important;
-        margin-bottom: 3px !important;
-        font-weight: 800 !important;
+        font-size: 28px !important;
+        margin-bottom: 4px !important;
+        font-weight: 900 !important;
         color: #000000 !important;
-        text-shadow: 1px 1px 0px #ffffff, 2px 2px 0px #ffffff !important;
+        text-shadow: 2px 2px 0px #ffffff, 4px 4px 0px #ffffff !important;
         line-height: 1 !important;
     }
     
     .stat-label {
-        font-size: 11px !important;
-        font-weight: 700 !important;
+        font-size: 12px !important;
+        font-weight: 800 !important;
         letter-spacing: 0.5px !important;
         color: #000000 !important;
         text-shadow: 1px 1px 2px rgba(255, 255, 255, 1) !important;
@@ -1403,20 +1406,20 @@
         text-transform: uppercase !important;
     }
     
-    /* Mobile Orbital Adjustments - Much Larger Radii */
+    /* Mobile Orbital Adjustments - MUCH LARGER Radii */
     @keyframes orbit1 {
-        0% { transform: rotate(0deg) translateX(90px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(90px) rotate(-360deg); }
+        0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
     }
     
     @keyframes orbit2 {
-        0% { transform: rotate(120deg) translateX(130px) rotate(-120deg); }
-        100% { transform: rotate(480deg) translateX(130px) rotate(-480deg); }
+        0% { transform: rotate(120deg) translateX(160px) rotate(-120deg); }
+        100% { transform: rotate(480deg) translateX(160px) rotate(-480deg); }
     }
     
     @keyframes orbit3 {
-        0% { transform: rotate(240deg) translateX(170px) rotate(-240deg); }
-        100% { transform: rotate(600deg) translateX(170px) rotate(-600deg); }
+        0% { transform: rotate(240deg) translateX(200px) rotate(-240deg); }
+        100% { transform: rotate(600deg) translateX(200px) rotate(-600deg); }
     }
     
     /* Mobile Much Larger Graphs - Bottom Aligned */
@@ -1751,46 +1754,49 @@
     }
     
     .stat-item {
-        width: 70px !important;
-        height: 70px !important;
+        width: 90px !important;
+        height: 90px !important;
         padding: 8px !important;
-        font-size: 11px !important;
+        font-size: 12px !important;
         opacity: 1 !important;
         visibility: visible !important;
         display: flex !important;
-        background: rgba(255, 255, 255, 0.9) !important;
-        border: 2px solid rgba(0, 0, 0, 0.1) !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        border: 3px solid #ff6a00 !important;
+        border-radius: 50% !important;
+        position: relative !important;
+        z-index: 10 !important;
     }
     
     .stat-number {
-        font-size: 18px !important;
+        font-size: 20px !important;
         margin-bottom: 2px !important;
-        font-weight: 800 !important;
+        font-weight: 900 !important;
         color: #000000 !important;
         text-shadow: 1px 1px 0px #ffffff !important;
     }
     
     .stat-label {
-        font-size: 9px !important;
-        font-weight: 700 !important;
+        font-size: 10px !important;
+        font-weight: 800 !important;
         color: #000000 !important;
         text-shadow: 1px 1px 2px rgba(255, 255, 255, 1) !important;
     }
     
-    /* Update orbital radius for 480px */
+    /* Update orbital radius for 480px - MUCH LARGER */
     @keyframes orbit1 {
-        0% { transform: rotate(0deg) translateX(70px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(70px) rotate(-360deg); }
+        0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
     }
     
     @keyframes orbit2 {
-        0% { transform: rotate(120deg) translateX(100px) rotate(-120deg); }
-        100% { transform: rotate(480deg) translateX(100px) rotate(-480deg); }
+        0% { transform: rotate(120deg) translateX(110px) rotate(-120deg); }
+        100% { transform: rotate(480deg) translateX(110px) rotate(-480deg); }
     }
     
     @keyframes orbit3 {
-        0% { transform: rotate(240deg) translateX(130px) rotate(-240deg); }
-        100% { transform: rotate(600deg) translateX(130px) rotate(-600deg); }
+        0% { transform: rotate(240deg) translateX(140px) rotate(-240deg); }
+        100% { transform: rotate(600deg) translateX(140px) rotate(-600deg); }
     }
     
     /* Fix buttons for small mobile */
