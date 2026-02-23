@@ -315,7 +315,7 @@
     filter: drop-shadow(0 0 10px rgba(255, 106, 0, 0.8)) !important;
 }
 
-/* Revolutionary Title - EXACTLY 3 LINES ON ALL SCREENS */
+/* Revolutionary Title - SIMPLE WHITE AND ORANGE */
 .hero-title {
     font-size: 48px !important;
     font-weight: 900 !important;
@@ -328,14 +328,10 @@
     justify-content: center !important;
     color: #ffffff !important;
     animation: titleReveal 1.5s ease-out 0.3s both !important;
-    text-shadow: 
-        0 0 40px rgba(255, 106, 0, 0.5),
-        0 0 80px rgba(59, 130, 246, 0.3),
-        0 10px 40px rgba(0, 0, 0, 0.8) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
     text-rendering: optimizeLegibility !important;
-    filter: contrast(1.1) brightness(1.05) !important;
     overflow: hidden !important;
     flex-shrink: 0 !important;
 }
@@ -364,15 +360,8 @@
     height: 63px !important;
     line-height: 1.1 !important;
     overflow: hidden !important;
-    background: linear-gradient(135deg, #ff6a00 0%, #fb923c 25%, #fbbf24 50%, #3b82f6 75%, #60a5fa 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    filter: 
-        drop-shadow(0 2px 4px rgba(255, 106, 0, 0.6))
-        drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)) !important;
-    background-size: 300% 300% !important;
-    animation: morphGradient 3s ease-in-out infinite !important;
+    color: #ff6a00 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
     position: relative !important;
     flex-shrink: 0 !important;
 }
@@ -1236,18 +1225,8 @@
         line-height: 1.1 !important;
         overflow: hidden !important;
         flex-shrink: 0 !important;
-        min-height: 35px !important;
-        line-height: 1.2 !important;
-        overflow: visible !important;
-        background: linear-gradient(135deg, #ff6a00 0%, #fb923c 25%, #fbbf24 50%, #3b82f6 75%, #60a5fa 100%) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        background-clip: text !important;
-        filter: 
-            drop-shadow(0 2px 4px rgba(255, 106, 0, 0.6))
-            drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)) !important;
-        background-size: 300% 300% !important;
-        animation: morphGradient 3s ease-in-out infinite !important;
+        color: #ff6a00 !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
         position: relative !important;
     }
     
