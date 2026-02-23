@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test - Digilight</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .debug-section {
+            border: 2px solid red;
+            margin: 20px 0;
+            padding: 20px;
+            background: yellow;
+        }
+        .debug-section h2 {
+            color: red;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <h1 style="text-align: center; color: blue; margin-bottom: 30px;">DEBUG TEST - Checking Website Structure</h1>
+        
+        <div class="debug-section">
+            <h2>CSS Variables Test</h2>
+            <p>If you see proper colors below, CSS is working:</p>
+            <div style="background: var(--primary-blue); color: white; padding: 10px; margin: 5px 0;">Primary Blue</div>
+            <div style="background: var(--accent-orange); color: white; padding: 10px; margin: 5px 0;">Accent Orange</div>
+            <div style="background: var(--bg-light); padding: 10px; margin: 5px 0;">BG Light</div>
+        </div>
+        
+        <div class="debug-section">
+            <h2>Service Card Test</h2>
+            <div class="services-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Test Service</h3>
+                    <p>This is a test service card</p>
+                    <button class="btn btn-primary">Test Button</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Test Service 2</h3>
+                    <p>This is another test service card</p>
+                    <button class="btn btn-primary">Test Button 2</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="debug-section">
+            <h2>Testimonial Card Test</h2>
+            <div class="testimonials-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                <div class="testimonial-card">
+                    <div style="color: var(--accent-orange); font-size: 18px;">★★★★★</div>
+                    <p class="testimonial-text">This is a test testimonial</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">T</div>
+                        <div class="author-info">
+                            <h4>Test User</h4>
+                            <p>Test Company</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="debug-section">
+            <h2>Layout Issues Found:</h2>
+            <ul id="issues-list">
+                <li>Checking for CSS conflicts...</li>
+                <li>Checking for HTML structure issues...</li>
+                <li>Checking for JavaScript errors...</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // Check for common issues
+        document.addEventListener('DOMContentLoaded', function() {
+            const issues = [];
+            
+            // Check CSS variables
+            const primaryBlue = getComputedStyle(document.documentElement).getPropertyValue('--primary-blue');
+            if (!primaryBlue || primaryBlue.trim() === '') {
+                issues.push('CSS variables not loaded properly');
+            }
+            
+            // Check for service cards
+            const serviceCards = document.querySelectorAll('.service-card');
+            if (serviceCards.length === 0) {
+                issues.push('Service cards not found');
+            }
+            
+            // Check for grid layout
+            const grids = document.querySelectorAll('.services-grid');
+            grids.forEach(grid => {
+                const style = getComputedStyle(grid);
+                if (style.display !== 'grid') {
+                    issues.push('Grid layout not working');
+                }
+            });
+            
+            // Update issues list
+            const issuesList = document.getElementById('issues-list');
+            if (issues.length === 0) {
+                issuesList.innerHTML = '<li style="color: green;">✅ No obvious issues found in this test</li>';
+            } else {
+                issuesList.innerHTML = issues.map(issue => `<li style="color: red;">❌ ${issue}</li>`).join('');
+            }
+        });
+    </script>
+</body>
+</html>
