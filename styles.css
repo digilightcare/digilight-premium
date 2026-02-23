@@ -315,54 +315,52 @@
     filter: drop-shadow(0 0 10px rgba(255, 106, 0, 0.8)) !important;
 }
 
-/* Revolutionary Title - Crystal Clear H1 Ultra Bold */
+/* Revolutionary Title - EXACTLY 3 LINES ON ALL SCREENS */
 .hero-title {
     font-size: 48px !important;
     font-weight: 900 !important;
     font-family: 'Inter', 'Helvetica Neue', 'Arial Black', sans-serif !important;
     line-height: 1.1 !important;
     margin-bottom: 12px !important;
+    height: 190px !important; /* EXACTLY 3 LINES: 48px × 1.1 × 3 ≈ 158px + padding */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
     animation: titleReveal 1.5s ease-out 0.3s both !important;
     text-shadow: 
         0 0 40px rgba(255, 106, 0, 0.5),
         0 0 80px rgba(59, 130, 246, 0.3),
         0 10px 40px rgba(0, 0, 0, 0.8) !important;
-    letter-spacing: -0.2px !important;
-    color: #ffffff !important;
-    position: relative !important;
-    height: 180px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
     text-rendering: optimizeLegibility !important;
     filter: contrast(1.1) brightness(1.05) !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
 }
 
-/* Title Lines - 3 Lines Fixed with Reduced Gap */
 .hero-title span {
     display: block !important;
-    height: 60px !important;
+    height: 63px !important; /* EXACTLY 1 LINE: 48px × 1.1 ≈ 53px + padding */
     line-height: 1.1 !important;
     overflow: hidden !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 0px !important;
+    flex-shrink: 0 !important;
 }
 
 #rotating-title {
     display: block !important;
-    height: 60px !important;
+    height: 63px !important;
     line-height: 1.1 !important;
     overflow: hidden !important;
-    margin-bottom: 2px !important;
+    flex-shrink: 0 !important;
 }
 
 .gradient-text {
     display: block !important;
-    height: 60px !important;
+    height: 63px !important;
     line-height: 1.1 !important;
     overflow: hidden !important;
-    margin-bottom: 2px !important;
     background: linear-gradient(135deg, #ff6a00 0%, #fb923c 25%, #fbbf24 50%, #3b82f6 75%, #60a5fa 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
@@ -374,34 +372,10 @@
     background-size: 300% 300% !important;
     animation: morphGradient 3s ease-in-out infinite !important;
     position: relative !important;
+    flex-shrink: 0 !important;
 }
 
-.hero-title::before {
-    content: attr(data-text) !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    background: linear-gradient(135deg, #ff6a00, #fb923c, #3b82f6, #60a5fa) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    animation: holographic 4s ease-in-out infinite !important;
-    z-index: -1 !important;
-}
-
-.gradient-text {
-    background: linear-gradient(135deg, #ff6a00 0%, #fb923c 25%, #fbbf24 50%, #3b82f6 75%, #60a5fa 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    filter: drop-shadow(0 0 30px rgba(255, 106, 0, 0.6)) !important;
-    background-size: 300% 300% !important;
-    animation: morphGradient 3s ease-in-out infinite !important;
-    position: relative !important;
-}
-
-/* Immersive Description - 3 Lines, Bigger Text */
+/* Immersive Description - EXACTLY 3 LINES ON DESKTOP/TABLET */
 .hero-description {
     font-size: 18px !important;
     line-height: 1.4 !important;
@@ -412,12 +386,13 @@
     font-weight: 400 !important;
     letter-spacing: 0.2px !important;
     text-shadow: 0 2px 25px rgba(0, 0, 0, 0.9) !important;
-    height: 84px !important;
+    height: 84px !important; /* EXACTLY 3 LINES: 18px × 1.4 × 3 ≈ 76px + padding */
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     padding-bottom: 3px !important;
     overflow: hidden !important;
+    flex-shrink: 0 !important;
 }
 
 #rotating-description {
@@ -425,6 +400,7 @@
     height: 84px !important;
     line-height: 1.4 !important;
     overflow: hidden !important;
+    flex-shrink: 0 !important;
 }
 
 /* Revolutionary Stats - Much Larger Orbital Formation (70% Upper) */
@@ -1217,24 +1193,19 @@
         gap: 8px !important;
     }
     
+    /* Mobile 3-Line Title Fix - EXACTLY 3 LINES */
     .hero-title {
         font-size: 28px !important;
         font-weight: 900 !important;
         font-family: 'Inter', 'Helvetica Neue', 'Arial Black', sans-serif !important;
-        line-height: 1.2 !important;
+        line-height: 1.1 !important;
         margin-bottom: 15px !important;
-        height: auto !important;
-        min-height: 70px !important;
-        padding-bottom: 5px !important;
-        overflow: visible !important;
+        height: 105px !important; /* EXACTLY 3 LINES: 28px × 1.1 × 3 ≈ 92px + padding */
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
-        text-shadow: 
-            0 0 30px rgba(255, 106, 0, 0.5),
-            0 0 60px rgba(59, 130, 246, 0.3),
-            0 5px 30px rgba(0, 0, 0, 0.8) !important;
-        -webkit-font-smoothing: antialiased !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
         -moz-osx-font-smoothing: grayscale !important;
         text-rendering: optimizeLegibility !important;
         filter: contrast(1.1) brightness(1.05) !important;
@@ -1242,24 +1213,27 @@
     
     .hero-title span {
         display: block !important;
-        height: auto !important;
-        min-height: 35px !important;
-        line-height: 1.2 !important;
-        overflow: visible !important;
-        margin-bottom: 5px !important;
+        height: 35px !important; /* EXACTLY 1 LINE: 28px × 1.1 ≈ 31px + padding */
+        line-height: 1.1 !important;
+        overflow: hidden !important;
+        margin-bottom: 0px !important;
+        flex-shrink: 0 !important;
     }
     
     #rotating-title {
         display: block !important;
-        height: auto !important;
-        min-height: 35px !important;
-        line-height: 1.2 !important;
-        overflow: visible !important;
+        height: 35px !important;
+        line-height: 1.1 !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
     }
     
     .gradient-text {
         display: block !important;
-        height: auto !important;
+        height: 35px !important;
+        line-height: 1.1 !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
         min-height: 35px !important;
         line-height: 1.2 !important;
         overflow: visible !important;
@@ -1276,29 +1250,29 @@
         position: relative !important;
     }
     
+    /* Mobile - 3 LINES TITLE, 5 LINES DESCRIPTION */
     .hero-description {
         font-size: 16px !important;
         line-height: 1.4 !important;
         margin-bottom: 20px !important;
         max-width: 100% !important;
-        height: auto !important;
-        min-height: 60px !important;
-        padding-bottom: 5px !important;
-        overflow: visible !important;
+        height: 140px !important; /* EXACTLY 5 LINES: 16px × 1.4 × 5 ≈ 112px + padding */
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
         font-weight: 400 !important;
         color: rgba(255, 255, 255, 0.95) !important;
         text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8) !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
     }
     
     #rotating-description {
         display: block !important;
-        height: auto !important;
-        min-height: 60px !important;
+        height: 140px !important;
         line-height: 1.4 !important;
-        overflow: visible !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
     }
     
     /* Mobile 70/30 Split Layout */
@@ -1576,26 +1550,40 @@
         max-width: 500px !important;
     }
     
+    /* Tablet 3-Line Title Fix - EXACTLY 3 LINES */
     .hero-title {
         font-size: 36px !important;
-        height: 135px !important;
+        height: 135px !important; /* EXACTLY 3 LINES: 36px × 1.1 × 3 ≈ 119px + padding */
+        line-height: 1.1 !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
     }
     
     .hero-title span,
     #rotating-title,
     .gradient-text {
-        height: 45px !important;
+        height: 45px !important; /* EXACTLY 1 LINE: 36px × 1.1 ≈ 40px + padding */
+        line-height: 1.1 !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
     }
     
+    /* Tablet - 3 LINES TITLE, 3 LINES DESCRIPTION */
     .hero-description {
         font-size: 16px !important;
-        height: 66px !important;
+        height: 84px !important; /* EXACTLY 3 LINES: 16px × 1.4 × 3 ≈ 67px + padding */
         max-width: 600px !important;
         margin: 0 auto 18px auto !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
     }
     
     #rotating-description {
-        height: 66px !important;
+        display: block !important;
+        height: 84px !important;
+        line-height: 1.4 !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
     }
     
     .hero-stats-right {
@@ -1720,37 +1708,38 @@
         display: none !important;
     }
     
+    /* 480px 3-Line Title Fix - EXACTLY 3 LINES */
     .hero-title {
         font-size: 24px !important;
-        height: auto !important;
-        min-height: 80px !important;
-        line-height: 1.2 !important;
-        margin-bottom: 15px !important;
-        overflow: visible !important;
+        height: 90px !important; /* EXACTLY 3 LINES: 24px × 1.1 × 3 ≈ 79px + padding */
+        line-height: 1.1 !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
     }
     
     .hero-title span,
     #rotating-title,
     .gradient-text {
-        height: auto !important;
-        min-height: 30px !important;
-        line-height: 1.2 !important;
-        overflow: visible !important;
+        height: 30px !important; /* EXACTLY 1 LINE: 24px × 1.1 ≈ 26px + padding */
+        line-height: 1.1 !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
     }
     
+    /* 480px Mobile - 3 LINES TITLE, 5 LINES DESCRIPTION */
     .hero-description {
         font-size: 15px !important;
-        height: auto !important;
-        min-height: 50px !important;
+        height: 125px !important; /* EXACTLY 5 LINES: 15px × 1.4 × 5 ≈ 105px + padding */
         line-height: 1.4 !important;
-        overflow: visible !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
     }
     
     #rotating-description {
-        height: auto !important;
-        min-height: 50px !important;
+        height: 125px !important;
         line-height: 1.4 !important;
-        overflow: visible !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
     }
     
     .hero-stats-right {
