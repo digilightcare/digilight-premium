@@ -1173,6 +1173,8 @@
         padding: 60px 0 40px 0 !important;
         min-height: 100vh !important;
         height: auto !important;
+        scroll-behavior: smooth !important;
+        overflow-x: hidden !important;
     }
     
     .hero::before {
@@ -1341,48 +1343,48 @@
     
     /* Mobile Larger Orbital Formation - Much Bigger */
     .hero-stats-right {
-        width: 300px !important;
-        height: 300px !important;
+        width: 320px !important;
+        height: 320px !important;
         margin: 0 auto !important;
         flex: none !important;
     }
     
     .hero-stats-right::before {
-        width: 40px !important;
-        height: 40px !important;
+        width: 45px !important;
+        height: 45px !important;
     }
     
     .orbit-path:nth-child(1) {
-        width: 120px !important;
-        height: 120px !important;
+        width: 140px !important;
+        height: 140px !important;
     }
     
     .orbit-path:nth-child(2) {
-        width: 180px !important;
-        height: 180px !important;
+        width: 200px !important;
+        height: 200px !important;
     }
     
     .orbit-path:nth-child(3) {
-        width: 240px !important;
-        height: 240px !important;
+        width: 260px !important;
+        height: 260px !important;
     }
     
+    /* Ensure all 3 satellites are visible on mobile */
     .stat-item {
-        width: 60px !important;
-        height: 60px !important;
-        padding: 8px !important;
-        background: rgba(255, 255, 255, 0.15) !important;
-        backdrop-filter: blur(10px) !important;
-        border: 2px solid rgba(255, 255, 255, 0.3) !important;
-        border-radius: 50% !important;
+        width: 85px !important;
+        height: 85px !important;
+        font-size: 12px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
         display: flex !important;
-        flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
     }
     
     .stat-number {
+        font-size: 18px !important;
+        margin-bottom: 3px !important;
         font-size: 20px !important;
         font-weight: 800 !important;
         margin-bottom: 2px !important;
@@ -1416,18 +1418,18 @@
     
     /* Mobile Orbital Adjustments - Much Larger Radii */
     @keyframes orbit1 {
-        0% { transform: rotate(0deg) translateX(70px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(70px) rotate(-360deg); }
+        0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
     }
     
     @keyframes orbit2 {
-        0% { transform: rotate(120deg) translateX(110px) rotate(-120deg); }
-        100% { transform: rotate(480deg) translateX(110px) rotate(-480deg); }
+        0% { transform: rotate(120deg) translateX(120px) rotate(-120deg); }
+        100% { transform: rotate(480deg) translateX(120px) rotate(-480deg); }
     }
     
     @keyframes orbit3 {
-        0% { transform: rotate(240deg) translateX(150px) rotate(-240deg); }
-        100% { transform: rotate(600deg) translateX(150px) rotate(-600deg); }
+        0% { transform: rotate(240deg) translateX(160px) rotate(-240deg); }
+        100% { transform: rotate(600deg) translateX(160px) rotate(-600deg); }
     }
     
     /* Mobile Much Larger Graphs - Bottom Aligned */
@@ -1475,17 +1477,45 @@
     .btn {
         width: 100% !important;
         justify-content: center !important;
-        padding: 10px 18px !important;
-        font-size: 10px !important;
+        padding: 16px 24px !important;
+        font-size: 16px !important;
+        min-height: 48px !important;
+        touch-action: manipulation !important;
     }
     
     .btn-primary {
-        padding: 12px 20px !important;
-        font-size: 11px !important;
+        padding: 16px 24px !important;
+        font-size: 16px !important;
+        min-height: 48px !important;
+        touch-action: manipulation !important;
     }
     
-    .badge-icon {
-        font-size: 9px !important;
+    /* Performance optimizations */
+    .hero * {
+        -webkit-transform: translateZ(0) !important;
+        transform: translateZ(0) !important;
+        -webkit-backface-visibility: hidden !important;
+        backface-visibility: hidden !important;
+        -webkit-perspective: 1000px !important;
+        perspective: 1000px !important;
+        scroll-behavior: smooth !important;
+    }
+    
+    /* Optimize images and animations for mobile */
+    .hero::before {
+        display: none !important;
+    }
+    
+    /* Reduce animation complexity on mobile for better performance */
+    .gradient-text {
+        animation: morphGradient 4s ease-in-out infinite !important;
+    }
+    
+    /* Ensure smooth scrolling throughout hero section */
+    .hero,
+    .hero * {
+        scroll-behavior: smooth !important;
+        -webkit-overflow-scrolling: touch !important;
     }
 }
 
@@ -1632,12 +1662,34 @@
     .hero {
         padding: 50px 0 30px 0 !important;
         min-height: 100vh !important;
+        scroll-behavior: smooth !important;
+        overflow-x: hidden !important;
     }
     
     .hero .container {
         padding: 0 20px !important;
         gap: 15px !important;
         min-height: calc(100vh - 80px) !important;
+        scroll-behavior: smooth !important;
+    }
+    
+    /* Performance optimizations for small mobile */
+    .hero * {
+        -webkit-transform: translateZ(0) !important;
+        transform: translateZ(0) !important;
+        -webkit-backface-visibility: hidden !important;
+        backface-visibility: hidden !important;
+        scroll-behavior: smooth !important;
+    }
+    
+    /* Reduce animation complexity for better performance */
+    .gradient-text {
+        animation: morphGradient 5s ease-in-out infinite !important;
+    }
+    
+    /* Disable heavy effects on mobile */
+    .hero::before {
+        display: none !important;
     }
     
     .hero-title {
@@ -1694,17 +1746,34 @@
     }
     
     .stat-item {
-        width: 50px !important;
-        height: 50px !important;
-        padding: 6px !important;
+        width: 60px !important;
+        height: 60px !important;
+        padding: 8px !important;
+        font-size: 11px !important;
     }
     
     .stat-number {
-        font-size: 16px !important;
+        font-size: 18px !important;
+        margin-bottom: 2px !important;
     }
     
     .stat-label {
         font-size: 10px !important;
+    }
+    
+    /* Fix buttons for small mobile */
+    .btn {
+        padding: 14px 20px !important;
+        font-size: 14px !important;
+        min-height: 44px !important;
+        touch-action: manipulation !important;
+    }
+    
+    .btn-primary {
+        padding: 14px 20px !important;
+        font-size: 14px !important;
+        min-height: 44px !important;
+        touch-action: manipulation !important;
     }
     
     @keyframes orbit1 {
