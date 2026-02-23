@@ -1387,6 +1387,19 @@
         z-index: 10 !important;
     }
     
+    /* Apply orbital animations to mobile satellites */
+    .stat-item:nth-child(4) {
+        animation: orbit1 12s linear infinite !important;
+    }
+    
+    .stat-item:nth-child(5) {
+        animation: orbit2 18s linear infinite !important;
+    }
+    
+    .stat-item:nth-child(6) {
+        animation: orbit3 24s linear infinite !important;
+    }
+    
     .stat-number {
         font-size: 28px !important;
         margin-bottom: 4px !important;
@@ -1766,6 +1779,19 @@
         border-radius: 50% !important;
         position: relative !important;
         z-index: 10 !important;
+    }
+    
+    /* Apply orbital animations to 480px satellites */
+    .stat-item:nth-child(4) {
+        animation: orbit1 12s linear infinite !important;
+    }
+    
+    .stat-item:nth-child(5) {
+        animation: orbit2 18s linear infinite !important;
+    }
+    
+    .stat-item:nth-child(6) {
+        animation: orbit3 24s linear infinite !important;
     }
     
     .stat-number {
