@@ -1343,93 +1343,80 @@
     
     /* Mobile Larger Orbital Formation - Much Bigger */
     .hero-stats-right {
-        width: 320px !important;
-        height: 320px !important;
+        width: 350px !important;
+        height: 350px !important;
         margin: 0 auto !important;
         flex: none !important;
     }
     
     .hero-stats-right::before {
-        width: 45px !important;
-        height: 45px !important;
+        width: 50px !important;
+        height: 50px !important;
     }
     
     .orbit-path:nth-child(1) {
-        width: 140px !important;
-        height: 140px !important;
+        width: 160px !important;
+        height: 160px !important;
     }
     
     .orbit-path:nth-child(2) {
-        width: 200px !important;
-        height: 200px !important;
+        width: 220px !important;
+        height: 220px !important;
     }
     
     .orbit-path:nth-child(3) {
-        width: 260px !important;
-        height: 260px !important;
+        width: 280px !important;
+        height: 280px !important;
     }
     
     /* Ensure all 3 satellites are visible on mobile */
     .stat-item {
-        width: 85px !important;
-        height: 85px !important;
-        font-size: 12px !important;
+        width: 95px !important;
+        height: 95px !important;
+        font-size: 13px !important;
         opacity: 1 !important;
         visibility: visible !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        border: 2px solid rgba(0, 0, 0, 0.1) !important;
     }
     
     .stat-number {
-        font-size: 18px !important;
+        font-size: 22px !important;
         margin-bottom: 3px !important;
-        font-size: 20px !important;
         font-weight: 800 !important;
-        margin-bottom: 2px !important;
         color: #000000 !important;
         text-shadow: 1px 1px 0px #ffffff, 2px 2px 0px #ffffff !important;
         line-height: 1 !important;
-    }
-    
-    /* Simple Mobile High Contrast Colors for Each Satellite */
-    .stat-item:nth-child(4) .stat-number {
-        color: #000000 !important;
-    }
-    
-    .stat-item:nth-child(5) .stat-number {
-        color: #000000 !important;
-    }
-    
-    .stat-item:nth-child(6) .stat-number {
-        color: #000000 !important;
     }
     
     .stat-label {
         font-size: 11px !important;
         font-weight: 700 !important;
         letter-spacing: 0.5px !important;
-        color: #ffffff !important;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 1) !important;
+        color: #000000 !important;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 1) !important;
         line-height: 1 !important;
         text-transform: uppercase !important;
     }
     
     /* Mobile Orbital Adjustments - Much Larger Radii */
     @keyframes orbit1 {
-        0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+        0% { transform: rotate(0deg) translateX(90px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(90px) rotate(-360deg); }
     }
     
     @keyframes orbit2 {
-        0% { transform: rotate(120deg) translateX(120px) rotate(-120deg); }
-        100% { transform: rotate(480deg) translateX(120px) rotate(-480deg); }
+        0% { transform: rotate(120deg) translateX(130px) rotate(-120deg); }
+        100% { transform: rotate(480deg) translateX(130px) rotate(-480deg); }
     }
     
     @keyframes orbit3 {
-        0% { transform: rotate(240deg) translateX(160px) rotate(-240deg); }
-        100% { transform: rotate(600deg) translateX(160px) rotate(-600deg); }
+        0% { transform: rotate(240deg) translateX(170px) rotate(-240deg); }
+        100% { transform: rotate(600deg) translateX(170px) rotate(-600deg); }
     }
     
     /* Mobile Much Larger Graphs - Bottom Aligned */
@@ -1764,19 +1751,46 @@
     }
     
     .stat-item {
-        width: 60px !important;
-        height: 60px !important;
+        width: 70px !important;
+        height: 70px !important;
         padding: 8px !important;
         font-size: 11px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: flex !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        border: 2px solid rgba(0, 0, 0, 0.1) !important;
     }
     
     .stat-number {
         font-size: 18px !important;
         margin-bottom: 2px !important;
+        font-weight: 800 !important;
+        color: #000000 !important;
+        text-shadow: 1px 1px 0px #ffffff !important;
     }
     
     .stat-label {
-        font-size: 10px !important;
+        font-size: 9px !important;
+        font-weight: 700 !important;
+        color: #000000 !important;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 1) !important;
+    }
+    
+    /* Update orbital radius for 480px */
+    @keyframes orbit1 {
+        0% { transform: rotate(0deg) translateX(70px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(70px) rotate(-360deg); }
+    }
+    
+    @keyframes orbit2 {
+        0% { transform: rotate(120deg) translateX(100px) rotate(-120deg); }
+        100% { transform: rotate(480deg) translateX(100px) rotate(-480deg); }
+    }
+    
+    @keyframes orbit3 {
+        0% { transform: rotate(240deg) translateX(130px) rotate(-240deg); }
+        100% { transform: rotate(600deg) translateX(130px) rotate(-600deg); }
     }
     
     /* Fix buttons for small mobile */
@@ -2440,6 +2454,43 @@ header nav .container {
     /* Prevent body scroll when menu is open */
     body.menu-open {
         overflow: hidden;
+    }
+    
+    /* Fix home page specific hamburger menu issues */
+    body#index .nav-links {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 80% !important;
+        max-width: 300px !important;
+        height: 100vh !important;
+        background: #ffffff !important;
+        flex-direction: column !important;
+        padding: 80px 20px 20px !important;
+        transition: all 0.3s ease !important;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1) !important;
+        z-index: 1001 !important;
+        overflow-y: auto !important;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    body#index .nav-links.active {
+        right: 0 !important;
+    }
+    
+    /* Fix home page hero performance */
+    body#index .hero {
+        scroll-behavior: smooth !important;
+        overflow-x: hidden !important;
+        transform: translateZ(0) !important;
+        will-change: auto !important;
+    }
+    
+    body#index .hero * {
+        transform: translateZ(0) !important;
+        will-change: auto !important;
     }
 }
 
