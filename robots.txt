@@ -25,9 +25,6 @@ Allow: /fonts/
 # Block admin and private areas
 Disallow: /admin/
 Disallow: /private/
-Disallow: /seo-meta-tags.html
-Disallow: /services-old.html
-Disallow: /blog-old-backup.html
 
 # Block old static blog HTML files (replaced by dynamic system)
 Disallow: /blog/ai-digital-marketing-2026.html
