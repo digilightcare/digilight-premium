@@ -119,27 +119,11 @@
     overflow: hidden !important;
     background: #000000 !important;
     background-attachment: fixed !important;
-    cursor: none !important;
+    cursor: auto !important;
     padding: 100px 0 60px 0 !important;
     box-sizing: border-box !important;
 }
 
-/* Custom Cursor */
-.hero::before {
-    content: '' !important;
-    position: fixed !important;
-    top: var(--mouse-y, 50%) !important;
-    left: var(--mouse-x, 50%) !important;
-    width: 20px !important;
-    height: 20px !important;
-    background: radial-gradient(circle, #ff6a00, #fb923c) !important;
-    border-radius: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    pointer-events: none !important;
-    z-index: 9999 !important;
-    mix-blend-mode: difference !important;
-    transition: all 0.1s ease !important;
-}
 
 /* Dynamic Mesh Background */
 .hero-background {
@@ -1130,12 +1114,6 @@
     }
 }
 
-/* Interactive Cursor Effect */
-.hero:hover::before {
-    width: 30px !important;
-    height: 30px !important;
-    background: radial-gradient(circle, #ff6a00, #fb923c, #3b82f6) !important;
-}
 
 /* Mobile Responsive - Revolutionary Design - Optimized for All Screens */
 @media (max-width: 768px) {
