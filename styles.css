@@ -5035,3 +5035,22 @@ img:hover {
         font-size: 14px;
     }
 }
+
+/* Service CTA Buttons */
+.service-cta {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    background: #2563eb;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.service-cta:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}

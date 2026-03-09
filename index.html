@@ -1998,6 +1998,21 @@ setTimeout(function(){
   trackEvent("engaged_30_seconds");
 },30000);
 
+// Exit-Intent Popup (Desktop Only)
+let exitIntentShown = false;
+
+document.addEventListener("mouseout", function(e){
+  if (!exitIntentShown && e.clientY < 10 && window.innerWidth > 768 && !sessionStorage.getItem("leadPopupShown")){
+    document.getElementById("leadPopup").style.display = "block";
+    sessionStorage.setItem("leadPopupShown", "true");
+    exitIntentShown = true;
+    
+    if (typeof trackEvent === 'function') {
+      trackEvent('popup_shown_exit_intent');
+    }
+  }
+});
+
 })();
 </script>
 
@@ -2033,7 +2048,7 @@ if (!sessionStorage.getItem("leadPopupShown")) {
     }
     document.getElementById('leadPopup').style.display = 'block';
     sessionStorage.setItem("leadPopupShown", "true");
-  }, 10000);
+  }, 15000);
 
   // Also show popup after 50% scroll (if not shown yet)
   let scrollPopupShown = false;
