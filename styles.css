@@ -5146,6 +5146,13 @@ img:hover {
 }
 
 /* FAQ Accordion Styles */
+.faq-answer {
+    max-height: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
 .faq-question.active {
     color: #0052ff;
 }
