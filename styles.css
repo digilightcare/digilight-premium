@@ -4460,14 +4460,10 @@ img:hover {
 .stat-number {
     font-size: 56px;
     font-weight: 800;
-    background: linear-gradient(135deg, #0056d2 0%, #0066d2 50%, #ff6a00 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #0052ff;
     margin-bottom: 12px;
     font-family: Arial, sans-serif;
     line-height: 1;
-    text-shadow: none;
 }
 
 .stat-label {
