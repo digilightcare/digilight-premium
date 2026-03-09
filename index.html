@@ -1893,23 +1893,47 @@
 (function(){
 
 function trackEvent(eventName, params = {}) {
+
   if (typeof gtag === "function") {
-    gtag("event", eventName, params);
+
+    const pageData = {
+      page_location: window.location.pathname,
+      page_title: document.title
+    };
+
+    gtag("event", eventName, {
+      ...pageData,
+      ...params
+    });
+
   }
+
 }
 
 /* Track WhatsApp clicks */
 document.querySelectorAll("a[href*='wa.me']").forEach(function(btn){
+
   btn.addEventListener("click", function(){
-    trackEvent("whatsapp_click",{method:"whatsapp"});
+
+    trackEvent("whatsapp_click", {
+      service_type: document.title
+    });
+
   });
+
 });
 
 /* Track phone call clicks */
 document.querySelectorAll("a[href^='tel']").forEach(function(btn){
+
   btn.addEventListener("click", function(){
-    trackEvent("call_click",{method:"phone"});
+
+    trackEvent("call_click", {
+      service_type: document.title
+    });
+
   });
+
 });
 
 /* Track CTA buttons */
@@ -1924,9 +1948,16 @@ document.querySelectorAll("a,button").forEach(function(btn){
     text.includes("request quote") ||
     text.includes("talk to us")
   ){
-      btn.addEventListener("click", function(){
-        trackEvent("cta_click",{type:"primary_cta"});
+
+    btn.addEventListener("click", function(){
+
+      trackEvent("cta_click", {
+        button_text: btn.innerText,
+        service_type: document.title
       });
+
+    });
+
   }
 
 });
