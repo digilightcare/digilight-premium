@@ -1888,5 +1888,73 @@
             });
         });
     </script>
+
+<script>
+(function(){
+
+function trackEvent(eventName, params = {}) {
+  if (typeof gtag === "function") {
+    gtag("event", eventName, params);
+  }
+}
+
+/* Track WhatsApp clicks */
+document.querySelectorAll("a[href*='wa.me']").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    trackEvent("whatsapp_click",{method:"whatsapp"});
+  });
+});
+
+/* Track phone call clicks */
+document.querySelectorAll("a[href^='tel']").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    trackEvent("call_click",{method:"phone"});
+  });
+});
+
+/* Track CTA buttons */
+document.querySelectorAll("a,button").forEach(function(btn){
+
+  const text = btn.innerText.toLowerCase();
+
+  if(
+    text.includes("contact") ||
+    text.includes("get started") ||
+    text.includes("start project") ||
+    text.includes("request quote") ||
+    text.includes("talk to us")
+  ){
+      btn.addEventListener("click", function(){
+        trackEvent("cta_click",{type:"primary_cta"});
+      });
+  }
+
+});
+
+/* Scroll depth tracking */
+let scrollTracked = false;
+
+window.addEventListener("scroll", function(){
+
+  const scrollPercent =
+  (window.scrollY + window.innerHeight) /
+  document.documentElement.scrollHeight;
+
+  if(!scrollTracked && scrollPercent > 0.5){
+      trackEvent("scroll_50_percent");
+      scrollTracked = true;
+  }
+
+});
+
+/* Engagement tracking */
+
+setTimeout(function(){
+  trackEvent("engaged_30_seconds");
+},30000);
+
+})();
+</script>
+
 </body>
 </html>
