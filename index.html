@@ -1892,13 +1892,32 @@
 <script>
 (function(){
 
+function detectServiceType() {
+
+  const path = window.location.pathname.toLowerCase();
+
+  if (path.includes("seo")) return "seo";
+  if (path.includes("ads")) return "google_ads";
+  if (path.includes("ppc")) return "ppc";
+  if (path.includes("social")) return "social_media";
+  if (path.includes("website")) return "web_development";
+  if (path.includes("ecommerce")) return "ecommerce";
+  if (path.includes("pricing")) return "pricing";
+  if (path.includes("portfolio")) return "portfolio";
+  if (path.includes("blog")) return "blog";
+
+  return "general";
+
+}
+
 function trackEvent(eventName, params = {}) {
 
   if (typeof gtag === "function") {
 
     const pageData = {
       page_location: window.location.pathname,
-      page_title: document.title
+      page_title: document.title,
+      service_type: detectServiceType()
     };
 
     gtag("event", eventName, {
@@ -1915,9 +1934,7 @@ document.querySelectorAll("a[href*='wa.me']").forEach(function(btn){
 
   btn.addEventListener("click", function(){
 
-    trackEvent("whatsapp_click", {
-      service_type: document.title
-    });
+    trackEvent("whatsapp_click");
 
   });
 
@@ -1928,9 +1945,7 @@ document.querySelectorAll("a[href^='tel']").forEach(function(btn){
 
   btn.addEventListener("click", function(){
 
-    trackEvent("call_click", {
-      service_type: document.title
-    });
+    trackEvent("call_click");
 
   });
 
@@ -1952,8 +1967,7 @@ document.querySelectorAll("a,button").forEach(function(btn){
     btn.addEventListener("click", function(){
 
       trackEvent("cta_click", {
-        button_text: btn.innerText,
-        service_type: document.title
+        button_text: btn.innerText
       });
 
     });
