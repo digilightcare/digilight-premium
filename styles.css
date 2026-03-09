@@ -501,14 +501,7 @@
     display: none !important;
 }
 
-.stat-number {
-    font-size: 20px !important;
-    font-weight: 900 !important;
-    margin-bottom: 3px !important;
-    color: #000000 !important;
-    text-shadow: 1px 1px 0px #ffffff, 2px 2px 0px #ffffff !important;
-    line-height: 1 !important;
-}
+/* Satellite stats styling removed - conflicts with service page stats */
 
 /* Simple High Contrast Colors for Each Satellite */
 .stat-item:nth-child(4) .stat-number {
@@ -523,6 +516,7 @@
     color: #000000 !important;
 }
 
+/* Satellite label styling removed - conflicts with service page stats
 .stat-label {
     font-size: 10px !important;
     color: #ffffff !important;
