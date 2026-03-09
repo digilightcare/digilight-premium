@@ -2025,28 +2025,32 @@ function submitLeadForm(event) {
   closePopup();
 }
 
-// Show popup after 10 seconds
-setTimeout(function(){
-  if (typeof trackEvent === 'function') {
-    trackEvent('popup_shown');
-  }
-  document.getElementById('leadPopup').style.display = 'block';
-}, 10000);
-
-// Also show popup after 50% scroll
-let scrollPopupShown = false;
-window.addEventListener('scroll', function() {
-  if (!scrollPopupShown) {
-    const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
-    if (scrollPercent > 0.5) {
-      scrollPopupShown = true;
-      if (typeof trackEvent === 'function') {
-        trackEvent('popup_shown_scroll');
-      }
-      document.getElementById('leadPopup').style.display = 'block';
+// Show popup after 10 seconds (only once per session)
+if (!sessionStorage.getItem("leadPopupShown")) {
+  setTimeout(function(){
+    if (typeof trackEvent === 'function') {
+      trackEvent('popup_shown');
     }
-  }
-});
+    document.getElementById('leadPopup').style.display = 'block';
+    sessionStorage.setItem("leadPopupShown", "true");
+  }, 10000);
+
+  // Also show popup after 50% scroll (if not shown yet)
+  let scrollPopupShown = false;
+  window.addEventListener('scroll', function() {
+    if (!scrollPopupShown && !sessionStorage.getItem("leadPopupShown")) {
+      const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+      if (scrollPercent > 0.5) {
+        scrollPopupShown = true;
+        if (typeof trackEvent === 'function') {
+          trackEvent('popup_shown_scroll');
+        }
+        document.getElementById('leadPopup').style.display = 'block';
+        sessionStorage.setItem("leadPopupShown", "true");
+      }
+    }
+  });
+}
 </script>
 
 <!-- Lead Capture Popup -->
@@ -2060,7 +2064,7 @@ window.addEventListener('scroll', function() {
         <div class="popup-body">
             <p>Enter your email or WhatsApp to receive a free strategy report.</p>
             <form onsubmit="submitLeadForm(event)">
-                <input type="text" id="leadContact" placeholder="Email or WhatsApp Number" required>
+                <input type="text" id="leadContact" placeholder="Enter your WhatsApp number or email" required>
                 <button type="submit" class="popup-submit">Get Free Audit</button>
             </form>
         </div>
