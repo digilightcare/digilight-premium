@@ -5214,6 +5214,44 @@ img:hover {
     margin-bottom: 40px;
 }
 
+/* Service Landing Pages - Section Backgrounds */
+.services-section {
+    padding: 30px 0;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 25%, #f8faff 50%, #fff8f0 75%, #fff5e6 100%);
+    margin: 0 0 2px 0;
+    width: 100%;
+    display: block;
+}
+
+.stats-section {
+    padding: 30px 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    margin: 0 0 2px 0;
+    width: 100%;
+    display: block;
+    color: white;
+}
+
+.stats-section .section-title {
+    color: white;
+}
+
+.stats-section .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-section {
+    padding: 30px 0;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #003acc 50%, #002699 100%);
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 2px 0;
+    width: 100%;
+    display: block;
+}
+
 /* Responsive Grid Layouts */
 @media (max-width: 1024px) {
     .services-grid {
