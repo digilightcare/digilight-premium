@@ -505,19 +505,21 @@
 
 /* Simple High Contrast Colors for Each Satellite */
 .stat-item:nth-child(4) .stat-number {
-    color: #000000 !important;
+    color: #ffffff !important;
 }
 
 .stat-item:nth-child(5) .stat-number {
-    color: #000000 !important;
+    color: #ffffff !important;
 }
 
 .stat-item:nth-child(6) .stat-number {
-    color: #000000 !important;
+    color: #ffffff !important;
 }
 
-/* Satellite label styling removed - conflicts with service page stats
-.stat-label {
+/* Satellite label styling for homepage hero satellites */
+.stat-item:nth-child(4) .stat-label,
+.stat-item:nth-child(5) .stat-label,
+.stat-item:nth-child(6) .stat-label {
     font-size: 10px !important;
     color: #ffffff !important;
     text-transform: uppercase !important;
