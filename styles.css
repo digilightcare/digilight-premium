@@ -5080,3 +5080,99 @@ img:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
+
+/* FAQ Accordion Styles */
+.faq-question.active {
+    color: #0052ff;
+}
+
+.faq-question.active span {
+    transform: rotate(45deg);
+}
+
+.faq-answer.active {
+    max-height: 500px !important;
+    padding: 0 20px 20px 20px !important;
+}
+
+/* Service FAQ Section */
+.service-faq .faq-item {
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.service-faq .faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.service-faq .faq-question {
+    transition: all 0.3s ease;
+}
+
+.service-faq .faq-question:hover {
+    background: #f1f5f9;
+}
+
+/* Final CTA Section */
+.cta-section .hero-buttons .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section .hero-buttons .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Related Services Section */
+.services-grid .service-item {
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    background: white;
+    text-align: center;
+}
+
+.services-grid .service-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.services-grid .service-item .service-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.services-grid .service-item h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #1e293b;
+}
+
+.services-grid .service-item p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.services-grid .service-item .btn-primary {
+    background: linear-gradient(135deg, #0052ff 0%, #003dcc 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.services-grid .service-item .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 82, 255, 0.3);
+}
