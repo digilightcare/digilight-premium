@@ -4396,7 +4396,8 @@ img:hover {
     z-index: 1;
 }
 
-.stat-item {
+.stat-item,
+.stat-card {
     text-align: center;
     padding: 24px 16px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
@@ -4409,7 +4410,8 @@ img:hover {
     box-shadow: 0 8px 24px rgba(0, 82, 255, 0.12);
 }
 
-.stat-item::before {
+.stat-item::before,
+.stat-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -4420,11 +4422,13 @@ img:hover {
     transition: left 0.6s ease;
 }
 
-.stat-item:hover::before {
+.stat-item:hover::before,
+.stat-card:hover::before {
     left: 100%;
 }
 
-.stat-item:hover {
+.stat-item:hover,
+.stat-card:hover {
     transform: translateY(-12px) scale(1.03);
     background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(240, 249, 255, 1) 100%);
     box-shadow: 0 24px 70px rgba(0, 82, 255, 0.25);
@@ -4493,7 +4497,8 @@ img:hover {
         gap: 20px;
     }
     
-    .stat-item {
+    .stat-item,
+    .stat-card {
         padding: 24px 16px;
     }
     
@@ -4526,7 +4531,8 @@ img:hover {
         gap: 16px;
     }
     
-    .stat-item {
+    .stat-item,
+    .stat-card {
         padding: 20px 16px;
     }
     
