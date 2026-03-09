@@ -3319,7 +3319,7 @@ body#index .services-section .service-card {
 /* FOOTER */
 footer {
     background: 
-        linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.85) 100%),
+        linear-gradient(135deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.05) 100%),
         url('images/parallax_05.png');
     background-attachment: scroll;
     background-position: center;
@@ -3333,7 +3333,7 @@ footer {
 
 .footer {
     background: 
-        linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.85) 100%),
+        linear-gradient(135deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.05) 100%),
         url('images/parallax_05.png');
     background-attachment: scroll;
     background-position: center;
