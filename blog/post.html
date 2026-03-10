@@ -656,6 +656,18 @@
     <script src="../js/script.js"></script>
     
     <script>
+        // REDIRECT DYNAMIC URLs TO STATIC URLs
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const slug = urlParams.get('slug');
+            
+            // If slug parameter exists, redirect to static URL
+            if (slug) {
+                window.location.replace('/blog/' + slug + '.html');
+                return;
+            }
+        })();
+
         // Dynamic Post Loader
         (async function() {
             // Get slug from URL parameter
@@ -785,7 +797,7 @@
                     // Display related posts
                     const relatedPostsGrid = document.getElementById('related-posts-grid');
                     relatedPostsGrid.innerHTML = relatedPostsData.map(post => `
-                        <a href="post.html?slug=${post.slug}" class="related-post-card">
+                        <a href="${post.slug}.html" class="related-post-card">
                             <h3>${post.title}</h3>
                             <p>${post.description}</p>
                             <span class="read-more">

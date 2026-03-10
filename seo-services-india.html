@@ -561,6 +561,23 @@
     }
     </script>
 
+    <!-- Latest Blog Posts Section -->
+    <section class="blog-posts-section" style="padding: 80px 0; background: linear-gradient(135deg, #f8faff 0%, #fff5e6 25%, #fff8f0 50%, #e6f3ff 75%, #f0f8ff 100%); margin: 0; width: 100%; display: block;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="section-label" style="background: var(--accent-orange); color: white; padding: 8px 20px; border-radius: 25px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Latest Insights</span>
+                <h2 style="font-size: 42px; margin-top: 20px; margin-bottom: 16px; font-weight: 800; color: var(--primary-blue); font-family: 'Raleway', Arial, sans-serif;">Latest Blog Posts</h2>
+                <p style="font-size: 18px; color: #64748b; max-width: 700px; margin: 0 auto; line-height: 1.7;">Expert tips and insights on digital marketing, SEO, and business growth</p>
+            </div>
+            <div id="latest-blog-posts" class="results-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+                <!-- Blog posts will be loaded here -->
+            </div>
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="blog.html" class="btn btn-primary" style="font-size: 18px; padding: 16px 32px;">View All Blog Posts →</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -637,6 +654,76 @@
 
     <script src="js/script.js"></script>
     <script>lucide.createIcons();</script>
+
+    <!-- Load Latest Blog Posts -->
+    <script>
+        (async function loadLatestBlogPosts() {
+            const container = document.getElementById('latest-blog-posts');
+            if (!container) return;
+
+            try {
+                const response = await fetch('blog/posts.json');
+                if (!response.ok) throw new Error('Failed to load posts');
+
+                const data = await response.json();
+                const latestPosts = data.posts.slice(0, 3);
+
+                async function parseFrontmatter(content) {
+                    const regex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
+                    const match = content.match(regex);
+                    if (!match) return { metadata: {}, content };
+
+                    const metadata = {};
+                    match[1].split('\n').forEach(line => {
+                        const colon = line.indexOf(':');
+                        if (colon > -1) {
+                            const key = line.substring(0, colon).trim();
+                            let value = line.substring(colon + 1).trim();
+                            value = value.replace(/^["']|["']$/g, '');
+                            metadata[key] = value;
+                        }
+                    });
+                    return { metadata, content: match[2] };
+                }
+
+                const postsData = [];
+                for (const post of latestPosts) {
+                    try {
+                        const postResponse = await fetch(`blog/posts/${post.filename}`);
+                        if (!postResponse.ok) continue;
+
+                        const text = await postResponse.text();
+                        const parsed = await parseFrontmatter(text);
+                        postsData.push({
+                            slug: post.slug,
+                            title: parsed.metadata.title || 'Untitled',
+                            description: parsed.metadata.description || parsed.content.substring(0, 120) + '...',
+                            thumbnail: parsed.metadata.thumbnail || 'images/blog.jpg',
+                            category: parsed.metadata.category || 'BLOG'
+                        });
+                    } catch (err) {
+                        console.warn('Failed to load post:', post.filename);
+                    }
+                }
+
+                container.innerHTML = postsData.map(post => `
+                    <div class="result-card">
+                        <img src="${post.thumbnail}" alt="${post.title}" loading="lazy">
+                        <div class="result-card-content">
+                            <span class="category-badge">${post.category}</span>
+                            <h3>${post.title}</h3>
+                            <p>${post.description}</p>
+                            <a href="blog/${post.slug}.html" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                `).join('');
+
+            } catch (error) {
+                console.error('Error loading blog posts:', error);
+                container.innerHTML = '<p style="text-align:center;color:#64748b;">Unable to load blog posts.</p>';
+            }
+        })();
+    </script>
 
     <!-- Sticky Lead Contact Bar -->
     <div class="sticky-lead-bar">
