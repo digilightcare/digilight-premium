@@ -709,15 +709,15 @@
                 }
 
                 container.innerHTML = postsData.map(post => `
-                    <div class="result-card">
+                    <a href="blog/${post.slug}.html" class="result-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
                         <img src="${post.thumbnail}" alt="${post.title}" loading="lazy">
                         <div class="result-card-content">
                             <span class="category-badge">${post.category}</span>
                             <h3>${post.title}</h3>
                             <p>${post.description}</p>
-                            <a href="blog/${post.slug}.html" class="read-more-btn">Read More</a>
+                            <span class="read-more-btn">Read More</span>
                         </div>
-                    </div>
+                    </a>
                 `).join('');
 
             } catch (error) {
