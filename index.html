@@ -2100,7 +2100,10 @@ let exitIntentShown = false;
 
 document.addEventListener("mouseout", function(e){
   if (!exitIntentShown && e.clientY < 10 && window.innerWidth > 768 && !sessionStorage.getItem("leadPopupShown")){
-    document.getElementById("leadPopup").style.display = "block";
+    const popup = document.getElementById("leadPopup");
+    if (popup) {
+      popup.style.display = "flex";
+    }
     sessionStorage.setItem("leadPopupShown", "true");
     exitIntentShown = true;
     
@@ -2116,7 +2119,10 @@ document.addEventListener("mouseout", function(e){
 <script>
 // Lead Popup Functions
 function closePopup() {
-  document.getElementById('leadPopup').style.display = 'none';
+  const popup = document.getElementById('leadPopup');
+  if (popup) {
+    popup.style.display = 'none';
+  }
 }
 
 function submitLeadForm(event) {
@@ -2143,7 +2149,10 @@ if (!sessionStorage.getItem("leadPopupShown")) {
     if (typeof trackEvent === 'function') {
       trackEvent('popup_shown');
     }
-    document.getElementById('leadPopup').style.display = 'block';
+    const popup = document.getElementById('leadPopup');
+    if (popup) {
+      popup.style.display = 'flex';
+    }
     sessionStorage.setItem("leadPopupShown", "true");
   }, 15000);
 
@@ -2157,7 +2166,10 @@ if (!sessionStorage.getItem("leadPopupShown")) {
         if (typeof trackEvent === 'function') {
           trackEvent('popup_shown_scroll');
         }
-        document.getElementById('leadPopup').style.display = 'block';
+        const popup = document.getElementById('leadPopup');
+        if (popup) {
+          popup.style.display = 'flex';
+        }
         sessionStorage.setItem("leadPopupShown", "true");
       }
     }

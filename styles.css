@@ -4975,10 +4975,11 @@ img:hover {
 /* Fix WhatsApp Floating Button Overlap */
 @media (max-width: 768px) {
     .whatsapp-float {
-        bottom: 90px !important;
+        bottom: 110px !important;
         right: 16px !important;
         width: 56px !important;
         height: 56px !important;
+        z-index: 1000 !important;
     }
     
     .whatsapp-float svg {
@@ -4989,10 +4990,11 @@ img:hover {
 
 @media (max-width: 480px) {
     .whatsapp-float {
-        bottom: 85px !important;
+        bottom: 100px !important;
         right: 12px !important;
         width: 52px !important;
         height: 52px !important;
+        z-index: 1000 !important;
     }
     
     .whatsapp-float svg {
