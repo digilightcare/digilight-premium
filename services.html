@@ -663,13 +663,13 @@
                 }
 
                 container.innerHTML = postsData.map(post => `
-                    <a href="blog/${post.slug}.html" class="result-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
-                        <img src="${post.thumbnail}" alt="${post.title}" loading="lazy">
-                        <div class="result-card-content">
+                    <a href="blog/${post.slug}.html" class="result-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+                        <img src="${post.thumbnail}" alt="${post.title}" loading="lazy" style="width: 100%; height: 240px; object-fit: cover; transition: transform 0.4s ease;">
+                        <div class="result-card-content" style="flex: 1; display: flex; flex-direction: column;">
                             <span class="category-badge">${post.category}</span>
                             <h3>${post.title}</h3>
-                            <p>${post.description}</p>
-                            <span class="read-more-btn" style="background: var(--accent-orange); color: var(--white); padding: 12px 28px; border-radius: 14px; font-weight: 600; font-size: 16px; text-decoration: none; transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer; display: inline-block; box-shadow: 0 4px 16px rgba(255,106,0,0.3); width: auto; align-self: center;">Read More</span>
+                            <p style="flex: 1;">${post.description}</p>
+                            <span class="read-more-btn" style="background: var(--accent-orange); color: var(--white); padding: 12px 28px; border-radius: 14px; font-weight: 600; font-size: 16px; text-decoration: none; transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer; display: inline-block; box-shadow: 0 4px 16px rgba(255,106,0,0.3); width: auto; align-self: center;" onmouseover="this.style.background='#e56900'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(255,106,0,0.4)';" onmouseout="this.style.background='var(--accent-orange)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(255,106,0,0.3)';">Read More</span>
                         </div>
                     </a>
                 `).join('');
