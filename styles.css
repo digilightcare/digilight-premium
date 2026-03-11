@@ -1730,68 +1730,85 @@
         flex-shrink: 0 !important;
     }
     
+    /* Small mobile inherits from 768px media query - no overrides needed for orbits */
     .hero-stats-right {
         width: 260px !important;
         height: 260px !important;
     }
     
     .orbit-path:nth-child(1) {
-        width: 100px !important;
-        height: 100px !important;
+        width: 90px !important;
+        height: 90px !important;
+        margin-top: -45px !important;
+        margin-left: -45px !important;
     }
     
     .orbit-path:nth-child(2) {
         width: 150px !important;
         height: 150px !important;
+        margin-top: -75px !important;
+        margin-left: -75px !important;
     }
     
     .orbit-path:nth-child(3) {
-        width: 200px !important;
-        height: 200px !important;
+        width: 210px !important;
+        height: 210px !important;
+        margin-top: -105px !important;
+        margin-left: -105px !important;
     }
     
     .stat-item {
-        width: 90px !important;
-        height: 90px !important;
-        padding: 8px !important;
-        font-size: 12px !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: flex !important;
-        background: rgba(255, 255, 255, 0.95) !important;
-        border: 3px solid #ff6a00 !important;
-        border-radius: 50% !important;
-        position: relative !important;
-        z-index: 10 !important;
+        width: 80px !important;
+        height: 80px !important;
+        padding: 6px !important;
+        font-size: 11px !important;
     }
     
-    /* Apply orbital animations to 480px satellites - SIMPLIFIED */
+    /* Use mobile-specific animations with correct radii for 480px */
     .stat-item:nth-child(4) {
-        animation: orbit1 10s linear infinite !important;
+        animation: orbit1Small 12s linear infinite !important;
     }
     
     .stat-item:nth-child(5) {
-        animation: orbit2 15s linear infinite !important;
+        animation: orbit2Small 18s linear infinite !important;
     }
     
     .stat-item:nth-child(6) {
-        animation: orbit3 20s linear infinite !important;
+        animation: orbit3Small 24s linear infinite !important;
     }
     
-    /* SIMPLIFIED orbital radius for 480px */
-    @keyframes orbit1 {
-        0% { transform: rotate(0deg) translateX(70px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(70px) rotate(-360deg); }
+    /* Small mobile orbital animations with hardware acceleration */
+    @keyframes orbit1Small {
+        0% { 
+            transform: rotate(0deg) translateX(45px) rotate(0deg) translateZ(0);
+            -webkit-transform: rotate(0deg) translateX(45px) rotate(0deg) translateZ(0);
+        }
+        100% { 
+            transform: rotate(360deg) translateX(45px) rotate(-360deg) translateZ(0);
+            -webkit-transform: rotate(360deg) translateX(45px) rotate(-360deg) translateZ(0);
+        }
     }
     
-    @keyframes orbit2 {
-        0% { transform: rotate(120deg) translateX(100px) rotate(-120deg); }
-        100% { transform: rotate(480deg) translateX(100px) rotate(-480deg); }
+    @keyframes orbit2Small {
+        0% { 
+            transform: rotate(120deg) translateX(75px) rotate(-120deg) translateZ(0);
+            -webkit-transform: rotate(120deg) translateX(75px) rotate(-120deg) translateZ(0);
+        }
+        100% { 
+            transform: rotate(480deg) translateX(75px) rotate(-480deg) translateZ(0);
+            -webkit-transform: rotate(480deg) translateX(75px) rotate(-480deg) translateZ(0);
+        }
     }
     
-    @keyframes orbit3 {
-        0% { transform: rotate(240deg) translateX(130px) rotate(-240deg); }
-        100% { transform: rotate(600deg) translateX(130px) rotate(-600deg); }
+    @keyframes orbit3Small {
+        0% { 
+            transform: rotate(240deg) translateX(105px) rotate(-240deg) translateZ(0);
+            -webkit-transform: rotate(240deg) translateX(105px) rotate(-240deg) translateZ(0);
+        }
+        100% { 
+            transform: rotate(600deg) translateX(105px) rotate(-600deg) translateZ(0);
+            -webkit-transform: rotate(600deg) translateX(105px) rotate(-600deg) translateZ(0);
+        }
     }
     
     .stat-number {
