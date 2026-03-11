@@ -1259,11 +1259,6 @@
         height: auto !important;
         order: 2 !important;
         margin-top: 20px !important;
-    }
-    
-    /* Mobile Animation Performance Optimizations - REMOVED CONFLICTS */
-    .hero-stats-right,
-    .orbit-path {
         will-change: transform !important;
         -webkit-transform: translateZ(0) !important;
         transform: translateZ(0) !important;
@@ -1271,128 +1266,125 @@
         backface-visibility: hidden !important;
         -webkit-perspective: 1000px !important;
         perspective: 1000px !important;
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
     }
     
-    /* DO NOT apply to stat-item - it blocks orbital animations */
+    /* Disable hover effects on mobile for better performance */
+    .stat-item:hover {
+        transform: none !important;
+        -webkit-transform: none !important;
+    }
+    
+    /* Mobile Animation Performance Optimizations */
+    .hero-stats-right,
+    .orbit-path,
     .stat-item {
         will-change: transform !important;
+        -webkit-transform: translateZ(0) !important;
+        transform: translateZ(0) !important;
         -webkit-backface-visibility: hidden !important;
         backface-visibility: hidden !important;
         -webkit-perspective: 1000px !important;
         perspective: 1000px !important;
-        /* REMOVED transform: translateZ(0) - this blocks animations */
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
     }
     
-    /* Smooth Animation Transitions */
-    .orbit-path {
-        transition: transform 0.1s linear !important;
-        -webkit-transition: -webkit-transform 0.1s linear !important;
-    }
-    
-    .stat-item {
-        transition: all 0.3s ease !important;
-        -webkit-transition: all 0.3s ease !important;
-    }
-    
-    .stat-item:hover {
-        transform: scale(1.1) !important;
-        -webkit-transform: scale(1.1) !important;
-        background: rgba(255, 255, 255, 0.25) !important;
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important;
-    }
-    
-    /* Mobile Larger Orbital Formation - MUCH BIGGER */
+    /* Mobile Orbital Formation - Match Desktop */
     .hero-stats-right {
-        width: 400px !important;
-        height: 400px !important;
+        width: 300px !important;
+        height: 300px !important;
         margin: 0 auto !important;
         flex: none !important;
-        position: relative !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
     }
     
     .hero-stats-right::before {
-        width: 60px !important;
-        height: 60px !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
+        width: 40px !important;
+        height: 40px !important;
     }
     
-    .orbit-path {
-        position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
-    }
-    
+    /* Mobile orbit paths - properly centered */
     .orbit-path:nth-child(1) {
-        width: 200px !important;
-        height: 200px !important;
-        margin-top: -100px !important;
-        margin-left: -100px !important;
+        width: 100px !important;
+        height: 100px !important;
+        top: 50% !important;
+        left: 50% !important;
+        margin-top: -50px !important;
+        margin-left: -50px !important;
     }
     
     .orbit-path:nth-child(2) {
-        width: 280px !important;
-        height: 280px !important;
-        margin-top: -140px !important;
-        margin-left: -140px !important;
+        width: 170px !important;
+        height: 170px !important;
+        top: 50% !important;
+        left: 50% !important;
+        margin-top: -85px !important;
+        margin-left: -85px !important;
     }
     
     .orbit-path:nth-child(3) {
-        width: 360px !important;
-        height: 360px !important;
-        margin-top: -180px !important;
-        margin-left: -180px !important;
+        width: 240px !important;
+        height: 240px !important;
+        top: 50% !important;
+        left: 50% !important;
+        margin-top: -120px !important;
+        margin-left: -120px !important;
     }
     
-    /* Ensure all 3 satellites are VISIBLE on mobile */
+    /* Mobile satellites - match desktop styling */
     .stat-item {
-        width: 120px !important;
-        height: 120px !important;
-        font-size: 14px !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important;
-        background: rgba(255, 255, 255, 0.95) !important;
-        border: 3px solid #ff6a00 !important;
-        border-radius: 50% !important;
-        position: relative !important;
-        z-index: 10 !important;
+        width: 90px !important;
+        height: 90px !important;
+        font-size: 12px !important;
+        padding: 6px !important;
     }
     
-    /* Apply orbital animations to mobile satellites - SIMPLIFIED */
+    /* Use same animation speeds as desktop for consistency */
     .stat-item:nth-child(4) {
-        animation: orbit1 10s linear infinite !important;
+        animation: orbit1Mobile 12s linear infinite !important;
     }
     
     .stat-item:nth-child(5) {
-        animation: orbit2 15s linear infinite !important;
+        animation: orbit2Mobile 18s linear infinite !important;
     }
     
     .stat-item:nth-child(6) {
-        animation: orbit3 20s linear infinite !important;
+        animation: orbit3Mobile 24s linear infinite !important;
     }
     
-    /* SIMPLIFIED Mobile Orbital Adjustments - Working Center Rotation */
-    @keyframes orbit1 {
-        0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
-        100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+    /* Mobile-specific orbital animations with hardware acceleration */
+    @keyframes orbit1Mobile {
+        0% { 
+            transform: rotate(0deg) translateX(50px) rotate(0deg) translateZ(0);
+            -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg) translateZ(0);
+        }
+        100% { 
+            transform: rotate(360deg) translateX(50px) rotate(-360deg) translateZ(0);
+            -webkit-transform: rotate(360deg) translateX(50px) rotate(-360deg) translateZ(0);
+        }
     }
     
-    @keyframes orbit2 {
-        0% { transform: rotate(120deg) translateX(140px) rotate(-120deg); }
-        100% { transform: rotate(480deg) translateX(140px) rotate(-480deg); }
+    @keyframes orbit2Mobile {
+        0% { 
+            transform: rotate(120deg) translateX(85px) rotate(-120deg) translateZ(0);
+            -webkit-transform: rotate(120deg) translateX(85px) rotate(-120deg) translateZ(0);
+        }
+        100% { 
+            transform: rotate(480deg) translateX(85px) rotate(-480deg) translateZ(0);
+            -webkit-transform: rotate(480deg) translateX(85px) rotate(-480deg) translateZ(0);
+        }
     }
     
-    @keyframes orbit3 {
-        0% { transform: rotate(240deg) translateX(180px) rotate(-240deg); }
-        100% { transform: rotate(600deg) translateX(180px) rotate(-600deg); }
+    @keyframes orbit3Mobile {
+        0% { 
+            transform: rotate(240deg) translateX(120px) rotate(-240deg) translateZ(0);
+            -webkit-transform: rotate(240deg) translateX(120px) rotate(-240deg) translateZ(0);
+        }
+        100% { 
+            transform: rotate(600deg) translateX(120px) rotate(-600deg) translateZ(0);
+            -webkit-transform: rotate(600deg) translateX(120px) rotate(-600deg) translateZ(0);
+        }
     }
     
     .stat-number {
