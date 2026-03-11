@@ -1278,15 +1278,21 @@
     
     /* Mobile Animation Performance Optimizations */
     .hero-stats-right,
-    .orbit-path,
-    .stat-item {
+    .orbit-path {
         will-change: transform !important;
-        -webkit-transform: translateZ(0) !important;
-        transform: translateZ(0) !important;
         -webkit-backface-visibility: hidden !important;
         backface-visibility: hidden !important;
         -webkit-perspective: 1000px !important;
         perspective: 1000px !important;
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+    }
+    
+    /* Satellites need will-change but NOT static transform */
+    .stat-item {
+        will-change: transform !important;
+        -webkit-backface-visibility: hidden !important;
+        backface-visibility: hidden !important;
         -webkit-font-smoothing: antialiased !important;
         -moz-osx-font-smoothing: grayscale !important;
     }
