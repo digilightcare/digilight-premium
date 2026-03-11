@@ -2117,8 +2117,8 @@ document.addEventListener("mouseout", function(e){
 </script>
 
 <script>
-// Lead Popup Functions
-function closePopup() {
+// Lead Popup Functions - Define on window object to ensure global access
+window.closePopup = function() {
   const popup = document.getElementById('leadPopup');
   if (popup) {
     popup.style.display = 'none';
@@ -2129,9 +2129,9 @@ function closePopup() {
     }
   }
   return false;
-}
+};
 
-function submitLeadForm(event) {
+window.submitLeadForm = function(event) {
   event.preventDefault();
   event.stopPropagation();
   
@@ -2154,11 +2154,46 @@ function submitLeadForm(event) {
   
   // Close popup after a short delay to ensure WhatsApp opens
   setTimeout(function() {
-    closePopup();
+    window.closePopup();
   }, 300);
   
   return false;
-}
+};
+
+// Add direct event listeners after DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Close button event listener
+  const closeBtn = document.querySelector('.popup-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.closePopup();
+    });
+    
+    closeBtn.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.closePopup();
+    });
+  }
+  
+  // Overlay event listener
+  const overlay = document.querySelector('.popup-overlay');
+  if (overlay) {
+    overlay.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.closePopup();
+    });
+    
+    overlay.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.closePopup();
+    });
+  }
+});
 
 // Show popup after 10 seconds (only once per session)
 if (!sessionStorage.getItem("leadPopupShown")) {
@@ -2196,15 +2231,15 @@ if (!sessionStorage.getItem("leadPopupShown")) {
 
 <!-- Lead Capture Popup -->
 <div id="leadPopup" class="lead-popup" style="display: none;">
-    <div class="popup-overlay" onclick="closePopup()"></div>
+    <div class="popup-overlay"></div>
     <div class="popup-content">
         <div class="popup-header">
             <h3>🚀 Get Free Digital Marketing Audit</h3>
-            <button class="popup-close" onclick="closePopup()">×</button>
+            <button type="button" class="popup-close">×</button>
         </div>
         <div class="popup-body">
             <p>Enter your email or WhatsApp to receive a free strategy report.</p>
-            <form onsubmit="submitLeadForm(event)">
+            <form onsubmit="return submitLeadForm(event);">
                 <input type="text" id="leadContact" placeholder="Enter your WhatsApp number or email" required>
                 <button type="submit" class="popup-submit">Get Free Audit</button>
             </form>
