@@ -2122,12 +2122,24 @@ function closePopup() {
   const popup = document.getElementById('leadPopup');
   if (popup) {
     popup.style.display = 'none';
+    // Reset form
+    const form = popup.querySelector('form');
+    if (form) {
+      form.reset();
+    }
   }
+  return false;
 }
 
 function submitLeadForm(event) {
   event.preventDefault();
+  event.stopPropagation();
+  
   const contact = document.getElementById('leadContact').value;
+  
+  if (!contact || contact.trim() === '') {
+    return false;
+  }
   
   // Track lead submission
   if (typeof trackEvent === 'function') {
@@ -2140,7 +2152,12 @@ function submitLeadForm(event) {
   const message = `Hi%20Digilight%20India,%20I%20want%20a%20free%20digital%20marketing%20audit.%20My%20contact:%20${encodeURIComponent(contact)}`;
   window.open(`https://wa.me/919548838588?text=${message}`, '_blank');
   
-  closePopup();
+  // Close popup after a short delay to ensure WhatsApp opens
+  setTimeout(function() {
+    closePopup();
+  }, 300);
+  
+  return false;
 }
 
 // Show popup after 10 seconds (only once per session)
