@@ -6,3 +6,12 @@
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
+
+# Custom domain redirects
+[[redirects]]
+  from = "https://digilightindia.com/*"
+  to = "https://www.digilightindia.com/:splat"
+  status = 301
+
+# Legacy Netlify subdomain redirect (will be handled by Netlify dashboard)
+# This ensures old links redirect properly when custom domain is active
