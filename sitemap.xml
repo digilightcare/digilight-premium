@@ -6,7 +6,7 @@
     
     <!-- Homepage -->
     <url>
-        <loc>https://www.digilightindia.com/</loc>
+        <loc>https://digilightindia.com/</loc>
         <lastmod>2026-03-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -14,56 +14,56 @@
     
     <!-- Main Pages -->
     <url>
-        <loc>https://www.digilightindia.com/index.html</loc>
+        <loc>https://digilightindia.com/index.html</loc>
         <lastmod>2026-03-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/services.html</loc>
+        <loc>https://digilightindia.com/services.html</loc>
         <lastmod>2026-02-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/portfolio.html</loc>
+        <loc>https://digilightindia.com/portfolio.html</loc>
         <lastmod>2026-02-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/pricing.html</loc>
+        <loc>https://digilightindia.com/pricing.html</loc>
         <lastmod>2026-02-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/testimonials.html</loc>
+        <loc>https://digilightindia.com/testimonials.html</loc>
         <lastmod>2026-02-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/guide.html</loc>
+        <loc>https://digilightindia.com/guide.html</loc>
         <lastmod>2026-02-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/blog.html</loc>
+        <loc>https://digilightindia.com/blog.html</loc>
         <lastmod>2026-02-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/contact.html</loc>
+        <loc>https://digilightindia.com/contact.html</loc>
         <lastmod>2026-02-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -71,35 +71,35 @@
     
     <!-- Service Landing Pages -->
     <url>
-        <loc>https://www.digilightindia.com/seo-services-india.html</loc>
+        <loc>https://digilightindia.com/seo-services-india.html</loc>
         <lastmod>2026-03-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/google-ads-agency-india.html</loc>
+        <loc>https://digilightindia.com/google-ads-agency-india.html</loc>
         <lastmod>2026-03-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/social-media-marketing-india.html</loc>
+        <loc>https://digilightindia.com/social-media-marketing-india.html</loc>
         <lastmod>2026-03-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/website-development-company-india.html</loc>
+        <loc>https://digilightindia.com/website-development-company-india.html</loc>
         <lastmod>2026-03-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/digital-marketing-agency-india.html</loc>
+        <loc>https://digilightindia.com/digital-marketing-agency-india.html</loc>
         <lastmod>2026-03-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -110,49 +110,42 @@
 
     <!-- Blog Posts Start -->
     <url>
-        <loc>https://www.digilightindia.com/blog/ai-digital-marketing-2026.html</loc>
+        <loc>https://digilightindia.com/blog/ai-digital-marketing-2026.html</loc>
         <lastmod>2026-02-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/blog/sample-post.html</loc>
+        <loc>https://digilightindia.com/blog/seo-services-meerut.html</loc>
         <lastmod>2026-02-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/blog/seo-services-meerut.html</loc>
+        <loc>https://digilightindia.com/blog/social-media-marketing-strategy.html</loc>
         <lastmod>2026-02-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/blog/social-media-marketing-strategy.html</loc>
+        <loc>https://digilightindia.com/blog/google-ads-lead-generation.html</loc>
         <lastmod>2026-02-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/blog/google-ads-lead-generation.html</loc>
+        <loc>https://digilightindia.com/blog/content-marketing-that-converts.html</loc>
         <lastmod>2026-02-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
     <url>
-        <loc>https://www.digilightindia.com/blog/content-marketing-that-converts.html</loc>
-        <lastmod>2026-02-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.digilightindia.com/blog/email-marketing-automation.html</loc>
+        <loc>https://digilightindia.com/blog/email-marketing-automation.html</loc>
         <lastmod>2026-02-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
