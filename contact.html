@@ -216,17 +216,23 @@
             font-family: 'Raleway', Arial, sans-serif;
         }
         
-        .trust-point {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .trust-points .trust-point {
+            display: flex !important;
+            align-items: center !important;
+            gap: 12px !important;
+            padding: 0 !important;
             margin-bottom: 14px;
-            font-size: 15px;
-            color: #1e293b;
-            font-weight: 600;
+            background: transparent !important;
+            border: none;
+            border-radius: 0 !important;
+            font-size: 15px !important;
+            color: #1e293b !important;
+            font-weight: 600 !important;
+            transform: none !important;
+            transition: none !important;
         }
         
-        .trust-point::before {
+        .trust-points .trust-point::before {
             content: '✓';
             color: #10b981;
             font-weight: 700;
@@ -250,7 +256,7 @@
         
         .form-card .section-title {
             font-size: 42px;
-            text-align: left;
+            text-align: center;
         }
         
         .form-card > p {
@@ -258,6 +264,7 @@
             color: #64748b;
             margin-bottom: 36px;
             line-height: 1.6;
+            text-align: center;
         }
         
         .ml-embedded {
@@ -714,7 +721,7 @@
                 
                 <div>
                     <div class="form-card">
-                        <h3 class="section-title" style="text-align: left; margin-bottom: 16px;">Send Us a Message</h3>
+                        <h3 class="section-title" style="text-align: center; margin-bottom: 16px;">Send Us a Message</h3>
                         <p>Fill out the form below and we'll get back to you within 24 hours.</p>
                         
                         <div class="ml-embedded" data-form="oK7HyY"></div>
