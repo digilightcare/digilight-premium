@@ -521,6 +521,12 @@ async function buildBlog() {
         // Convert markdown to HTML using marked.js
         const htmlContent = marked(content);
         
+        // Skip draft posts — do not generate HTML or add to sitemap
+        if (data.draft === 'true') {
+            console.log(`⏭️  Skipped (draft): /blog/${slug}.html`);
+            continue;
+        }
+
         // Create post data
         const postData = {
             slug,
