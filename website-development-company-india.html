@@ -170,6 +170,7 @@
         }
         @media (max-width: 768px) {
             .pricing-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+            .contact-hero { max-height: none !important; }
         }
 
         /* ===== SECTION BACKGROUNDS ===== */
@@ -285,9 +286,12 @@
         /* ===== PRICING CARD CTA — MOBILE CENTERING ===== */
         @media (max-width: 768px) {
             .pricing-grid .pricing-card .btn {
-                display: block !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
                 box-sizing: border-box !important;
-                text-align: center !important;
+                max-width: none !important;
             }
         }
     </style>
