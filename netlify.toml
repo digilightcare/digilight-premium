@@ -3,6 +3,21 @@
   publish = "."
 
 [[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/"
+  to = "/blog.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/index.html"
+  to = "/blog.html"
+  status = 301
+
+[[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
