@@ -55,14 +55,6 @@ function getPostTemplate(data) {
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-68DSEJQ1RQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-68DSEJQ1RQ');
-    </script>
     <meta name="google-site-verification" content="Vm1nrpE8araD_uosVz-LNZu75FGPKKMP3vc5oL-F3gA" />
 
     <meta charset="UTF-8">
