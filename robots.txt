@@ -28,6 +28,9 @@ Disallow: /private/
 Disallow: /seo-meta-tags.html
 Disallow: /services-old.html
 Disallow: /blog-old-backup.html
+Disallow: /debug-test.html
+Disallow: /index-clean.html
+Disallow: /test-website.html
 
 # Block dynamic blog URLs (use static URLs instead)
 Disallow: /blog/post.html?*

@@ -52,6 +52,82 @@
         ml('account', '1349402');
     </script>
     
+    <!-- Structured Data - BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://digilightindia.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Pricing",
+        "item": "https://digilightindia.com/pricing.html"
+      }]
+    }
+    </script>
+    
+    <!-- Structured Data - Offer Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [{
+        "@type": "Offer",
+        "name": "Starter Package",
+        "description": "Perfect for small businesses starting their digital marketing journey",
+        "price": "15000",
+        "priceCurrency": "INR",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "15000",
+          "priceCurrency": "INR",
+          "unitText": "MONTH"
+        },
+        "seller": {
+          "@type": "Organization",
+          "name": "Digilight India"
+        }
+      },{
+        "@type": "Offer",
+        "name": "Growth Package",
+        "description": "Ideal for growing businesses looking to scale their online presence",
+        "price": "30000",
+        "priceCurrency": "INR",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "30000",
+          "priceCurrency": "INR",
+          "unitText": "MONTH"
+        },
+        "seller": {
+          "@type": "Organization",
+          "name": "Digilight India"
+        }
+      },{
+        "@type": "Offer",
+        "name": "Professional Package",
+        "description": "Comprehensive digital marketing for established businesses",
+        "price": "50000",
+        "priceCurrency": "INR",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "50000",
+          "priceCurrency": "INR",
+          "unitText": "MONTH"
+        },
+        "seller": {
+          "@type": "Organization",
+          "name": "Digilight India"
+        }
+      }]
+    }
+    </script>
+    
     <style>
         .pricing-grid {
             display: grid;

@@ -33,6 +33,55 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     
+    <!-- Structured Data - Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Website Development",
+      "name": "Website Development Company India",
+      "description": "Professional website development services in India including custom web design, e-commerce development, responsive websites, and web applications.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Digilight India",
+        "url": "https://digilightindia.com"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceRange": "$$"
+      }
+    }
+    </script>
+    
+    <!-- Structured Data - BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://digilightindia.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://digilightindia.com/services.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Website Development India",
+        "item": "https://digilightindia.com/website-development-company-india.html"
+      }]
+    }
+    </script>
+    
     <style>
         /* ===== BOUNCE ANIMATION ===== */
         @keyframes bounce {

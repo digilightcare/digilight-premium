@@ -51,6 +51,46 @@
         (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
         ml('account', '1349402');
     </script>
+    
+    <!-- Structured Data - BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://digilightindia.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Portfolio",
+        "item": "https://digilightindia.com/portfolio.html"
+      }]
+    }
+    </script>
+    
+    <!-- Structured Data - ItemList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [{
+        "@type": "CreativeWork",
+        "name": "Service Bachat - E-Commerce Marketing",
+        "description": "Google Ads campaign delivering 2000+ customers in 3 months with 40% conversion rate increase"
+      },{
+        "@type": "CreativeWork",
+        "name": "InstaShop - Social Media Marketing",
+        "description": "Meta Ads campaign achieving 500+ new customers and 20% sales growth in 1 month"
+      },{
+        "@type": "CreativeWork",
+        "name": "Indian Space Tech - YouTube Marketing",
+        "description": "YouTube SEO campaign generating 112+ subscribers and 13K+ views in 1 month"
+      }]
+    }
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->

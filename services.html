@@ -59,6 +59,66 @@
         (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
         ml('account', '1349402');
     </script>
+    
+    <!-- Structured Data - BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://digilightindia.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://digilightindia.com/services.html"
+      }]
+    }
+    </script>
+    
+    <!-- Structured Data - Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [{
+        "@type": "Service",
+        "name": "SEO Services",
+        "description": "Search Engine Optimization to improve organic rankings and traffic",
+        "provider": {
+          "@type": "Organization",
+          "name": "Digilight India"
+        }
+      },{
+        "@type": "Service",
+        "name": "PPC Advertising",
+        "description": "Pay-Per-Click advertising campaigns on Google and social media platforms",
+        "provider": {
+          "@type": "Organization",
+          "name": "Digilight India"
+        }
+      },{
+        "@type": "Service",
+        "name": "Social Media Marketing",
+        "description": "Social media management and advertising across all major platforms",
+        "provider": {
+          "@type": "Organization",
+          "name": "Digilight India"
+        }
+      },{
+        "@type": "Service",
+        "name": "Content Marketing",
+        "description": "Content creation and marketing strategies to engage your audience",
+        "provider": {
+          "@type": "Organization",
+          "name": "Digilight India"
+        }
+      }]
+    }
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -108,7 +168,7 @@
                 <!-- SEO Service -->
                 <div style="text-align: center; display: flex; flex-direction: column; height: 100%;">
                     <div style="margin-bottom: 24px;">
-                        <img src="images/seo.png" alt="SEO" style="width: 180px; height: 180px; object-fit: contain;">
+                        <img src="images/seo.png" alt="SEO Services - Search Engine Optimization" loading="lazy" width="180" height="180" style="width: 180px; height: 180px; object-fit: contain;">
                     </div>
                     <h3 style="font-size: 16px; color: var(--primary-blue); margin-bottom: 16px; font-weight: 700;">📈 Search Engine Optimization (SEO)</h3>
                     <div class="service-card" style="background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%); border: 2px solid #e6f3ff; border-radius: 20px; padding: 30px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
@@ -140,7 +200,7 @@
                 <!-- Social Media Marketing -->
                 <div style="text-align: center; display: flex; flex-direction: column; height: 100%;">
                     <div style="margin-bottom: 24px;">
-                        <img src="images/smm.png" alt="Social Media Marketing" style="width: 180px; height: 180px; object-fit: contain;">
+                        <img src="images/smm.png" alt="Social Media Marketing Services" loading="lazy" width="180" height="180" style="width: 180px; height: 180px; object-fit: contain;">
                     </div>
                     <h3 style="font-size: 16px; color: var(--primary-blue); margin-bottom: 16px; font-weight: 700;">📱 Social Media Marketing (SMM)</h3>
                     <div class="service-card" style="background: linear-gradient(135deg, #ffffff 0%, #fff5e6 100%); border: 2px solid #ffe8cc; border-radius: 20px; padding: 30px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
@@ -172,7 +232,7 @@
                 <!-- PPC Advertising -->
                 <div style="text-align: center; display: flex; flex-direction: column; height: 100%;">
                     <div style="margin-bottom: 24px;">
-                        <img src="images/ppc.png" alt="PPC Advertising" style="width: 180px; height: 180px; object-fit: contain;">
+                        <img src="images/ppc.png" alt="PPC Advertising - Pay Per Click Services" loading="lazy" width="180" height="180" style="width: 180px; height: 180px; object-fit: contain;">
                     </div>
                     <h3 style="font-size: 16px; color: var(--primary-blue); margin-bottom: 16px; font-weight: 700;">💻 Pay-Per-Click Advertising (PPC)</h3>
                     <div class="service-card" style="background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%); border: 2px solid #dcfce7; border-radius: 20px; padding: 30px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
@@ -204,7 +264,7 @@
                 <!-- Content Writing & Email Marketing -->
                 <div style="text-align: center; display: flex; flex-direction: column; height: 100%;">
                     <div style="margin-bottom: 24px;">
-                        <img src="images/content.png" alt="Content Writing" style="width: 180px; height: 180px; object-fit: contain;">
+                        <img src="images/content.png" alt="Content Writing and Email Marketing Services" loading="lazy" width="180" height="180" style="width: 180px; height: 180px; object-fit: contain;">
                     </div>
                     <h3 style="font-size: 16px; color: var(--primary-blue); margin-bottom: 16px; font-weight: 700;">📝 Content Writing & Email Marketing</h3>
                     <div class="service-card" style="background: linear-gradient(135deg, #ffffff 0%, #fef3c7 100%); border: 2px solid #fde68a; border-radius: 20px; padding: 30px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
@@ -241,7 +301,7 @@
                 <!-- Web Development & Graphic Design -->
                 <div style="text-align: center; display: flex; flex-direction: column; height: 100%;">
                     <div style="margin-bottom: 24px;">
-                        <img src="images/graphic.png" alt="Web Development & Graphic Design" style="width: 180px; height: 180px; object-fit: contain;">
+                        <img src="images/graphic.png" alt="Web Development and Graphic Design Services" loading="lazy" width="180" height="180" style="width: 180px; height: 180px; object-fit: contain;">
                     </div>
                     <h3 style="font-size: 16px; color: var(--primary-blue); margin-bottom: 16px; font-weight: 700;">🎨 Web Development & Graphic Design</h3>
                     <div class="service-card" style="background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%); border: 2px solid #c7d2fe; border-radius: 20px; padding: 30px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
@@ -274,7 +334,7 @@
                 <!-- Google & Social Media Ads -->
                 <div style="text-align: center; display: flex; flex-direction: column; height: 100%;">
                     <div style="margin-bottom: 24px;">
-                        <img src="images/ads.png" alt="Google & Social Media Ads" style="width: 180px; height: 180px; object-fit: contain;">
+                        <img src="images/ads.png" alt="Google Ads and Social Media Advertising Services" loading="lazy" width="180" height="180" style="width: 180px; height: 180px; object-fit: contain;">
                     </div>
                     <h3 style="font-size: 16px; color: var(--primary-blue); margin-bottom: 16px; font-weight: 700;">📢 Google & Social Media Ads</h3>
                     <div class="service-card" style="background: linear-gradient(135deg, #ffffff 0%, #fce7f3 100%); border: 2px solid #fbcfe8; border-radius: 20px; padding: 30px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
@@ -307,7 +367,7 @@
                 <!-- E-Commerce Marketing Solutions -->
                 <div style="text-align: center; display: flex; flex-direction: column; height: 100%;">
                     <div style="margin-bottom: 24px;">
-                        <img src="images/ecommerce.png" alt="E-Commerce Marketing" style="width: 180px; height: 180px; object-fit: contain;">
+                        <img src="images/ecommerce.png" alt="E-Commerce Marketing Solutions" loading="lazy" width="180" height="180" style="width: 180px; height: 180px; object-fit: contain;">
                     </div>
                     <h3 style="font-size: 16px; color: var(--primary-blue); margin-bottom: 16px; font-weight: 700;">🛒 E-Commerce Marketing Solutions</h3>
                     <div class="service-card" style="background: linear-gradient(135deg, #ffffff 0%, #f3e8ff 100%); border: 2px solid #e9d5ff; border-radius: 20px; padding: 30px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
@@ -340,7 +400,7 @@
                 <!-- AI-Powered Marketing Solutions -->
                 <div style="text-align: center; display: flex; flex-direction: column; height: 100%;">
                     <div style="margin-bottom: 24px;">
-                        <img src="images/ai-marketing.png" alt="AI-Powered Marketing" style="width: 180px; height: 180px; object-fit: contain;">
+                        <img src="images/ai-marketing.png" alt="AI-Powered Marketing Solutions" loading="lazy" width="180" height="180" style="width: 180px; height: 180px; object-fit: contain;">
                     </div>
                     <h3 style="font-size: 16px; color: var(--primary-blue); margin-bottom: 16px; font-weight: 700;">🤖 AI-Powered Marketing Solutions</h3>
                     <div class="service-card" style="background: linear-gradient(135deg, #ffffff 0%, #fee2e2 100%); border: 2px solid #fecaca; border-radius: 20px; padding: 30px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
