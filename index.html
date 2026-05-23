@@ -2048,22 +2048,46 @@ document.addEventListener('click', function(e) {
   }
 });
 
-/* Google Ads Phone Call Conversion Tracking - Single Event Delegation */
-document.addEventListener('click', function(e) {
-  const btn = e.target.closest('a[href^="tel:"]');
+/* Google Ads Phone Call Conversion Tracking */
+function gtag_report_phone_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
   
-  if (!btn) return;
+  gtag('event', 'conversion', {
+    'send_to': 'AW-17521716798/3YteCL7-mJgcEL7cgKNB',
+    'event_callback': callback
+  });
   
-  if (typeof trackEvent === 'function') {
-    trackEvent('call_click');
-  }
+  return false;
+}
+
+// Single event delegation for phone links - prevents duplicate firing
+(function() {
+  var phoneConversionAttached = false;
   
-  if (typeof gtag === 'function') {
-    gtag('event', 'conversion', {
-      'send_to': 'AW-17521716798/3YteCL7-mJgcEL7cgKNB'
+  if (!phoneConversionAttached) {
+    document.addEventListener('click', function(e) {
+      var phoneLink = e.target.closest('a[href^="tel:"]');
+      
+      if (!phoneLink) return;
+      
+      // Track GA4 event
+      if (typeof trackEvent === 'function') {
+        trackEvent('call_click');
+      }
+      
+      // Fire Google Ads conversion
+      if (typeof gtag === 'function') {
+        gtag_report_phone_conversion(phoneLink.href);
+      }
     });
+    
+    phoneConversionAttached = true;
   }
-});
+})();
 
 /* Track CTA buttons */
 document.querySelectorAll("a,button").forEach(function(btn){
