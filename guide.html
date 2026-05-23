@@ -51,6 +51,62 @@
         (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
         ml('account', '1349402');
     </script>
+    
+    <!-- Structured Data - BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://digilightindia.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Free Tools",
+        "item": "https://digilightindia.com/guide.html"
+      }]
+    }
+    </script>
+    
+    <!-- Structured Data - FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Are these tools really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! All our tools and resources are 100% free with no hidden costs. We believe in providing value to help businesses grow."
+        }
+      },{
+        "@type": "Question",
+        "name": "Do I need to sign up to use the tools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No sign-up required! Access all 81+ tools instantly without creating an account. Just visit our Free Tools Hub and start using them right away."
+        }
+      },{
+        "@type": "Question",
+        "name": "What's included in the AI Growth Guide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our AI Growth Guide includes actionable strategies for automating workflows, increasing revenue, case studies, data-driven tactics, and expert insights on leveraging AI for business growth."
+        }
+      },{
+        "@type": "Question",
+        "name": "Can I use these tools for commercial projects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! All our free tools can be used for both personal and commercial projects without any restrictions."
+        }
+      }]
+    }
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->

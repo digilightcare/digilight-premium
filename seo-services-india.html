@@ -30,6 +30,55 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Structured Data - Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "SEO Services",
+      "name": "SEO Services India",
+      "description": "Professional SEO services in India including technical SEO, keyword research, on-page optimization, link building, and local SEO to boost your search rankings and organic traffic.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Digilight India",
+        "url": "https://digilightindia.com"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceRange": "$$"
+      }
+    }
+    </script>
+    
+    <!-- Structured Data - BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://digilightindia.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://digilightindia.com/services.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SEO Services India",
+        "item": "https://digilightindia.com/seo-services-india.html"
+      }]
+    }
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
