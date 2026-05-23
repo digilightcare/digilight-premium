@@ -2065,29 +2065,23 @@ function gtag_report_phone_conversion(url) {
 }
 
 // Single event delegation for phone links - prevents duplicate firing
-(function() {
-  var phoneConversionAttached = false;
+if (!window.phoneConversionAttached) {
+  window.phoneConversionAttached = true;
   
-  if (!phoneConversionAttached) {
-    document.addEventListener('click', function(e) {
-      var phoneLink = e.target.closest('a[href^="tel:"]');
-      
-      if (!phoneLink) return;
-      
-      // Track GA4 event
-      if (typeof trackEvent === 'function') {
-        trackEvent('call_click');
-      }
-      
-      // Fire Google Ads conversion
-      if (typeof gtag === 'function') {
-        gtag_report_phone_conversion(phoneLink.href);
-      }
-    });
+  document.addEventListener('click', function(e) {
+    const phoneLink = e.target.closest('a[href^="tel:"]');
     
-    phoneConversionAttached = true;
-  }
-})();
+    if (!phoneLink) return;
+    
+    if (typeof trackEvent === 'function') {
+      trackEvent('call_click');
+    }
+    
+    if (typeof gtag === 'function') {
+      gtag_report_phone_conversion(phoneLink.href);
+    }
+  });
+}
 
 /* Track CTA buttons */
 document.querySelectorAll("a,button").forEach(function(btn){
