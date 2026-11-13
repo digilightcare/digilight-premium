@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+# Public business landing page offer
+Allow: /landing-page-offer.html
+
 # Sitemap
 Sitemap: https://digilightindia.com/sitemap.xml
 
