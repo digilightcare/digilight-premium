@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
 
-# Public business landing page offer and its destination page
+# Landing pages and supporting conversion/legal pages
+# These public pages are crawlable and are also listed in sitemap.xml
 Allow: /website-demos.html
 Allow: /website-terms
 Allow: /website-terms.html
