@@ -12,7 +12,7 @@
 .demos-hero{height:54vh;min-height:380px;max-height:540px;padding-top:90px;background-image:url('images/inner-bg.jpg')}.demos-hero:before{background:rgba(4,17,36,.52)}
 .demos-hero .demos-kicker{display:inline-block;color:#ff8a24;font:800 12px Raleway,sans-serif;letter-spacing:2px;margin-bottom:12px}.demos-hero h1{max-width:980px;margin:12px auto 20px;font-size:clamp(34px,4.5vw,54px)}.demos-hero p{max-width:850px}
 .demos-trust{background:#fff;border-bottom:1px solid #e6edf5}.demos-trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:22px 15px}.demos-trust-grid>div{display:flex;align-items:center;justify-content:center;gap:12px;color:#233d5d;font:700 14px Raleway,sans-serif}.demos-trust-grid i{width:38px;height:38px;border-radius:10px;background:#eaf3ff;color:#0056d2;display:grid;place-items:center}
-#demos{padding:68px 0;background:linear-gradient(135deg,#f5f9ff,#fff 55%,#fff8f1)}#demos .container,#how .container,#contact .container{max-width:1200px;margin:auto;padding:0 20px}
+#demos{padding:68px 0;background:linear-gradient(135deg,#f5f9ff,#fff 55%,#fff8f1)}#demos .wrap,#how .wrap,#contact .wrap{width:min(1200px,calc(100% - 40px));margin-inline:auto;padding:0}
 #demos .section-head,#how .section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:28px}#demos .kicker,#how .kicker{color:#ff6a00;font:800 12px Raleway,sans-serif;letter-spacing:2px;text-transform:uppercase}
 #demos h2,#how h2{color:#0056d2;font:800 clamp(30px,4vw,42px)/1.15 Raleway,sans-serif;margin:10px 0 0}#demos .section-head p,#how .section-head p{max-width:460px;color:#53677f;line-height:1.7;margin:0}
 #demos .filters{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 25px}#demos .filter{border:1px solid #d8e3f0;background:white;color:#24415f;border-radius:999px;padding:10px 15px;font:700 13px Raleway,sans-serif;cursor:pointer}#demos .filter[aria-pressed=true]{background:#0056d2;color:#fff;border-color:#0056d2}
@@ -27,7 +27,7 @@
 #contact{padding:56px 0;background:linear-gradient(120deg,#071b35,#104b7c);color:#fff}#contact .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}#contact h2{font:800 clamp(27px,3.7vw,38px)/1.15 Raleway,sans-serif;color:#fff;margin:0 0 9px}#contact p{font:14px/1.7 'Plus Jakarta Sans',sans-serif;color:#d7e5f4;margin:0}#contact .cta-actions{display:flex;gap:12px;flex-wrap:wrap}#contact .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:7px;text-decoration:none;font:800 13px Raleway,sans-serif}#contact .btn-primary{background:#ff6a00;color:#fff}#contact .btn-ghost{border:1px solid rgba(255,255,255,.5);color:#fff;background:rgba(255,255,255,.06)}
 @media(max-width:900px){#demos .grid{grid-template-columns:repeat(2,minmax(0,1fr))}#demos .section-head,#how .section-head{display:block}#demos .section-head p,#how .section-head p{margin-top:12px}}
 @media(max-width:768px){.demos-hero{height:auto;min-height:360px;padding-top:110px;padding-bottom:45px}.demos-trust-grid{grid-template-columns:1fr;gap:12px}.demos-trust-grid>div{justify-content:flex-start}.demos-trust-grid{padding:18px 20px}}
-@media(max-width:640px){#demos{padding:52px 0}#demos .grid,#how .steps{grid-template-columns:1fr}#contact .cta-inner{display:block}#contact .cta-actions{margin-top:20px}#demos .card-actions{gap:12px}}
+@media(max-width:640px){#demos{padding:52px 0}#demos .wrap,#how .wrap,#contact .wrap{width:calc(100% - 32px)}#demos .grid,#how .steps{grid-template-columns:1fr}#contact .cta-inner{display:block}#contact .cta-actions{margin-top:20px}#demos .card-actions{gap:12px}}
 </style></head><body><header>
         <nav>
             <div class="logo" style="display: flex; align-items: center; gap: 8px; cursor: pointer;" onclick="window.location.href='index.html'">
@@ -102,7 +102,7 @@
           <div class="step"><b>03</b><h3>Approve scope and begin</h3><p>We confirm inclusions, delivery timeline and payment milestones before starting customization.</p></div>
         </div>
       </div>
-    </section><section class="cta" id="contact"><div class="wrap cta-inner"><div><h2>Have a different profession or business?</h2><p>Tell us what you do. We’ll discuss the most suitable website format.</p></div><div class="cta-actions"><a class="btn btn-primary" href="https://wa.me/919548835888?text=Hello%20Digilight%20India%2C%20I%20need%20a%20website%20for%20my%20business.">WhatsApp +91 95488 35888</a><a class="btn btn-ghost" href="tel:+919760437373">Call +91 97604 37373</a></div></div></section></main><footer>
+    </section><section class="cta" id="contact"><div class="wrap cta-inner"><div><h2>Have a different profession or business?</h2><p>Tell us what you do. We’ll discuss the most suitable website format.</p></div><div class="cta-actions"><a class="btn btn-primary" href="https://wa.me/919548835888?text=Hello%20Digilight%20India%2C%20I%20need%20a%20website%20for%20my%20business.">WhatsApp +91 95488 35888</a><a class="btn btn-ghost" href="contact.html">Contact Us</a></div></div></section></main><footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
