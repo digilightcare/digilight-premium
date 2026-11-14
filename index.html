@@ -265,7 +265,7 @@
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="website-demos.html">Website Demos</a></li>
-                <li><a href="landing-page-offer.html">Landing Page ₹4,999</a></li>
+                <li><a href="landing-page-offer.html">Landing Page Offer</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="guide.html">Free Tools</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -1406,7 +1406,8 @@
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="website-demos.html">Website Demos</a></li>
-                        <li><a href="landing-page-offer.html">Landing Page ₹4,999</a></li>
+                        <li><a href="landing-page-offer.html">Landing Page Offer</a></li>
+                        <li><a href="website-terms.html">Website Terms & Conditions</a></li>
                         <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="guide.html">Free Tools</a></li>
                         <li><a href="blog.html">Blog</a></li>
@@ -1457,12 +1458,16 @@
                 const latestPosts = data.posts.slice(0, 3);
 
                 async function parseFrontmatter(content) {
-                    const regex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
+                    const regex = /^---\s*
+([\s\S]*?)
+---\s*
+([\s\S]*)$/;
                     const match = content.match(regex);
                     if (!match) return { metadata: {}, content };
 
                     const metadata = {};
-                    match[1].split('\n').forEach(line => {
+                    match[1].split('
+').forEach(line => {
                         const colon = line.indexOf(':');
                         if (colon > -1) {
                             const key = line.substring(0, colon).trim();
