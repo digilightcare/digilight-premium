@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 
 # Public business landing page offer and its destination page
+Allow: /website-demos.html
 Allow: /landing-page-offer.html
 Allow: /website-development-company-india.html
 
