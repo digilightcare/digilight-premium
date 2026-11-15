@@ -25,3 +25,124 @@
 .legal-layout .legal-card:hover{transform:translateY(-2px);border-color:#9dcce8;box-shadow:0 12px 26px rgba(9,40,78,.1)}
 @media(max-width:900px){.legal-layout{grid-template-columns:1fr;gap:17px;margin-top:26px}.legal-sidebar{position:relative;top:auto;max-height:none}.legal-sidebar .legal-sidebar-links.quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.legal-layout .legal-wrap,.legal-layout .terms-layout{margin:0}.legal-layout .legal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.legal-layout{width:calc(100% - 24px);margin:18px auto 48px}.legal-sidebar{padding:14px}.legal-sidebar .legal-sidebar-links.quick{grid-template-columns:1fr 1fr}.legal-layout .legal-grid{grid-template-columns:1fr}.legal-layout .legal-section,.legal-layout .terms-section{padding:20px 17px;margin:13px 0}.legal-layout .legal-note{padding:16px 17px}.legal-sidebar-help{margin-top:13px}}
+
+/* Readability pass: match the primary Digilight website typography and contrast */
+.legal-layout,
+.legal-layout *{
+  font-family:'Raleway',Arial,sans-serif !important;
+}
+.legal-layout .legal-wrap,
+.legal-layout .terms-layout{
+  color:#111111;
+}
+.legal-layout .legal-wrap p,
+.legal-layout .legal-wrap li,
+.legal-layout .terms-layout p,
+.legal-layout .terms-layout li,
+.legal-layout .terms-intro,
+.legal-layout .legal-note{
+  color:#111111 !important;
+  font-size:17px !important;
+  line-height:1.85 !important;
+  font-weight:500 !important;
+}
+.legal-layout .legal-section h2,
+.legal-layout .terms-section h2{
+  color:#0758c9 !important;
+  font-size:23px !important;
+  line-height:1.4 !important;
+  font-weight:800 !important;
+}
+.legal-layout .legal-hero h1,
+.legal-layout .terms-hero h1{
+  font-family:'Raleway',Arial,sans-serif !important;
+  font-weight:800 !important;
+}
+.legal-layout .legal-sidebar-title{
+  color:#111111 !important;
+  font-size:13px !important;
+  font-weight:800 !important;
+  letter-spacing:.7px !important;
+}
+.legal-layout .legal-sidebar-links a{
+  color:#111111 !important;
+  font-size:14px !important;
+  line-height:1.55 !important;
+  font-weight:700 !important;
+  padding:10px 11px !important;
+}
+.legal-layout .legal-sidebar-links a:hover,
+.legal-layout .legal-sidebar-links a.active{
+  color:#064f91 !important;
+}
+.legal-layout .legal-sidebar-help strong{
+  color:#111111 !important;
+  font-size:14px !important;
+  font-weight:800 !important;
+}
+.legal-layout .legal-sidebar-help p{
+  color:#111111 !important;
+  font-size:13px !important;
+  line-height:1.65 !important;
+  font-weight:500 !important;
+}
+.legal-layout .legal-sidebar-help a{
+  font-size:13px !important;
+  font-weight:800 !important;
+}
+.legal-layout .legal-card h2{
+  color:#0758c9 !important;
+  font-size:19px !important;
+  font-weight:800 !important;
+}
+.legal-layout .legal-card p{
+  color:#111111 !important;
+  font-size:15px !important;
+  line-height:1.7 !important;
+  font-weight:500 !important;
+}
+.legal-layout .legal-card a{
+  color:#064f91 !important;
+  font-size:15px !important;
+  font-weight:800 !important;
+}
+.legal-layout .legal-contact,
+.legal-layout .legal-contact p,
+.legal-layout .legal-contact h2,
+.legal-layout .legal-contact a{
+  color:#ffffff !important;
+}
+@media(max-width:600px){
+  .legal-layout .legal-wrap p,
+  .legal-layout .legal-wrap li,
+  .legal-layout .terms-layout p,
+  .legal-layout .terms-layout li,
+  .legal-layout .terms-intro,
+  .legal-layout .legal-note{
+    font-size:16.5px !important;
+    line-height:1.85 !important;
+  }
+  .legal-layout .legal-section h2,
+  .legal-layout .terms-section h2{
+    font-size:21px !important;
+    line-height:1.4 !important;
+  }
+  .legal-layout .legal-sidebar-title{
+    font-size:13px !important;
+  }
+  .legal-layout .legal-sidebar-links a{
+    font-size:14px !important;
+    line-height:1.5 !important;
+    padding:10px 9px !important;
+  }
+  .legal-layout .legal-sidebar-help strong{
+    font-size:14px !important;
+  }
+  .legal-layout .legal-sidebar-help p{
+    font-size:13px !important;
+  }
+  .legal-layout .legal-card p,
+  .legal-layout .legal-card a{
+    font-size:15px !important;
+  }
+}
