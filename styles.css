@@ -5379,3 +5379,22 @@ img:hover {
         flex-shrink: 0 !important;
     }
 }
+
+
+/* Legal footer column: preserve existing footer content while accommodating the central policy library. */
+@media (min-width: 969px) {
+    footer .footer-grid {
+        grid-template-columns: 1.6fr 1fr 1.25fr 1fr;
+    }
+}
+@media (max-width: 968px) {
+    footer .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 640px) {
+    footer .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
