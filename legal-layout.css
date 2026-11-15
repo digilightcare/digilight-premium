@@ -1,0 +1,27 @@
+/* Digilight India Legal Centre — shared premium document layout */
+.legal-layout{width:min(1240px,calc(100% - 40px));margin:38px auto 82px;display:grid;grid-template-columns:286px minmax(0,1fr);gap:26px;align-items:start}
+.legal-layout .legal-wrap,.legal-layout .terms-layout{width:auto;max-width:none;margin:0;min-width:0}
+.legal-sidebar{position:sticky;top:104px;max-height:calc(100vh - 124px);overflow:auto;background:#fff;border:1px solid #e2e9f2;border-radius:16px;padding:19px;box-shadow:0 12px 34px rgba(9,40,78,.08)}
+.legal-sidebar-title{font:800 11px 'Plus Jakarta Sans',sans-serif;letter-spacing:1px;text-transform:uppercase;color:#8190a5;margin:2px 9px 12px}
+.legal-sidebar-links{display:grid;gap:4px}
+.legal-sidebar-links a{display:flex;align-items:flex-start;gap:10px;padding:9px 10px;border-radius:9px;color:#40536d;font:600 12px/1.45 'Plus Jakarta Sans',sans-serif;text-decoration:none;transition:background .18s,color .18s}
+.legal-sidebar-links a:before{content:'';width:6px;height:6px;border-radius:50%;background:#b9c7d8;flex:none;margin-top:5px}
+.legal-sidebar-links a:hover{background:#f1f7fc;color:#0758a8}
+.legal-sidebar-links a.active{background:#eaf8fc;color:#087d9c}
+.legal-sidebar-links a.active:before{background:#10b8d1;box-shadow:0 0 0 4px #d4f5fa}
+.legal-sidebar-divider{height:1px;background:#e7edf4;margin:17px 0}
+.legal-sidebar .legal-sidebar-links.related a:before{width:5px;height:5px;border-radius:1px;background:#ff7a18}
+.legal-sidebar-help{background:linear-gradient(135deg,#eafaff,#eef3ff);border:1px solid #d8eaf5;border-radius:12px;padding:14px;margin-top:18px}
+.legal-sidebar-help strong{display:block;color:#07537d;font:800 12px 'Plus Jakarta Sans',sans-serif}
+.legal-sidebar-help p{font:500 11px/1.55 'Plus Jakarta Sans',sans-serif;color:#5d7189;margin:5px 0 10px}
+.legal-sidebar-help a{display:inline-block;background:#0758c9;color:#fff!important;padding:7px 10px;border-radius:7px;font:700 11px 'Plus Jakarta Sans',sans-serif;text-decoration:none}
+.legal-layout .legal-section,.legal-layout .terms-section{scroll-margin-top:112px}
+.legal-layout .legal-section h2,.legal-layout .terms-section h2{scroll-margin-top:112px}
+.legal-layout .legal-note{margin-bottom:22px}
+.legal-layout .legal-contact{background:linear-gradient(135deg,#082d58,#07518c);border:0}
+.legal-layout .legal-contact h2,.legal-layout .legal-contact p,.legal-layout .legal-contact a{color:#fff}
+.legal-layout .legal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.legal-layout .legal-card{transition:transform .2s,border-color .2s,box-shadow .2s}
+.legal-layout .legal-card:hover{transform:translateY(-2px);border-color:#9dcce8;box-shadow:0 12px 26px rgba(9,40,78,.1)}
+@media(max-width:900px){.legal-layout{grid-template-columns:1fr;gap:17px;margin-top:26px}.legal-sidebar{position:relative;top:auto;max-height:none}.legal-sidebar .legal-sidebar-links.quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.legal-layout .legal-wrap,.legal-layout .terms-layout{margin:0}.legal-layout .legal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.legal-layout{width:calc(100% - 24px);margin:18px auto 48px}.legal-sidebar{padding:14px}.legal-sidebar .legal-sidebar-links.quick{grid-template-columns:1fr 1fr}.legal-layout .legal-grid{grid-template-columns:1fr}.legal-layout .legal-section,.legal-layout .terms-section{padding:20px 17px;margin:13px 0}.legal-layout .legal-note{padding:16px 17px}.legal-sidebar-help{margin-top:13px}}
