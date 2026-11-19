@@ -1,0 +1,22 @@
+
+/* Legal document actions and print layout */
+.legal-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 22px;padding:14px 16px;background:#f5f8fc;border:1px solid #dbe5f1;border-radius:12px}
+.legal-actions-label{font:700 13px/1.4 'Raleway',Arial,sans-serif;color:#17324f;margin-right:auto}
+.legal-action-btn{appearance:none;border:1px solid #b8cbe0;background:#fff;color:#123b66;border-radius:8px;padding:10px 14px;font:700 13px/1.2 'Raleway',Arial,sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.legal-action-btn:hover{border-color:#0758c9;background:#eef5ff}
+.legal-action-btn:focus-visible{outline:3px solid #ff9a35;outline-offset:2px}
+.legal-copyright{font:600 12px/1.6 'Raleway',Arial,sans-serif;color:#60748b;text-align:center;margin:24px 0 8px}
+@media(max-width:600px){.legal-actions{gap:8px}.legal-actions-label{width:100%}.legal-action-btn{flex:1;justify-content:center;padding:11px 9px}}
+@media print{
+ @page{size:A4;margin:16mm 15mm}
+ body{background:#fff!important;color:#111!important}
+ header,footer,.legal-hero,.terms-hero,.legal-sidebar,.legal-actions,.terms-related-links,.terms-back,.mobile-menu-toggle{display:none!important}
+ main,.legal-layout,.legal-wrap,.terms-layout{display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
+ .legal-section,.terms-section,.legal-note,.terms-intro{box-shadow:none!important;border:0!important;border-radius:0!important;background:#fff!important;padding:8px 0!important;margin:0 0 14px!important;break-inside:avoid}
+ .legal-section h2,.terms-section h2{color:#123b66!important;break-after:avoid}
+ a{color:#111!important;text-decoration:none!important}
+ a[href^="http"]:after{content:" (" attr(href) ")";font-size:9pt;overflow-wrap:anywhere}
+ .legal-contact,.terms-contact{background:#fff!important;color:#111!important}
+ .legal-contact *,.terms-contact *{color:#111!important}
+ .legal-copyright{display:block!important;margin-top:24px;border-top:1px solid #bbb;padding-top:8px}
+}
