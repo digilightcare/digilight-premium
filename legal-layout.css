@@ -18,8 +18,10 @@
 .legal-layout .legal-section,.legal-layout .terms-section{scroll-margin-top:112px}
 .legal-layout .legal-section h2,.legal-layout .terms-section h2{scroll-margin-top:112px}
 .legal-layout .legal-note{margin-bottom:22px}
-.legal-layout .legal-contact{background:linear-gradient(135deg,#082d58,#07518c);border:0}
-.legal-layout .legal-contact h2,.legal-layout .legal-contact p,.legal-layout .legal-contact a{color:#fff}
+.legal-layout .legal-contact,.legal-layout .terms-contact{background:linear-gradient(135deg,#082d58,#07518c);border:0;border-radius:14px;padding:25px;color:#fff;box-shadow:0 12px 28px rgba(8,45,88,.12)}
+.legal-layout .legal-contact h2,.legal-layout .legal-contact p,.legal-layout .legal-contact a,.legal-layout .terms-contact h2,.legal-layout .terms-contact p,.legal-layout .terms-contact a{color:#fff!important}
+.legal-layout .legal-contact a,.legal-layout .terms-contact a{text-decoration:underline;text-underline-offset:3px}
+.legal-layout .legal-contact a:focus-visible,.legal-layout .terms-contact a:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .legal-layout .legal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .legal-layout .legal-card{transition:transform .2s,border-color .2s,box-shadow .2s}
 .legal-layout .legal-card:hover{transform:translateY(-2px);border-color:#9dcce8;box-shadow:0 12px 26px rgba(9,40,78,.1)}
