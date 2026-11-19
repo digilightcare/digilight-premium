@@ -148,3 +148,28 @@
     font-size:15px !important;
   }
 }
+
+/* FINAL OVERRIDE — keep every contact-panel element readable on the blue background.
+   Deliberately placed last to override the general black-text rules above. */
+html body .legal-layout .legal-wrap .legal-contact,
+html body .legal-layout .legal-wrap .legal-contact *,
+html body .legal-layout .terms-layout .terms-contact,
+html body .legal-layout .terms-layout .terms-contact * {
+  color: #fff !important;
+}
+html body .legal-layout .legal-wrap .legal-contact a,
+html body .legal-layout .terms-layout .terms-contact a {
+  color: #fff !important;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,.8);
+  text-underline-offset: 3px;
+}
+html body .legal-layout .legal-wrap .legal-contact a:hover,
+html body .legal-layout .terms-layout .terms-contact a:hover {
+  color: #d9edff !important;
+}
+html body .legal-layout .legal-wrap .legal-contact a:focus-visible,
+html body .legal-layout .terms-layout .terms-contact a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
